@@ -8,23 +8,93 @@
   <meta name="theme-color" content="#09090b" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://prettych.github.io/htmlTest/pages/free-static-hosting.html" />
+  <meta property="og:title" content="免费静态托管对照 · Mogul Desk" />
+  <meta property="og:description" content="GitHub Pages、Cloudflare Pages、Vercel、Netlify 等免费额度与商用条款对照（可核验）。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://prettych.github.io/htmlTest/pages/free-static-hosting.html" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:site_name" content="Mogul Desk" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="免费静态托管对照 · Mogul Desk" />
+  <meta name="twitter:description" content="GitHub Pages、Cloudflare Pages、Vercel、Netlify 等免费额度与商用条款对照（可核验）。" />
   <link rel="stylesheet" href="../assets/styles.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "免费静态托管对照",
+  "description": "GitHub Pages、Cloudflare Pages、Vercel、Netlify 等免费额度与商用条款对照（可核验）。",
+  "numberOfItems": 8,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "GitHub Pages",
+      "url": "https://prettych.github.io/htmlTest/pages/free-static-hosting.html#github-pages"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Cloudflare Pages",
+      "url": "https://prettych.github.io/htmlTest/pages/free-static-hosting.html#cloudflare-pages"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Vercel Hobby",
+      "url": "https://prettych.github.io/htmlTest/pages/free-static-hosting.html#vercel-hobby"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Netlify Free",
+      "url": "https://prettych.github.io/htmlTest/pages/free-static-hosting.html#netlify-free"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Render Static Sites",
+      "url": "https://prettych.github.io/htmlTest/pages/free-static-hosting.html#render-static"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Surge.sh",
+      "url": "https://prettych.github.io/htmlTest/pages/free-static-hosting.html#surge"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "GitLab Pages",
+      "url": "https://prettych.github.io/htmlTest/pages/free-static-hosting.html#gitlab-pages"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "Firebase Hosting",
+      "url": "https://prettych.github.io/htmlTest/pages/free-static-hosting.html#firebase-hosting"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
+<a class="skip-link" href="#main">跳到正文</a>
   <header class="site">
     <div class="inner">
-            <a class="logo" href="../index.html"><span class="logo-mark" aria-hidden="true">M</span>Mogul <span>Desk</span></a>
-      <nav>
+      <a class="logo" href="../index.html"><span class="logo-mark" aria-hidden="true">M</span>Mogul <span>Desk</span></a>
+      <nav aria-label="主导航">
         <a href="../index.html">首页</a>
         <a href="free-static-hosting.html" aria-current="page">静态托管</a>
         <a href="free-tts-api.html">TTS API</a>
         <a href="free-llm-api-no-card.html">免绑卡 LLM</a>
+        <a href="changelog.html">更新日志</a>
         <a href="about.html">关于</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap wrap--wide">
+  <main id="main" class="wrap wrap--wide" tabindex="-1">
     <section class="hero hero--page">
       <span class="badge">对照页 · 8 条</span>
       <h1>免费静态托管：额度、商用与自定义域名</h1>
@@ -38,8 +108,30 @@
     </div>
 
     <h2>速览</h2>
+    <div class="filter-bar" data-compare-root>
+      <div class="filter-bar-top">
+        <div class="filter-search">
+          <label for="filter-q">搜索</label>
+          <input type="search" id="filter-q" data-filter-search placeholder="平台名、额度、关键词…" autocomplete="off" />
+        </div>
+        <div class="filter-meta">
+          <span data-filter-count></span>
+          <button type="button" class="filter-clear" data-filter-clear>清除</button>
+        </div>
+      </div>
+      <div class="filter-groups">
+        <div class="filter-group" data-filter-group="commercial" role="group" aria-label="按商用筛选">
+          <span class="filter-group-label">商用</span>
+          <button type="button" class="filter-chip is-active" data-filter-value="" aria-pressed="true">全部</button>
+          <button type="button" class="filter-chip" data-filter-value="yes" aria-pressed="false">可商用/未见禁令</button>
+          <button type="button" class="filter-chip" data-filter-value="no" aria-pressed="false">不可商用</button>
+          <button type="button" class="filter-chip" data-filter-value="unclear" aria-pressed="false">需核对</button>
+        </div>
+      </div>
+      <p class="filter-empty" data-filter-status hidden role="status">没有匹配的条目。试试换关键词，或点「清除」。</p>
+    </div>
     <div class="table-scroll" tabindex="0" role="region" aria-label="对照表（可横向滚动）">
-    <table class="compare">
+    <table class="compare" role="table">
       <thead>
         <tr>
           <th>平台</th>
@@ -49,50 +141,50 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td><a href="#github-pages">GitHub Pages</a></td>
+        <tr data-entry="github-pages" data-commercial="no" data-verified="2026-10-21" data-search="GitHub Pages 不允许免费商业主机 1GB 100GB">
+          <td><a href="#github-pages">GitHub Pages</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
           <td>站点 ≤ 1 GB；带宽软上限约 100 GB/月</td>
           <td class="tag-bad"><span class="pill pill-bad">不允许当免费商业主机</span></td>
           <td>支持</td>
         </tr>
-        <tr>
-          <td><a href="#cloudflare-pages">Cloudflare Pages</a></td>
+        <tr data-entry="cloudflare-pages" data-commercial="yes" data-verified="2026-10-21" data-search="Cloudflare Pages 未见禁止商用 500构建">
+          <td><a href="#cloudflare-pages">Cloudflare Pages</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
           <td>500 次构建/月；每站 2 万文件；静态请求通常不计费</td>
           <td class="tag-ok"><span class="pill pill-ok">未见等同「禁止商用」条款</span></td>
           <td>每项目最多 100 个（Free）</td>
         </tr>
-        <tr>
-          <td><a href="#vercel-hobby">Vercel Hobby</a></td>
+        <tr data-entry="vercel-hobby" data-commercial="no" data-verified="2026-10-21" data-search="Vercel Hobby 非商用个人 100GB">
+          <td><a href="#vercel-hobby">Vercel Hobby</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
           <td>Fast Data Transfer 100 GB 等</td>
           <td class="tag-bad"><span class="pill pill-bad">仅限非商用个人用途</span></td>
           <td>每项目最多 50 个域名</td>
         </tr>
-        <tr>
-          <td><a href="#netlify-free">Netlify Free</a></td>
+        <tr data-entry="netlify-free" data-commercial="unclear" data-verified="2026-10-21" data-search="Netlify Free credits 需核对商用">
+          <td><a href="#netlify-free">Netlify Free</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
           <td>300 credits/月；带宽 20 credits/GB</td>
           <td class="tag-warn"><span class="pill pill-warn">文档未写死禁止商用；额度耗尽会暂停</span></td>
           <td>支持 + SSL</td>
         </tr>
-        <tr>
-          <td><a href="#render-static">Render Static Sites</a></td>
+        <tr data-entry="render-static" data-commercial="unclear" data-verified="2026-10-21" data-search="Render Static 可商用超额绑卡">
+          <td><a href="#render-static">Render Static Sites</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
           <td>静态站免费部署；Hobby 含 5 GB 出站带宽</td>
           <td class="tag-warn"><span class="pill pill-warn">可商用，但超额需绑卡否则可能停服</span></td>
           <td>Hobby 含 2 个域名额度</td>
         </tr>
-        <tr>
-          <td><a href="#surge">Surge.sh</a></td>
+        <tr data-entry="surge" data-commercial="unclear" data-verified="2026-10-21" data-search="Surge.sh 需核对条款">
+          <td><a href="#surge">Surge.sh</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
           <td>免费无限发布；基础 SSL</td>
           <td class="tag-warn"><span class="pill pill-warn">以官网条款为准；Professional 才有强制 HTTPS 等</span></td>
           <td>免费档支持</td>
         </tr>
-        <tr>
-          <td><a href="#gitlab-pages">GitLab Pages</a></td>
+        <tr data-entry="gitlab-pages" data-commercial="unclear" data-verified="2026-10-21" data-search="GitLab Pages ToS 需核对">
+          <td><a href="#gitlab-pages">GitLab Pages</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
           <td>站点最大 1 GB；每站最多 150 个自定义域名</td>
           <td class="tag-warn"><span class="pill pill-warn">官方设置页未写「禁止商用」一句；以 ToS 为准</span></td>
           <td>支持（gitlab.io / 自定义）</td>
         </tr>
-        <tr>
-          <td><a href="#firebase-hosting">Firebase Hosting</a></td>
+        <tr data-entry="firebase-hosting" data-commercial="unclear" data-verified="2026-10-21" data-search="Firebase Hosting Spark 超量停服">
+          <td><a href="#firebase-hosting">Firebase Hosting</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
           <td>存储 10 GB；传输约 10 GB/月（Spark）</td>
           <td class="tag-warn"><span class="pill pill-warn">可商用；超量需升 Blaze，否则站点可能被停</span></td>
           <td>支持</td>
@@ -103,8 +195,11 @@
 
     <h2 id="entries">逐条说明</h2>
 
-    <article class="entry" id="github-pages">
+    <article class="entry" id="github-pages" data-entry="github-pages" data-commercial="no" data-verified="2026-10-21" data-search="GitHub Pages 不允许免费商业主机 1GB 100GB">
+      <div class="entry-head">
       <h3>1. GitHub Pages</h3>
+      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
+    </div>
       <p class="one-liner">从仓库直接托管静态站；文档与开源项目最省事，但明确禁止当免费商业主机。</p>
       <dl>
         <dt>用途</dt>
@@ -123,8 +218,11 @@
       </p>
     </article>
 
-    <article class="entry" id="cloudflare-pages">
+    <article class="entry" id="cloudflare-pages" data-entry="cloudflare-pages" data-commercial="yes" data-verified="2026-10-21" data-search="Cloudflare Pages 未见禁止商用 500构建">
+      <div class="entry-head">
       <h3>2. Cloudflare Pages</h3>
+      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
+    </div>
       <p class="one-liner">边缘 CDN 上的静态站；Free 档构建次数与文件数是硬门槛，静态流量通常很宽裕。</p>
       <dl>
         <dt>用途</dt>
@@ -143,8 +241,11 @@
       </p>
     </article>
 
-    <article class="entry" id="vercel-hobby">
+    <article class="entry" id="vercel-hobby" data-entry="vercel-hobby" data-commercial="no" data-verified="2026-10-21" data-search="Vercel Hobby 非商用个人 100GB">
+      <div class="entry-head">
       <h3>3. Vercel Hobby</h3>
+      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
+    </div>
       <p class="one-liner">Next.js / 前端实验友好；Hobby <strong>明文限非商用个人用途</strong>。</p>
       <dl>
         <dt>用途</dt>
@@ -163,8 +264,11 @@
       </p>
     </article>
 
-    <article class="entry" id="netlify-free">
+    <article class="entry" id="netlify-free" data-entry="netlify-free" data-commercial="unclear" data-verified="2026-10-21" data-search="Netlify Free credits 需核对商用">
+      <div class="entry-head">
       <h3>4. Netlify Free（Credit-based）</h3>
+      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
+    </div>
       <p class="one-liner">2025-09-04 后新账号用积分制：Free 每月 300 credits，耗尽硬停。</p>
       <dl>
         <dt>用途</dt>
@@ -183,8 +287,11 @@
       </p>
     </article>
 
-    <article class="entry" id="render-static">
+    <article class="entry" id="render-static" data-entry="render-static" data-commercial="unclear" data-verified="2026-10-21" data-search="Render Static 可商用超额绑卡">
+      <div class="entry-head">
       <h3>5. Render Static Sites</h3>
+      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
+    </div>
       <p class="one-liner">静态站本身免费部署，但流量与构建分钟计入工作区月度配额。</p>
       <dl>
         <dt>用途</dt>
@@ -204,8 +311,11 @@
       </p>
     </article>
 
-    <article class="entry" id="surge">
+    <article class="entry" id="surge" data-entry="surge" data-commercial="unclear" data-verified="2026-10-21" data-search="Surge.sh 需核对条款">
+      <div class="entry-head">
       <h3>6. Surge.sh</h3>
+      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
+    </div>
       <p class="one-liner">命令行把本地文件夹发布成静态站；免费档强调无限发布 + 自定义域名 + 基础 SSL。</p>
       <dl>
         <dt>用途</dt>
@@ -224,8 +334,11 @@
       </p>
     </article>
 
-    <article class="entry" id="gitlab-pages">
+    <article class="entry" id="gitlab-pages" data-entry="gitlab-pages" data-commercial="unclear" data-verified="2026-10-21" data-search="GitLab Pages ToS 需核对">
+      <div class="entry-head">
       <h3>7. GitLab Pages</h3>
+      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
+    </div>
       <p class="one-liner">跟 GitLab CI 产物绑定；适合已经在 GitLab 上的文档与项目站。</p>
       <dl>
         <dt>用途</dt>
@@ -244,8 +357,11 @@
       </p>
     </article>
 
-    <article class="entry" id="firebase-hosting">
+    <article class="entry" id="firebase-hosting" data-entry="firebase-hosting" data-commercial="unclear" data-verified="2026-10-21" data-search="Firebase Hosting Spark 超量停服">
+      <div class="entry-head">
       <h3>8. Firebase Hosting（Spark / 免费用量）</h3>
+      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
+    </div>
       <p class="one-liner">Google 全球 CDN 静态托管；免费档有明确存储与月传输上限。</p>
       <dl>
         <dt>用途</dt>
@@ -279,9 +395,11 @@
   <footer class="site">
     <div class="wrap wrap--wide">
       <p class="footer-brand">Mogul Desk</p>
-      <p class="footer-meta">核验日期：2026-10-21（Asia/Shanghai） · <a href="about.html">关于本站</a></p>
+      <p class="footer-meta">核验日期：2026-10-21（Asia/Shanghai） · <a href="about.html">关于本站</a> · <a href="changelog.html">更新日志</a></p>
+      <p class="footer-errata">发现问题？<a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF&body=%E9%A1%B5%E9%9D%A2%EF%BC%9A%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A">发勘误邮件</a>（仅勘误 / 纠错，不是客服）。</p>
       <p class="footer-disclaimer">免责：额度与条款以各平台官网为准；本站无流量/收入承诺，未接入联盟链接。</p>
     </div>
   </footer>
+  <script src="../assets/compare-filter.js" defer></script>
 </body>
 </html>

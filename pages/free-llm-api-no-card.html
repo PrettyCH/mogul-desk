@@ -8,23 +8,93 @@
   <meta name="theme-color" content="#09090b" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://prettych.github.io/htmlTest/pages/free-llm-api-no-card.html" />
+  <meta property="og:title" content="无需绑卡的免费 LLM API 短名单 · Mogul Desk" />
+  <meta property="og:description" content="Gemini、Groq、OpenRouter、Workers AI、Mistral、NVIDIA、Fireworks、SiliconFlow 免费/起步积分对照。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://prettych.github.io/htmlTest/pages/free-llm-api-no-card.html" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:site_name" content="Mogul Desk" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="无需绑卡的免费 LLM API 短名单 · Mogul Desk" />
+  <meta name="twitter:description" content="Gemini、Groq、OpenRouter、Workers AI、Mistral、NVIDIA、Fireworks、SiliconFlow 免费/起步积分对照。" />
   <link rel="stylesheet" href="../assets/styles.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "无需绑卡的免费 LLM API 短名单",
+  "description": "Gemini、Groq、OpenRouter、Workers AI、Mistral、NVIDIA、Fireworks、SiliconFlow 免费/起步积分对照。",
+  "numberOfItems": 8,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Google Gemini API Free",
+      "url": "https://prettych.github.io/htmlTest/pages/free-llm-api-no-card.html#gemini"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Groq Free",
+      "url": "https://prettych.github.io/htmlTest/pages/free-llm-api-no-card.html#groq"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "OpenRouter :free",
+      "url": "https://prettych.github.io/htmlTest/pages/free-llm-api-no-card.html#openrouter"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Cloudflare Workers AI",
+      "url": "https://prettych.github.io/htmlTest/pages/free-llm-api-no-card.html#workers-ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Mistral Free mode",
+      "url": "https://prettych.github.io/htmlTest/pages/free-llm-api-no-card.html#mistral"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "NVIDIA API Catalog",
+      "url": "https://prettych.github.io/htmlTest/pages/free-llm-api-no-card.html#nvidia"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "Fireworks 起步积分",
+      "url": "https://prettych.github.io/htmlTest/pages/free-llm-api-no-card.html#fireworks"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "SiliconFlow 起步积分",
+      "url": "https://prettych.github.io/htmlTest/pages/free-llm-api-no-card.html#siliconflow"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
+<a class="skip-link" href="#main">跳到正文</a>
   <header class="site">
     <div class="inner">
-            <a class="logo" href="../index.html"><span class="logo-mark" aria-hidden="true">M</span>Mogul <span>Desk</span></a>
-      <nav>
+      <a class="logo" href="../index.html"><span class="logo-mark" aria-hidden="true">M</span>Mogul <span>Desk</span></a>
+      <nav aria-label="主导航">
         <a href="../index.html">首页</a>
         <a href="free-static-hosting.html">静态托管</a>
         <a href="free-tts-api.html">TTS API</a>
         <a href="free-llm-api-no-card.html" aria-current="page">免绑卡 LLM</a>
+        <a href="changelog.html">更新日志</a>
         <a href="about.html">关于</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap wrap--wide">
+  <main id="main" class="wrap wrap--wide" tabindex="-1">
     <section class="hero hero--page">
       <span class="badge">对照页 · 8 条</span>
       <h1>无需绑卡（或明确写「要绑卡」）的免费 LLM API</h1>
@@ -38,8 +108,35 @@
     </div>
 
     <h2>速览</h2>
+    <div class="filter-bar" data-compare-root>
+      <div class="filter-bar-top">
+        <div class="filter-search">
+          <label for="filter-q">搜索</label>
+          <input type="search" id="filter-q" data-filter-search placeholder="服务名、额度、关键词…" autocomplete="off" />
+        </div>
+        <div class="filter-meta">
+          <span data-filter-count></span>
+          <button type="button" class="filter-clear" data-filter-clear>清除</button>
+        </div>
+      </div>
+      <div class="filter-groups">
+        <div class="filter-group" data-filter-group="card" role="group" aria-label="按是否绑卡筛选">
+          <span class="filter-group-label">绑卡</span>
+          <button type="button" class="filter-chip is-active" data-filter-value="" aria-pressed="true">全部</button>
+          <button type="button" class="filter-chip" data-filter-value="no" aria-pressed="false">免绑卡起步</button>
+          <button type="button" class="filter-chip" data-filter-value="maybe" aria-pressed="false">积分用尽后需付费</button>
+        </div>
+        <div class="filter-group" data-filter-group="quota" role="group" aria-label="按额度类型筛选">
+          <span class="filter-group-label">额度</span>
+          <button type="button" class="filter-chip is-active" data-filter-value="" aria-pressed="true">全部</button>
+          <button type="button" class="filter-chip" data-filter-value="recurring" aria-pressed="false">长期/按日刷新</button>
+          <button type="button" class="filter-chip" data-filter-value="credit" aria-pressed="false">一次性赠金</button>
+        </div>
+      </div>
+      <p class="filter-empty" data-filter-status hidden role="status">没有匹配的条目。试试换关键词，或点「清除」。</p>
+    </div>
     <div class="table-scroll" tabindex="0" role="region" aria-label="对照表（可横向滚动）">
-    <table class="compare">
+    <table class="compare" role="table">
       <thead>
         <tr>
           <th>服务</th>
@@ -48,43 +145,43 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td><a href="#gemini">Google Gemini API Free</a></td>
+        <tr data-entry="gemini" data-card="no" data-quota="recurring" data-verified="2026-10-21" data-search="Google Gemini Free Tier AI Studio">
+          <td><a href="#gemini">Google Gemini API Free</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
           <td>多款 Flash 等 Free of charge；限额见 AI Studio</td>
           <td class="tag-ok"><span class="pill pill-ok">Free Tier 无需结算</span></td>
         </tr>
-        <tr>
-          <td><a href="#groq">Groq Free</a></td>
+        <tr data-entry="groq" data-card="no" data-quota="recurring" data-verified="2026-10-21" data-search="Groq Free RPM RPD">
+          <td><a href="#groq">Groq Free</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
           <td>按模型 RPM/RPD/TPM/TPD（控制台 Limits）</td>
           <td class="tag-ok"><span class="pill pill-ok">可免费创建账号/Key</span></td>
         </tr>
-        <tr>
-          <td><a href="#openrouter">OpenRouter :free</a></td>
+        <tr data-entry="openrouter" data-card="no" data-quota="recurring" data-verified="2026-10-21" data-search="OpenRouter :free 模型">
+          <td><a href="#openrouter">OpenRouter :free</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
           <td>未购满积分约 20 RPM / 50 RPD</td>
           <td class="tag-ok"><span class="pill pill-ok">可用免费模型起步</span></td>
         </tr>
-        <tr>
-          <td><a href="#workers-ai">Cloudflare Workers AI</a></td>
+        <tr data-entry="workers-ai" data-card="no" data-quota="recurring" data-verified="2026-10-21" data-search="Cloudflare Workers AI Neurons">
+          <td><a href="#workers-ai">Cloudflare Workers AI</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
           <td>10,000 Neurons/天免费</td>
           <td class="tag-ok"><span class="pill pill-ok">Workers Free 含免费额度</span></td>
         </tr>
-        <tr>
-          <td><a href="#mistral">Mistral Free mode</a></td>
+        <tr data-entry="mistral" data-card="no" data-quota="recurring" data-verified="2026-10-21" data-search="Mistral Free mode">
+          <td><a href="#mistral">Mistral Free mode</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
           <td>含每月 included usage；限额在 Admin → Limits</td>
           <td class="tag-ok"><span class="pill pill-ok">可建 Key 用不绑卡档</span></td>
         </tr>
-        <tr>
-          <td><a href="#nvidia">NVIDIA API Catalog</a></td>
+        <tr data-entry="nvidia" data-card="no" data-quota="recurring" data-verified="2026-10-21" data-search="NVIDIA API Catalog Developer">
+          <td><a href="#nvidia">NVIDIA API Catalog</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
           <td>Developer Program 托管端点免费原型</td>
           <td class="tag-ok"><span class="pill pill-ok">开发者计划可起步</span></td>
         </tr>
-        <tr>
-          <td><a href="#fireworks">Fireworks 起步积分</a></td>
+        <tr data-entry="fireworks" data-card="no" data-quota="credit" data-verified="2026-10-21" data-search="Fireworks 起步积分 $1 一次性">
+          <td><a href="#fireworks">Fireworks 起步积分</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
           <td>新账号约 $1 预付积分（一次性）</td>
           <td class="tag-ok"><span class="pill pill-ok">文档称可不加支付方式</span></td>
         </tr>
-        <tr>
-          <td><a href="#siliconflow">SiliconFlow 起步积分</a></td>
+        <tr data-entry="siliconflow" data-card="maybe" data-quota="credit" data-verified="2026-10-21" data-search="SiliconFlow 起步积分 用尽付费">
+          <td><a href="#siliconflow">SiliconFlow 起步积分</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
           <td>定价 FAQ：约 $1 免费积分起步</td>
           <td class="tag-warn"><span class="pill pill-warn">积分用尽后需付费；实名以控制台为准</span></td>
         </tr>
@@ -94,8 +191,11 @@
 
     <h2 id="entries">逐条说明</h2>
 
-    <article class="entry" id="gemini">
+    <article class="entry" id="gemini" data-entry="gemini" data-card="no" data-quota="recurring" data-verified="2026-10-21" data-search="Google Gemini Free Tier AI Studio">
+      <div class="entry-head">
       <h3>1. Google Gemini Developer API（Free Tier）</h3>
+      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
+    </div>
       <p class="one-liner">AI Studio 发 Key 即可调多款 Gemini；Free Tier 输入输出在定价页对多款 Flash 标为免费。</p>
       <dl>
         <dt>用途</dt>
@@ -114,8 +214,11 @@
       </p>
     </article>
 
-    <article class="entry" id="groq">
+    <article class="entry" id="groq" data-entry="groq" data-card="no" data-quota="recurring" data-verified="2026-10-21" data-search="Groq Free RPM RPD">
+      <div class="entry-head">
       <h3>2. GroqCloud API（Free）</h3>
+      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
+    </div>
       <p class="one-liner">LPU 推理，OpenAI 兼容端点；免费档按模型列 RPM/RPD/TPM/TPD。</p>
       <dl>
         <dt>用途</dt>
@@ -132,8 +235,11 @@
       </p>
     </article>
 
-    <article class="entry" id="openrouter">
+    <article class="entry" id="openrouter" data-entry="openrouter" data-card="no" data-quota="recurring" data-verified="2026-10-21" data-search="OpenRouter :free 模型">
+      <div class="entry-head">
       <h3>3. OpenRouter 免费模型（ID 以 <code>:free</code> 结尾）</h3>
+      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
+    </div>
       <p class="one-liner">聚合多家模型；免费变体有平台级请求上限，与付费模型不同。</p>
       <dl>
         <dt>用途</dt>
@@ -150,8 +256,11 @@
       </p>
     </article>
 
-    <article class="entry" id="workers-ai">
+    <article class="entry" id="workers-ai" data-entry="workers-ai" data-card="no" data-quota="recurring" data-verified="2026-10-21" data-search="Cloudflare Workers AI Neurons">
+      <div class="entry-head">
       <h3>4. Cloudflare Workers AI</h3>
+      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
+    </div>
       <p class="one-liner">边缘侧推理；Free 与 Paid 都含每日 Neurons 免费配额，超额才计费。</p>
       <dl>
         <dt>用途</dt>
@@ -168,8 +277,11 @@
       </p>
     </article>
 
-    <article class="entry" id="mistral">
+    <article class="entry" id="mistral" data-entry="mistral" data-card="no" data-quota="recurring" data-verified="2026-10-21" data-search="Mistral Free mode">
+      <div class="entry-head">
       <h3>5. Mistral AI · Free mode</h3>
+      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
+    </div>
       <p class="one-liner">Studio 可建 API Key；Free mode 含每月 included usage，超限需开 pay-as-you-go。</p>
       <dl>
         <dt>用途</dt>
@@ -187,8 +299,11 @@
       </p>
     </article>
 
-    <article class="entry" id="nvidia">
+    <article class="entry" id="nvidia" data-entry="nvidia" data-card="no" data-quota="recurring" data-verified="2026-10-21" data-search="NVIDIA API Catalog Developer">
+      <div class="entry-head">
       <h3>6. NVIDIA API Catalog（build.nvidia.com）</h3>
+      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
+    </div>
       <p class="one-liner">NIM / 托管模型目录；Developer Program 可免费调原型端点，非生产授权。</p>
       <dl>
         <dt>用途</dt>
@@ -205,8 +320,11 @@
       </p>
     </article>
 
-    <article class="entry" id="fireworks">
+    <article class="entry" id="fireworks" data-entry="fireworks" data-card="no" data-quota="credit" data-verified="2026-10-21" data-search="Fireworks 起步积分 $1 一次性">
+      <div class="entry-head">
       <h3>7. Fireworks AI · 新账号起步积分</h3>
+      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
+    </div>
       <p class="one-liner">Serverless 推理；新账号有小额预付积分，用完即停，不是按月永久免费。</p>
       <dl>
         <dt>用途</dt>
@@ -224,8 +342,11 @@
       </p>
     </article>
 
-    <article class="entry" id="siliconflow">
+    <article class="entry" id="siliconflow" data-entry="siliconflow" data-card="maybe" data-quota="credit" data-verified="2026-10-21" data-search="SiliconFlow 起步积分 用尽付费">
+      <div class="entry-head">
       <h3>8. SiliconFlow（硅基流动国际站口径）</h3>
+      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
+    </div>
       <p class="one-liner">聚合多家开源模型的推理平台；定价页 FAQ 写明约 $1 免费积分起步。</p>
       <dl>
         <dt>用途</dt>
@@ -258,9 +379,11 @@
   <footer class="site">
     <div class="wrap wrap--wide">
       <p class="footer-brand">Mogul Desk</p>
-      <p class="footer-meta">核验日期：2026-10-21（Asia/Shanghai） · <a href="about.html">关于本站</a></p>
+      <p class="footer-meta">核验日期：2026-10-21（Asia/Shanghai） · <a href="about.html">关于本站</a> · <a href="changelog.html">更新日志</a></p>
+      <p class="footer-errata">发现问题？<a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF&body=%E9%A1%B5%E9%9D%A2%EF%BC%9A%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A">发勘误邮件</a>（仅勘误 / 纠错，不是客服）。</p>
       <p class="footer-disclaimer">免责：额度与条款以各平台官网为准；本站无流量/收入承诺，未接入联盟链接。</p>
     </div>
   </footer>
+  <script src="../assets/compare-filter.js" defer></script>
 </body>
 </html>

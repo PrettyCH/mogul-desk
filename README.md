@@ -31,15 +31,24 @@ mogul-site/
 ├── robots.txt                         # 允许抓取 + Sitemap 指向
 ├── sitemap.xml                        # 本地写好的 Pages URL（部署后可改域名）
 ├── assets/
-│   ├── styles.css                     # 深色样式；表格横向滚动；打印友好
+│   ├── styles.css                     # 深色样式；筛选条；打印友好
+│   ├── compare-filter.js              # 对照表筛选 / 搜索（无构建）
 │   └── favicon.svg                    # 极简图标
 ├── pages/
-│   ├── free-static-hosting.html       # 静态托管对照（8 条）
-│   ├── free-tts-api.html              # 免费 TTS API 对照（8 条）
-│   ├── free-llm-api-no-card.html      # 免绑卡 LLM API 短名单（8 条）
-│   └── about.html                     # 本站说明（无收入承诺、如何核验）
+│   ├── free-static-hosting.html       # 静态托管对照（8 条，可筛商用）
+│   ├── free-tts-api.html              # 免费 TTS API 对照（8 条，可筛绑卡）
+│   ├── free-llm-api-no-card.html      # 免绑卡 LLM API（8 条，可筛绑卡/额度类型）
+│   ├── changelog.html                 # 更新日志
+│   └── about.html                     # 本站说明 + 勘误入口
 └── README.md                          # 本文件
 ```
+
+## 功能（2026-10-21）
+
+- 对照表：**状态筛选** + **关键词搜索**（过滤表行与下方条目卡；无匹配有空状态）
+- 每条 **核验：2026-10-21**（`data-verified`，表行 + 条目卡）
+- **更新日志**、页脚 / 关于页 **勘误 mailto**
+- Open Graph + JSON-LD（WebSite / ItemList）；skip link
 
 ## 本地预览
 

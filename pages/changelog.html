@@ -51,6 +51,22 @@
     <ol class="changelog">
       <li>
         <time datetime="2026-10-21">2026-10-21</time>
+        <h3>托管页 P0：统一 commercial / overage 枚举 + 商用边界加深</h3>
+        <p>由 <code>data/hosting.json</code> + <code>scripts/build-hosting.py</code> 生成。筛选「可商用」仅匹配 <code>allowed</code>。</p>
+        <ul>
+          <li><code>github-pages</code> commercial：旧 yes/no 口径 → <strong>forbidden</strong>（依据 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits">Pages limits</a>）</li>
+          <li><code>vercel-hobby</code> → <strong>forbidden</strong> / overage <strong>hard_stop</strong>（依据 <a href="https://vercel.com/docs/limits/fair-use-guidelines">Fair Use</a>）</li>
+          <li><code>cloudflare-pages</code>：旧「未见禁止」yes → <strong>conditional</strong>（ToS 无禁令但无正许；筛可商用排除）</li>
+          <li><code>netlify-free</code> → <strong>allowed</strong> / <strong>hard_stop</strong>（依据 <a href="https://www.netlify.com/blog/introducing-netlify-free-plan/">Free plan 博文</a> + credit docs）— 待 Codex 复核是否降级</li>
+          <li><code>render-static</code> / <code>surge</code> / <code>gitlab-pages</code> commercial → <strong>unverified</strong></li>
+          <li><code>firebase-hosting</code> → <strong>conditional</strong> / <strong>hard_stop</strong>（Spark 超限停站）</li>
+          <li>每条补：场景结论、超限后果、证据句、按行勘误 mailto（预填 id）</li>
+          <li>LLM 页：data 枚举迁到 card=none|…、freeType=recurring|trial_credit；筛选项文案与托管分离</li>
+        </ul>
+      </li>
+
+      <li>
+        <time datetime="2026-10-21">2026-10-21</time>
         <h3>接入 AIHOT：每日 AI 日报页</h3>
         <p>新增 <code>pages/ai-daily.html</code>，由 <code>scripts/build-ai-daily.py</code> 读取 <code>data/aihot-daily.json</code> 生成。条目优先链原文，AIHOT 作次要；首页与全站导航挂上「AI 日报」。</p>
         <ul>

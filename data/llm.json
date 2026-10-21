@@ -1,0 +1,70 @@
+{
+  "page": "free-llm-api-no-card",
+  "verified_at": "2026-10-21",
+  "entries": [
+    {
+      "id": "gemini",
+      "card": "none",
+      "freeType": "recurring",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "name": "Google Gemini API Free"
+    },
+    {
+      "id": "groq",
+      "card": "none",
+      "freeType": "recurring",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "name": "Groq Free"
+    },
+    {
+      "id": "openrouter",
+      "card": "none",
+      "freeType": "recurring",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "name": "OpenRouter :free"
+    },
+    {
+      "id": "workers-ai",
+      "card": "none",
+      "freeType": "recurring",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "name": "Cloudflare Workers AI"
+    },
+    {
+      "id": "mistral",
+      "card": "none",
+      "freeType": "recurring",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "name": "Mistral Free mode"
+    },
+    {
+      "id": "nvidia",
+      "card": "none",
+      "freeType": "recurring",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "name": "NVIDIA API Catalog"
+    },
+    {
+      "id": "fireworks",
+      "card": "none",
+      "freeType": "trial_credit",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "name": "Fireworks 起步积分"
+    },
+    {
+      "id": "siliconflow",
+      "card": "conditional",
+      "freeType": "trial_credit",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "name": "SiliconFlow 起步积分"
+    }
+  ]
+}

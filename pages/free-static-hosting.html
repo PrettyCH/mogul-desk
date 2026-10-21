@@ -3,27 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>免费静态托管对照 · Mogul Desk</title>
-  <meta name="description" content="GitHub Pages、Cloudflare Pages、Vercel、Netlify、Render、Surge、GitLab Pages、Firebase Hosting 的免费额度与商用条款对照（可核验）。" />
+  <title>免费静态托管对照：商用限制、额度与超限后果 · Mogul Desk</title>
+  <meta name="description" content="对照 GitHub Pages、Cloudflare Pages、Vercel Hobby、Netlify Free、Render、Surge、GitLab Pages、Firebase Hosting 的商用限制、额度与超限后果（含核验来源）。" />
   <meta name="theme-color" content="#161512" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://prettych.github.io/htmlTest/pages/free-static-hosting.html" />
-  <meta property="og:title" content="免费静态托管对照 · Mogul Desk" />
-  <meta property="og:description" content="GitHub Pages、Cloudflare Pages、Vercel、Netlify 等免费额度与商用条款对照（可核验）。" />
+  <meta property="og:title" content="免费静态托管对照：商用限制、额度与超限后果 · Mogul Desk" />
+  <meta property="og:description" content="对照 GitHub Pages、Cloudflare Pages、Vercel Hobby、Netlify Free、Render、Surge、GitLab Pages、Firebase Hosting 的商用限制、额度与超限后果（含核验来源）。" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://prettych.github.io/htmlTest/pages/free-static-hosting.html" />
   <meta property="og:locale" content="zh_CN" />
   <meta property="og:site_name" content="Mogul Desk" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="免费静态托管对照 · Mogul Desk" />
-  <meta name="twitter:description" content="GitHub Pages、Cloudflare Pages、Vercel、Netlify 等免费额度与商用条款对照（可核验）。" />
+  <meta name="twitter:title" content="免费静态托管对照：商用限制、额度与超限后果 · Mogul Desk" />
+  <meta name="twitter:description" content="对照 GitHub Pages、Cloudflare Pages、Vercel Hobby、Netlify Free、Render、Surge、GitLab Pages、Firebase Hosting 的商用限制、额度与超限后果（含核验来源）。" />
   <link rel="stylesheet" href="../assets/styles.css" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "免费静态托管对照",
-  "description": "GitHub Pages、Cloudflare Pages、Vercel、Netlify 等免费额度与商用条款对照（可核验）。",
+  "name": "免费静态托管对照：商用限制、额度与超限后果",
+  "description": "对照 GitHub Pages、Cloudflare Pages、Vercel Hobby、Netlify Free、Render、Surge、GitLab Pages、Firebase Hosting 的商用限制、额度与超限后果（含核验来源）。",
   "numberOfItems": 8,
   "itemListElement": [
     {
@@ -83,7 +83,7 @@
   <header class="site">
     <div class="inner">
       <a class="logo" href="../index.html"><span class="logo-mark" aria-hidden="true">M</span>Mogul <span>Desk</span></a>
-            <nav aria-label="主导航">
+      <nav aria-label="主导航">
         <a href="../index.html">首页</a>
         <a href="ai-daily.html">AI 日报</a>
         <a href="free-static-hosting.html" aria-current="page">静态托管</a>
@@ -98,14 +98,17 @@
   <main id="main" class="wrap wrap--wide" tabindex="-1">
     <section class="hero hero--page">
       <span class="badge">对照页</span>
-      <h1>免费静态托管：额度、商用与自定义域名</h1>
+      <h1>免费静态托管对照：商用限制、额度与超限后果</h1>
       <p class="lead">
-        面向个人开发者与独立站长。数字来自各平台公开文档（核验日期：2026-10-21（Asia/Shanghai））。政策会改，下结论前请点「来源」再看一眼。
+        面向独立开发者：落地页 / 作品集 / 卖数字产品 / SaaS 文档能不能放免费档？超限是停站还是扣费？数字来自各平台公开文档（核验：2026-10-21，Asia/Shanghai）。「未见禁止」≠ 允许商用。
       </p>
     </section>
 
     <div class="note">
-      <strong>怎么读这张表：</strong>「商用」指条款是否允许把免费档拿来跑生意站 / 卖货 / SaaS；不是「能不能挂广告」的绝对判决。Vercel Hobby 与 GitHub Pages 都有明确的非商用/非在线生意限制——这是很多人翻车的地方。
+      <strong>口径：</strong>
+      <code>commercial</code> = allowed | conditional | forbidden | unverified；
+      <code>overage</code> = soft_limit | hard_stop | bill_or_card | unverified。
+      筛「可商用」只含 <strong>allowed</strong>；conditional / unverified 默认排除。下结论前请点来源。
     </div>
 
     <h2>速览</h2>
@@ -124,9 +127,18 @@
         <div class="filter-group" data-filter-group="commercial" role="group" aria-label="按商用筛选">
           <span class="filter-group-label">商用</span>
           <button type="button" class="filter-chip is-active" data-filter-value="" aria-pressed="true">全部</button>
-          <button type="button" class="filter-chip" data-filter-value="yes" aria-pressed="false">可商用/未见禁令</button>
-          <button type="button" class="filter-chip" data-filter-value="no" aria-pressed="false">不可商用</button>
-          <button type="button" class="filter-chip" data-filter-value="unclear" aria-pressed="false">需核对</button>
+          <button type="button" class="filter-chip" data-filter-value="allowed" aria-pressed="false">可商用</button>
+          <button type="button" class="filter-chip" data-filter-value="conditional" aria-pressed="false">有条件</button>
+          <button type="button" class="filter-chip" data-filter-value="forbidden" aria-pressed="false">不可商用</button>
+          <button type="button" class="filter-chip" data-filter-value="unverified" aria-pressed="false">待核实</button>
+        </div>
+        <div class="filter-group" data-filter-group="overage" role="group" aria-label="按超限后果筛选">
+          <span class="filter-group-label">超限</span>
+          <button type="button" class="filter-chip is-active" data-filter-value="" aria-pressed="true">全部</button>
+          <button type="button" class="filter-chip" data-filter-value="soft_limit" aria-pressed="false">软限制</button>
+          <button type="button" class="filter-chip" data-filter-value="hard_stop" aria-pressed="false">硬停</button>
+          <button type="button" class="filter-chip" data-filter-value="bill_or_card" aria-pressed="false">扣费或要卡</button>
+          <button type="button" class="filter-chip" data-filter-value="unverified" aria-pressed="false">待核实</button>
         </div>
       </div>
       <p class="filter-empty" data-filter-status hidden role="status">没有匹配的条目。试试换关键词，或点「清除」。</p>
@@ -137,58 +149,76 @@
         <tr>
           <th>平台</th>
           <th>免费档要点</th>
-          <th>商用（免费档）</th>
-          <th>自定义域名</th>
+          <th>商用</th>
+          <th>超限</th>
+          <th>域名 / SSL</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
-        <tr data-entry="github-pages" data-commercial="no" data-verified="2026-10-21" data-search="GitHub Pages 不允许免费商业主机 1GB 100GB">
-          <td><a href="#github-pages">GitHub Pages</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
+        <tr id="row-github-pages" data-entry="github-pages" data-commercial="forbidden" data-overage="soft_limit" data-verify-status="ok" data-verified="2026-10-21" data-search="GitHub Pages forbidden commercial soft bandwidth 1GB 100GB">
+          <td><a href="#github-pages">GitHub Pages</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
           <td>站点 ≤ 1 GB；带宽软上限约 100 GB/月</td>
-          <td class="tag-bad"><span class="pill pill-bad">不允许当免费商业主机</span></td>
-          <td>支持</td>
+          <td class="tag-bad"><span class="pill pill-bad">禁止当免费商业主机</span></td>
+          <td class="tag-warn"><span class="pill pill-warn">超限软限制（可能限流/邮件提醒）</span></td>
+          <td>支持自定义域名 + HTTPS</td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-static-hosting%20%C2%B7%20github-pages&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-static-hosting.html%0Aid%EF%BC%9Agithub-pages%0A%E5%90%8D%E7%A7%B0%EF%BC%9AGitHub%20Pages%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acommercial%3Dforbidden%3B%20overage%3Dsoft_limit%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
         </tr>
-        <tr data-entry="cloudflare-pages" data-commercial="yes" data-verified="2026-10-21" data-search="Cloudflare Pages 未见禁止商用 500构建">
-          <td><a href="#cloudflare-pages">Cloudflare Pages</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
-          <td>500 次构建/月；每站 2 万文件；静态请求通常不计费</td>
-          <td class="tag-ok"><span class="pill pill-ok">未见等同「禁止商用」条款</span></td>
-          <td>每项目最多 100 个（Free）</td>
+        <tr id="row-cloudflare-pages" data-entry="cloudflare-pages" data-commercial="conditional" data-overage="hard_stop" data-verify-status="ok" data-verified="2026-10-21" data-search="Cloudflare Pages conditional builds 500 commercial ToS">
+          <td><a href="#cloudflare-pages">Cloudflare Pages</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
+          <td>500 次构建/月；每站 2 万文件；单文件 25 MiB</td>
+          <td class="tag-warn"><span class="pill pill-warn">有条件：ToS 无商用禁令，但 Free 无 SLA</span></td>
+          <td class="tag-bad"><span class="pill pill-bad">构建次数硬顶；静态流量通常宽裕</span></td>
+          <td>Free 每项目最多 100 自定义域名</td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-static-hosting%20%C2%B7%20cloudflare-pages&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-static-hosting.html%0Aid%EF%BC%9Acloudflare-pages%0A%E5%90%8D%E7%A7%B0%EF%BC%9ACloudflare%20Pages%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acommercial%3Dconditional%3B%20overage%3Dhard_stop%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
         </tr>
-        <tr data-entry="vercel-hobby" data-commercial="no" data-verified="2026-10-21" data-search="Vercel Hobby 非商用个人 100GB">
-          <td><a href="#vercel-hobby">Vercel Hobby</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
-          <td>Fast Data Transfer 100 GB 等</td>
+        <tr id="row-vercel-hobby" data-entry="vercel-hobby" data-commercial="forbidden" data-overage="hard_stop" data-verify-status="ok" data-verified="2026-10-21" data-search="Vercel Hobby forbidden non-commercial hard_stop 100GB">
+          <td><a href="#vercel-hobby">Vercel Hobby</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
+          <td>Fast Data Transfer 100 GB 等（见 Hobby 表）</td>
           <td class="tag-bad"><span class="pill pill-bad">仅限非商用个人用途</span></td>
-          <td>每项目最多 50 个域名</td>
+          <td class="tag-bad"><span class="pill pill-bad">超限后多数能力暂停约 30 天</span></td>
+          <td>每项目最多 50 域名；自动 HTTPS</td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-static-hosting%20%C2%B7%20vercel-hobby&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-static-hosting.html%0Aid%EF%BC%9Avercel-hobby%0A%E5%90%8D%E7%A7%B0%EF%BC%9AVercel%20Hobby%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acommercial%3Dforbidden%3B%20overage%3Dhard_stop%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
         </tr>
-        <tr data-entry="netlify-free" data-commercial="unclear" data-verified="2026-10-21" data-search="Netlify Free credits 需核对商用">
-          <td><a href="#netlify-free">Netlify Free</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
-          <td>300 credits/月；带宽 20 credits/GB</td>
-          <td class="tag-warn"><span class="pill pill-warn">文档未写死禁止商用；额度耗尽会暂停</span></td>
-          <td>支持 + SSL</td>
+        <tr id="row-netlify-free" data-entry="netlify-free" data-commercial="allowed" data-overage="hard_stop" data-verify-status="ok" data-verified="2026-10-21" data-search="Netlify Free allowed commercial 300 credits hard_stop">
+          <td><a href="#netlify-free">Netlify Free</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
+          <td>300 credits/月硬顶；带宽约 20 credits/GB</td>
+          <td class="tag-ok"><span class="pill pill-ok">官方博文允许商用项目</span></td>
+          <td class="tag-bad"><span class="pill pill-bad">积分硬顶，耗尽暂停至下周期</span></td>
+          <td>支持自定义域名 + SSL</td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-static-hosting%20%C2%B7%20netlify-free&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-static-hosting.html%0Aid%EF%BC%9Anetlify-free%0A%E5%90%8D%E7%A7%B0%EF%BC%9ANetlify%20Free%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acommercial%3Dallowed%3B%20overage%3Dhard_stop%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
         </tr>
-        <tr data-entry="render-static" data-commercial="unclear" data-verified="2026-10-21" data-search="Render Static 可商用超额绑卡">
-          <td><a href="#render-static">Render Static Sites</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
+        <tr id="row-render-static" data-entry="render-static" data-commercial="unverified" data-overage="bill_or_card" data-verify-status="ok" data-verified="2026-10-21" data-search="Render Static unverified bill_or_card 5GB">
+          <td><a href="#render-static">Render Static Sites</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
           <td>静态站免费部署；Hobby 含 5 GB 出站带宽</td>
-          <td class="tag-warn"><span class="pill pill-warn">可商用，但超额需绑卡否则可能停服</span></td>
-          <td>Hobby 含 2 个域名额度</td>
+          <td class="tag-warn"><span class="pill pill-warn">待核实（文档无正许/禁止句）</span></td>
+          <td class="tag-warn"><span class="pill pill-warn">超额：有卡则计费，无卡则停服</span></td>
+          <td>Hobby 含 2 个自定义域名额度；自动 TLS</td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-static-hosting%20%C2%B7%20render-static&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-static-hosting.html%0Aid%EF%BC%9Arender-static%0A%E5%90%8D%E7%A7%B0%EF%BC%9ARender%20Static%20Sites%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acommercial%3Dunverified%3B%20overage%3Dbill_or_card%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
         </tr>
-        <tr data-entry="surge" data-commercial="unclear" data-verified="2026-10-21" data-search="Surge.sh 需核对条款">
-          <td><a href="#surge">Surge.sh</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
-          <td>免费无限发布；基础 SSL</td>
-          <td class="tag-warn"><span class="pill pill-warn">以官网条款为准；Professional 才有强制 HTTPS 等</span></td>
-          <td>免费档支持</td>
+        <tr id="row-surge" data-entry="surge" data-commercial="unverified" data-overage="unverified" data-verify-status="ok" data-verified="2026-10-21" data-search="Surge.sh unverified commercial overage">
+          <td><a href="#surge">Surge.sh</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
+          <td>定价页：Unlimited publishing；Basic SSL</td>
+          <td class="tag-warn"><span class="pill pill-warn">待核实</span></td>
+          <td class="tag-warn"><span class="pill pill-warn">超限后果未在定价页写清</span></td>
+          <td>免费档：自定义域名 + Basic SSL（强制 HTTPS 在 Professional）</td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-static-hosting%20%C2%B7%20surge&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-static-hosting.html%0Aid%EF%BC%9Asurge%0A%E5%90%8D%E7%A7%B0%EF%BC%9ASurge.sh%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acommercial%3Dunverified%3B%20overage%3Dunverified%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
         </tr>
-        <tr data-entry="gitlab-pages" data-commercial="unclear" data-verified="2026-10-21" data-search="GitLab Pages ToS 需核对">
-          <td><a href="#gitlab-pages">GitLab Pages</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
-          <td>站点最大 1 GB；每站最多 150 个自定义域名</td>
-          <td class="tag-warn"><span class="pill pill-warn">官方设置页未写「禁止商用」一句；以 ToS 为准</span></td>
-          <td>支持（gitlab.io / 自定义）</td>
+        <tr id="row-gitlab-pages" data-entry="gitlab-pages" data-commercial="unverified" data-overage="soft_limit" data-verify-status="ok" data-verified="2026-10-21" data-search="GitLab Pages unverified soft_limit 1GB 150 domains">
+          <td><a href="#gitlab-pages">GitLab Pages</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
+          <td>站点最大 1 GB；每站最多 150 自定义域名</td>
+          <td class="tag-warn"><span class="pill pill-warn">待核实（设置页仅技术上限）</span></td>
+          <td class="tag-warn"><span class="pill pill-warn">带宽无公开硬顶；滥用可能限流</span></td>
+          <td>支持 gitlab.io / 自定义域名 + TLS</td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-static-hosting%20%C2%B7%20gitlab-pages&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-static-hosting.html%0Aid%EF%BC%9Agitlab-pages%0A%E5%90%8D%E7%A7%B0%EF%BC%9AGitLab%20Pages%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acommercial%3Dunverified%3B%20overage%3Dsoft_limit%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
         </tr>
-        <tr data-entry="firebase-hosting" data-commercial="unclear" data-verified="2026-10-21" data-search="Firebase Hosting Spark 超量停服">
-          <td><a href="#firebase-hosting">Firebase Hosting</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
-          <td>存储 10 GB；传输约 10 GB/月（Spark）</td>
-          <td class="tag-warn"><span class="pill pill-warn">可商用；超量需升 Blaze，否则站点可能被停</span></td>
-          <td>支持</td>
+        <tr id="row-firebase-hosting" data-entry="firebase-hosting" data-commercial="conditional" data-overage="hard_stop" data-verify-status="ok" data-verified="2026-10-21" data-search="Firebase Hosting conditional hard_stop Spark 10GB">
+          <td><a href="#firebase-hosting">Firebase Hosting</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
+          <td>存储 10 GB；传输约 10 GB/月（Spark 免费用量）</td>
+          <td class="tag-warn"><span class="pill pill-warn">可用于生产，但 Spark 超限会停站</span></td>
+          <td class="tag-bad"><span class="pill pill-bad">Spark 超限宽限期后禁用至下月或升 Blaze</span></td>
+          <td>支持自定义域名 + 托管证书</td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-static-hosting%20%C2%B7%20firebase-hosting&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-static-hosting.html%0Aid%EF%BC%9Afirebase-hosting%0A%E5%90%8D%E7%A7%B0%EF%BC%9AFirebase%20Hosting%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acommercial%3Dconditional%3B%20overage%3Dhard_stop%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
         </tr>
       </tbody>
     </table>
@@ -196,113 +226,178 @@
 
     <h2 id="entries">逐条说明</h2>
 
-    <article class="entry" id="github-pages" data-entry="github-pages" data-commercial="no" data-verified="2026-10-21" data-search="GitHub Pages 不允许免费商业主机 1GB 100GB">
+    <article class="entry" id="github-pages" data-entry="github-pages" data-commercial="forbidden" data-overage="soft_limit" data-verify-status="ok" data-verified="2026-10-21" data-search="GitHub Pages forbidden commercial soft bandwidth 1GB 100GB">
       <div class="entry-head">
-      <h3>1. GitHub Pages</h3>
-      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
-    </div>
-      <p class="one-liner">从仓库直接托管静态站；文档与开源项目最省事，但明确禁止当免费商业主机。</p>
+        <h3>1. GitHub Pages</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
+      <p class="one-liner">从仓库托管静态站；文档与开源项目最省事，但明文禁止当免费商业主机。</p>
       <dl>
-        <dt>用途</dt>
-        <dd>个人站、项目文档、组织展示页；默认 <code>*.github.io</code>。</dd>
+        <dt>场景结论</dt>
+        <dd>
+          <ul class="scenario-list">
+            <li><strong>落地页：</strong>不适合商用落地页</li>
+            <li><strong>作品集：</strong>个人作品集/开源文档可以</li>
+            <li><strong>卖数字产品：</strong>卖数字产品/收款页不行</li>
+            <li><strong>SaaS 文档：</strong>促成商业交易或提供商业 SaaS 的站不行；纯开源项目文档通常可以</li>
+          </ul>
+        </dd>
         <dt>免费额度</dt>
-        <dd>发布站点 ≤ 1 GB；带宽软上限约 100 GB/月；软限制约每小时 10 次构建（自定义 Actions 工作流不受此限）。</dd>
-        <dt>商用</dt>
-        <dd>官方写明：不打算也不允许用作免费 Web 主机去跑在线生意、电商，或主要促成商业交易 / 提供商业 SaaS 的网站。</dd>
-        <dt>备注</dt>
-        <dd>免费账号上公开仓库即可用；敏感交易（密码、信用卡）也不适合放这里。</dd>
+        <dd>站点 ≤ 1 GB；带宽软上限约 100 GB/月</dd>
+        <dt>商用（免费档）</dt>
+        <dd><code>forbidden</code> — 禁止当免费商业主机</dd>
+        <dt>超限后果</dt>
+        <dd><code>soft_limit</code> — 带宽/构建为软上限；超额后站点可能无法正常服务，或收到 Support 邮件建议加 CDN/迁站；触发速率限制时返回 HTTP 429。</dd>
+        <dt>自定义域名 / SSL</dt>
+        <dd>支持自定义域名 + HTTPS</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">GitHub Pages is not intended for or allowed to be used as a free web-hosting service to run your online business, e-commerce site, or any other website that is primarily directed at either facilitating commercial transactions or providing commercial software as a service (SaaS).</dd>
       </dl>
       <p class="sources">
         来源：
         <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits" rel="noopener" target="_blank">Pages limits</a>
         <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages" rel="noopener" target="_blank">About Pages</a>
       </p>
+      
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-static-hosting%20%C2%B7%20github-pages&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-static-hosting.html%0Aid%EF%BC%9Agithub-pages%0A%E5%90%8D%E7%A7%B0%EF%BC%9AGitHub%20Pages%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acommercial%3Dforbidden%3B%20overage%3Dsoft_limit%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=github-pages）</p>
     </article>
 
-    <article class="entry" id="cloudflare-pages" data-entry="cloudflare-pages" data-commercial="yes" data-verified="2026-10-21" data-search="Cloudflare Pages 未见禁止商用 500构建">
+    <article class="entry" id="cloudflare-pages" data-entry="cloudflare-pages" data-commercial="conditional" data-overage="hard_stop" data-verify-status="ok" data-verified="2026-10-21" data-search="Cloudflare Pages conditional builds 500 commercial ToS">
       <div class="entry-head">
-      <h3>2. Cloudflare Pages</h3>
-      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
-    </div>
-      <p class="one-liner">边缘 CDN 上的静态站；Free 档构建次数与文件数是硬门槛，静态流量通常很宽裕。</p>
+        <h3>2. Cloudflare Pages</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
+      <p class="one-liner">边缘静态站；构建/文件数有硬顶。商用靠 ToS 无禁令 + 社区确认，本站标 conditional（筛「可商用」不会命中）。</p>
       <dl>
-        <dt>用途</dt>
-        <dd>博客、文档、营销落地页；可接 Pages Functions（计入 Workers 配额）。</dd>
+        <dt>场景结论</dt>
+        <dd>
+          <ul class="scenario-list">
+            <li><strong>落地页：</strong>商用落地页常见做法（无正许句，依赖 ToS 无禁令）</li>
+            <li><strong>作品集：</strong>可以</li>
+            <li><strong>卖数字产品：</strong>静态卖货页常见；收款/卡数据勿放 Free CDN 滥用场景</li>
+            <li><strong>SaaS 文档：</strong>产品文档可以；注意 Free 流量优先级低、共享 IP</li>
+          </ul>
+        </dd>
         <dt>免费额度</dt>
-        <dd>每月 500 次构建、同时 1 个构建；每站最多 20,000 文件、单文件 25 MiB；每账号最多 100 个项目；Free 每项目最多 100 个自定义域名。</dd>
-        <dt>商用</dt>
-        <dd>平台介绍与定价页强调静态请求免费；公开对照文常写「未见等同 GitHub/Vercel 的非商用禁令」。正式商用仍应读当前 ToS。</dd>
-        <dt>备注</dt>
-        <dd>Cloudflare 现更推荐用 Workers + Static Assets 开新项目；Pages 仍可用。</dd>
+        <dd>500 次构建/月；每站 2 万文件；单文件 25 MiB</dd>
+        <dt>商用（免费档）</dt>
+        <dd><code>conditional</code> — 有条件：ToS 无商用禁令，但 Free 无 SLA</dd>
+        <dt>超限后果</dt>
+        <dd><code>hard_stop</code> — Free：每月 500 次构建、同时 1 个构建——用尽后当月无法再构建部署。文件数/大小硬顶。静态资源本身不按 GB 计费（以当前 Workers &amp; Pages 定价页为准）；Functions 计入 Workers 配额。</dd>
+        <dt>自定义域名 / SSL</dt>
+        <dd>Free 每项目最多 100 自定义域名</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">Self-Serve Subscription Agreement §2.2.1 Restrictions 未列「禁止商用」；Pages Free limits：500 builds/month、20,000 files、25 MiB/file。社区员工亦确认 Free 可用于 business，但无 SLA。</dd>
       </dl>
       <p class="sources">
         来源：
         <a href="https://developers.cloudflare.com/pages/platform/limits/" rel="noopener" target="_blank">Pages limits</a>
         <a href="https://www.cloudflare.com/plans/developer-platform-pricing/" rel="noopener" target="_blank">Workers &amp; Pages pricing</a>
+        <a href="https://www.cloudflare.com/terms/" rel="noopener" target="_blank">Cloudflare terms</a>
       </p>
+      
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-static-hosting%20%C2%B7%20cloudflare-pages&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-static-hosting.html%0Aid%EF%BC%9Acloudflare-pages%0A%E5%90%8D%E7%A7%B0%EF%BC%9ACloudflare%20Pages%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acommercial%3Dconditional%3B%20overage%3Dhard_stop%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=cloudflare-pages）</p>
     </article>
 
-    <article class="entry" id="vercel-hobby" data-entry="vercel-hobby" data-commercial="no" data-verified="2026-10-21" data-search="Vercel Hobby 非商用个人 100GB">
+    <article class="entry" id="vercel-hobby" data-entry="vercel-hobby" data-commercial="forbidden" data-overage="hard_stop" data-verify-status="ok" data-verified="2026-10-21" data-search="Vercel Hobby forbidden non-commercial hard_stop 100GB">
       <div class="entry-head">
-      <h3>3. Vercel Hobby</h3>
-      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
-    </div>
-      <p class="one-liner">Next.js / 前端实验友好；Hobby <strong>明文限非商用个人用途</strong>。</p>
+        <h3>3. Vercel Hobby</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
+      <p class="one-liner">Next.js 友好；Hobby 明文限非商用个人用途，商用必须 Pro。</p>
       <dl>
-        <dt>用途</dt>
-        <dd>个人项目、演示、学习；框架集成强。</dd>
+        <dt>场景结论</dt>
+        <dd>
+          <ul class="scenario-list">
+            <li><strong>落地页：</strong>卖产品/服务的落地页不行</li>
+            <li><strong>作品集：</strong>个人作品集可以</li>
+            <li><strong>卖数字产品：</strong>不行（收款、广告变现、付费建站均算商用）</li>
+            <li><strong>SaaS 文档：</strong>商业 SaaS 文档/营销站不行；需 Pro</li>
+          </ul>
+        </dd>
         <dt>免费额度</dt>
-        <dd>含 Fast Data Transfer 100 GB、Fast Origin Transfer 10 GB、CDN Requests 100 万、Function Invocations 100 万、Active CPU 4 小时等（按月）；最多 200 项目、每项目 50 域名、每天 100 次部署。</dd>
-        <dt>商用</dt>
-        <dd>Fair Use：Hobby 仅限 non-commercial, personal use；卖产品/服务、广告变现等需 Pro。</dd>
-        <dt>备注</dt>
-        <dd>多数额度用超后需等约 30 天周期恢复（部分分析类暂停更短）。</dd>
+        <dd>Fast Data Transfer 100 GB 等（见 Hobby 表）</dd>
+        <dt>商用（免费档）</dt>
+        <dd><code>forbidden</code> — 仅限非商用个人用途</dd>
+        <dt>超限后果</dt>
+        <dd><code>hard_stop</code> — Hobby 超额后多数用量需等约 30 天周期恢复才能再用；Web Analytics 等可有更短暂停。违规商用可能导致部署/账号被暂停。</dd>
+        <dt>自定义域名 / SSL</dt>
+        <dd>每项目最多 50 域名；自动 HTTPS</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">Hobby teams are restricted to non-commercial personal use only. All commercial usage of the platform requires either a Pro or Enterprise plan.</dd>
       </dl>
       <p class="sources">
         来源：
         <a href="https://vercel.com/docs/plans/hobby" rel="noopener" target="_blank">Hobby plan</a>
         <a href="https://vercel.com/docs/limits/fair-use-guidelines" rel="noopener" target="_blank">Fair Use Guidelines</a>
       </p>
+      
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-static-hosting%20%C2%B7%20vercel-hobby&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-static-hosting.html%0Aid%EF%BC%9Avercel-hobby%0A%E5%90%8D%E7%A7%B0%EF%BC%9AVercel%20Hobby%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acommercial%3Dforbidden%3B%20overage%3Dhard_stop%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=vercel-hobby）</p>
     </article>
 
-    <article class="entry" id="netlify-free" data-entry="netlify-free" data-commercial="unclear" data-verified="2026-10-21" data-search="Netlify Free credits 需核对商用">
+    <article class="entry" id="netlify-free" data-entry="netlify-free" data-commercial="allowed" data-overage="hard_stop" data-verify-status="ok" data-verified="2026-10-21" data-search="Netlify Free allowed commercial 300 credits hard_stop">
       <div class="entry-head">
-      <h3>4. Netlify Free（Credit-based）</h3>
-      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
-    </div>
-      <p class="one-liner">2025-09-04 后新账号用积分制：Free 每月 300 credits，耗尽硬停。</p>
+        <h3>4. Netlify Free</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
+      <p class="one-liner">积分制 Free；官方博文写明可部署商用项目，但额度硬顶、适合小流量。</p>
       <dl>
-        <dt>用途</dt>
-        <dd>静态站 + 表单、预览部署；适合中小流量实验。</dd>
+        <dt>场景结论</dt>
+        <dd>
+          <ul class="scenario-list">
+            <li><strong>落地页：</strong>可以（额度紧）</li>
+            <li><strong>作品集：</strong>可以</li>
+            <li><strong>卖数字产品：</strong>可以，但 Free 适合小实验级流量</li>
+            <li><strong>SaaS 文档：</strong>可以；监控/安全能力弱于付费档</li>
+          </ul>
+        </dd>
         <dt>免费额度</dt>
-        <dd>300 credits/月（不可自动充值）。带宽约 20 credits/GB；生产部署每次 15 credits；Web Requests 约 2 credits / 1 万次。若几乎只烧带宽，大约折合十几 GB 量级。</dd>
-        <dt>商用</dt>
-        <dd>Credit-based 文档强调 Free 适合小实验；未在同页写死「禁止商用」。额度耗尽后项目会暂停直到下个周期。</dd>
-        <dt>备注</dt>
-        <dd>旧账号可能仍是 Legacy 套餐；本文按新积分制描述。</dd>
+        <dd>300 credits/月硬顶；带宽约 20 credits/GB</dd>
+        <dt>商用（免费档）</dt>
+        <dd><code>allowed</code> — 官方博文允许商用项目</dd>
+        <dt>超限后果</dt>
+        <dd><code>hard_stop</code> — Credit-based Free：300 credits/月、不可 auto recharge。耗尽后项目硬停，直到下个计费周期或升级付费档。带宽约 20 credits/GB；生产部署每次 15 credits。</dd>
+        <dt>自定义域名 / SSL</dt>
+        <dd>支持自定义域名 + SSL</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">Netlify Free plan blog: “On the Free plan, you can deploy commercial projects, personal sites, or other creative explorations…” Credit docs: 300 credits/month with credit hard limit, no recharge.</dd>
       </dl>
       <p class="sources">
         来源：
         <a href="https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/credit-based-pricing-plans/" rel="noopener" target="_blank">Credit-based plans</a>
+        <a href="https://www.netlify.com/blog/introducing-netlify-free-plan/" rel="noopener" target="_blank">Introducing Free plan (blog)</a>
         <a href="https://www.netlify.com/pricing" rel="noopener" target="_blank">Pricing</a>
       </p>
+      <p class="note note--inline"><strong>口径备注：</strong>博文是否仍覆盖 2025-09 后 credit-based Free——待二次确认</p>
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-static-hosting%20%C2%B7%20netlify-free&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-static-hosting.html%0Aid%EF%BC%9Anetlify-free%0A%E5%90%8D%E7%A7%B0%EF%BC%9ANetlify%20Free%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acommercial%3Dallowed%3B%20overage%3Dhard_stop%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=netlify-free）</p>
     </article>
 
-    <article class="entry" id="render-static" data-entry="render-static" data-commercial="unclear" data-verified="2026-10-21" data-search="Render Static 可商用超额绑卡">
+    <article class="entry" id="render-static" data-entry="render-static" data-commercial="unverified" data-overage="bill_or_card" data-verify-status="ok" data-verified="2026-10-21" data-search="Render Static unverified bill_or_card 5GB">
       <div class="entry-head">
-      <h3>5. Render Static Sites</h3>
-      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
-    </div>
-      <p class="one-liner">静态站本身免费部署，但流量与构建分钟计入工作区月度配额。</p>
+        <h3>5. Render Static Sites</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
+      <p class="one-liner">静态站免费部署，但 5 GB 带宽很小；商用是否允许官方未写死——本站标 unverified。</p>
       <dl>
-        <dt>用途</dt>
-        <dd>前端站、文档、博客；全局 CDN、自动 HTTPS、PR 预览。</dd>
+        <dt>场景结论</dt>
+        <dd>
+          <ul class="scenario-list">
+            <li><strong>落地页：</strong>技术上可部署；商用条款待核实</li>
+            <li><strong>作品集：</strong>可以（额度 5 GB 紧）</li>
+            <li><strong>卖数字产品：</strong>商用条款待核实</li>
+            <li><strong>SaaS 文档：</strong>商用条款待核实</li>
+          </ul>
+        </dd>
         <dt>免费额度</dt>
-        <dd>静态站免费部署。Hobby 工作区每月含 <strong>5 GB</strong> 出站带宽；超出且未绑支付方式时，服务可能被挂起至下月。</dd>
-        <dt>商用</dt>
-        <dd>文档未把静态站限定为「仅个人」；适合有预算绑卡的小生意站，但 5 GB 对图片站很紧。</dd>
-        <dt>备注</dt>
-        <dd>Hobby 含 2 个自定义域名额度，超出按文档另行计费。</dd>
+        <dd>静态站免费部署；Hobby 含 5 GB 出站带宽</dd>
+        <dt>商用（免费档）</dt>
+        <dd><code>unverified</code> — 待核实（文档无正许/禁止句）</dd>
+        <dt>超限后果</dt>
+        <dd><code>bill_or_card</code> — Hobby 工作区每月含 5 GB 出站带宽。超出且已绑支付方式：按 GB 计费；未绑支付方式：工作区服务会被挂起直至下月。</dd>
+        <dt>自定义域名 / SSL</dt>
+        <dd>Hobby 含 2 个自定义域名额度；自动 TLS</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">Static sites are free to deploy; outbound bandwidth FAQ: without payment method, Render spins down services until next month; with payment method, bills overage.</dd>
       </dl>
       <p class="sources">
         来源：
@@ -310,84 +405,125 @@
         <a href="https://render.com/docs/outbound-bandwidth" rel="noopener" target="_blank">Outbound bandwidth</a>
         <a href="https://render.com/docs/free" rel="noopener" target="_blank">Deploy for Free</a>
       </p>
+      <p class="note note--inline"><strong>口径待复核：</strong>商用字段暂标 unverified，列入 Codex 核口径清单。</p>
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-static-hosting%20%C2%B7%20render-static&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-static-hosting.html%0Aid%EF%BC%9Arender-static%0A%E5%90%8D%E7%A7%B0%EF%BC%9ARender%20Static%20Sites%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acommercial%3Dunverified%3B%20overage%3Dbill_or_card%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=render-static）</p>
     </article>
 
-    <article class="entry" id="surge" data-entry="surge" data-commercial="unclear" data-verified="2026-10-21" data-search="Surge.sh 需核对条款">
+    <article class="entry" id="surge" data-entry="surge" data-commercial="unverified" data-overage="unverified" data-verify-status="ok" data-verified="2026-10-21" data-search="Surge.sh unverified commercial overage">
       <div class="entry-head">
-      <h3>6. Surge.sh</h3>
-      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
-    </div>
-      <p class="one-liner">命令行把本地文件夹发布成静态站；免费档强调无限发布 + 自定义域名 + 基础 SSL。</p>
+        <h3>6. Surge.sh</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
+      <p class="one-liner">CLI 发布静态站；定价页无商用禁令也无超限细则——双项 unverified。</p>
       <dl>
-        <dt>用途</dt>
-        <dd>快速预览、简单落地页、课程作业站。</dd>
+        <dt>场景结论</dt>
+        <dd>
+          <ul class="scenario-list">
+            <li><strong>落地页：</strong>技术可发布；商用条款待核实</li>
+            <li><strong>作品集：</strong>常见用途</li>
+            <li><strong>卖数字产品：</strong>商用条款待核实</li>
+            <li><strong>SaaS 文档：</strong>生产向功能多在 Professional</li>
+          </ul>
+        </dd>
         <dt>免费额度</dt>
-        <dd>定价页：Unlimited publishing、Custom domain、Basic SSL。Professional（约 $30/月）才有强制 HTTPS、自定义重定向、密码保护等。</dd>
-        <dt>商用</dt>
-        <dd>定价页未写「禁止商用」；生产向功能多在 Professional。请自行阅读当前条款。</dd>
-        <dt>备注</dt>
-        <dd>部署 API 文档另有单项目文件数/体积一类限制，大规模站请先查 API docs。</dd>
+        <dd>定价页：Unlimited publishing；Basic SSL</dd>
+        <dt>商用（免费档）</dt>
+        <dd><code>unverified</code> — 待核实</dd>
+        <dt>超限后果</dt>
+        <dd><code>unverified</code> — 公开定价页未写带宽硬顶或停服规则；Professional（约 $30/月）才有强制 HTTPS、自定义重定向、密码保护等。大规模限制需另查 API docs——本站不编造数字。</dd>
+        <dt>自定义域名 / SSL</dt>
+        <dd>免费档：自定义域名 + Basic SSL（强制 HTTPS 在 Professional）</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">Pricing page lists Free: Unlimited publishing, Custom domain, Basic SSL. No commercial-forbid sentence on that page; no clear overage policy published there.</dd>
       </dl>
       <p class="sources">
         来源：
         <a href="https://surge.sh/pricing" rel="noopener" target="_blank">Pricing</a>
         <a href="https://surge.sh/docs/getting-started" rel="noopener" target="_blank">Getting started</a>
       </p>
+      <p class="note note--inline"><strong>口径待复核：</strong>商用字段暂标 unverified，列入 Codex 核口径清单。</p>
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-static-hosting%20%C2%B7%20surge&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-static-hosting.html%0Aid%EF%BC%9Asurge%0A%E5%90%8D%E7%A7%B0%EF%BC%9ASurge.sh%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acommercial%3Dunverified%3B%20overage%3Dunverified%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=surge）</p>
     </article>
 
-    <article class="entry" id="gitlab-pages" data-entry="gitlab-pages" data-commercial="unclear" data-verified="2026-10-21" data-search="GitLab Pages ToS 需核对">
+    <article class="entry" id="gitlab-pages" data-entry="gitlab-pages" data-commercial="unverified" data-overage="soft_limit" data-verify-status="ok" data-verified="2026-10-21" data-search="GitLab Pages unverified soft_limit 1GB 150 domains">
       <div class="entry-head">
-      <h3>7. GitLab Pages</h3>
-      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
-    </div>
-      <p class="one-liner">跟 GitLab CI 产物绑定；适合已经在 GitLab 上的文档与项目站。</p>
+        <h3>7. GitLab Pages</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
+      <p class="one-liner">跟 GitLab CI 产物绑定；技术上限清楚，商用是否允许未在同页写明。</p>
       <dl>
-        <dt>用途</dt>
-        <dd>项目文档、静态站点；默认 <code>*.gitlab.io</code>。</dd>
+        <dt>场景结论</dt>
+        <dd>
+          <ul class="scenario-list">
+            <li><strong>落地页：</strong>商用条款待核实</li>
+            <li><strong>作品集：</strong>项目文档常见</li>
+            <li><strong>卖数字产品：</strong>商用条款待核实</li>
+            <li><strong>SaaS 文档：</strong>已在 GitLab 的项目文档合适；商用待核实</li>
+          </ul>
+        </dd>
         <dt>免费额度</dt>
-        <dd>GitLab.com：站点最大 1 GB；每站最多 150 个自定义域名；支持 TLS。带宽无固定公开硬顶（滥用仍可能受限）。</dd>
-        <dt>商用</dt>
-        <dd>gitlab.com 设置页列出技术上限，未在同页写「禁止商用」；正式用途请读 GitLab 服务条款。</dd>
-        <dt>备注</dt>
-        <dd>站点大小与 CI artifact 上限相关（GitLab.com artifact 压缩上限 1 GB）。</dd>
+        <dd>站点最大 1 GB；每站最多 150 自定义域名</dd>
+        <dt>商用（免费档）</dt>
+        <dd><code>unverified</code> — 待核实（设置页仅技术上限）</dd>
+        <dt>超限后果</dt>
+        <dd><code>soft_limit</code> — GitLab.com Pages：最大站点 1 GB（与 CI artifact 上限相关）；自定义域名最多 150。带宽无固定公开硬顶；存在 Pages 相关 rate limits。正式滥用处置以 GitLab ToS 为准。</dd>
+        <dt>自定义域名 / SSL</dt>
+        <dd>支持 gitlab.io / 自定义域名 + TLS</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">GitLab.com settings list Pages max site size 1 GB and 150 custom domains; no commercial-forbid line on that page.</dd>
       </dl>
       <p class="sources">
         来源：
         <a href="https://docs.gitlab.com/user/gitlab_com/" rel="noopener" target="_blank">GitLab.com settings（含 Pages）</a>
         <a href="https://docs.gitlab.com/user/project/pages/" rel="noopener" target="_blank">GitLab Pages</a>
       </p>
+      <p class="note note--inline"><strong>口径待复核：</strong>商用字段暂标 unverified，列入 Codex 核口径清单。</p>
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-static-hosting%20%C2%B7%20gitlab-pages&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-static-hosting.html%0Aid%EF%BC%9Agitlab-pages%0A%E5%90%8D%E7%A7%B0%EF%BC%9AGitLab%20Pages%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acommercial%3Dunverified%3B%20overage%3Dsoft_limit%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=gitlab-pages）</p>
     </article>
 
-    <article class="entry" id="firebase-hosting" data-entry="firebase-hosting" data-commercial="unclear" data-verified="2026-10-21" data-search="Firebase Hosting Spark 超量停服">
+    <article class="entry" id="firebase-hosting" data-entry="firebase-hosting" data-commercial="conditional" data-overage="hard_stop" data-verify-status="ok" data-verified="2026-10-21" data-search="Firebase Hosting conditional hard_stop Spark 10GB">
       <div class="entry-head">
-      <h3>8. Firebase Hosting（Spark / 免费用量）</h3>
-      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
-    </div>
-      <p class="one-liner">Google 全球 CDN 静态托管；免费档有明确存储与月传输上限。</p>
+        <h3>8. Firebase Hosting</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
+      <p class="one-liner">Google CDN 静态托管；无「禁止商用」句，但 Spark 超限会硬停——标 conditional。</p>
       <dl>
-        <dt>用途</dt>
-        <dd>Web App 前端、活动页；与 Firebase 生态集成方便。</dd>
+        <dt>场景结论</dt>
+        <dd>
+          <ul class="scenario-list">
+            <li><strong>落地页：</strong>可以，注意 10 GB/月传输</li>
+            <li><strong>作品集：</strong>可以</li>
+            <li><strong>卖数字产品：</strong>可以；建议 Blaze + 预算告警</li>
+            <li><strong>SaaS 文档：</strong>可以；配额按项目计</li>
+          </ul>
+        </dd>
         <dt>免费额度</dt>
-        <dd>Hosting 存储前 10 GB 免费；CDN 数据传输前约 <strong>10 GB/月</strong> 免费。单文件最大 2 GB。</dd>
-        <dt>商用</dt>
-        <dd>可用于生产，但 Spark 超量后站点可能在宽限期后被禁用，直到下月或升级 Blaze。</dd>
-        <dt>备注</dt>
-        <dd>配额按<strong>项目</strong>计，不是按站点。建议在 Cloud Console 设预算告警。</dd>
+        <dd>存储 10 GB；传输约 10 GB/月（Spark 免费用量）</dd>
+        <dt>商用（免费档）</dt>
+        <dd><code>conditional</code> — 可用于生产，但 Spark 超限会停站</dd>
+        <dt>超限后果</dt>
+        <dd><code>hard_stop</code> — 免费用量：Hosting 存储前 10 GB、CDN 传输前约 10 GB/月。未上 Blaze 且传输出超：短暂宽限期后站点禁用，直到下月或升级 Blaze。已上 Blaze：超额按量计费（传输约 $0.15/GB）。</dd>
+        <dt>自定义域名 / SSL</dt>
+        <dd>支持自定义域名 + 托管证书</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">If you are not on the Blaze plan, and you reach the 10 GB/month limit of no-cost data transfer, we offer a short grace period but then your sites will be disabled… until the start of the next month… or upgrade to Blaze.</dd>
       </dl>
       <p class="sources">
         来源：
         <a href="https://firebase.google.com/docs/hosting/usage-quotas-pricing" rel="noopener" target="_blank">Usage quotas &amp; pricing</a>
         <a href="https://firebase.google.com/pricing/" rel="noopener" target="_blank">Firebase Pricing</a>
       </p>
+      
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-static-hosting%20%C2%B7%20firebase-hosting&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-static-hosting.html%0Aid%EF%BC%9Afirebase-hosting%0A%E5%90%8D%E7%A7%B0%EF%BC%9AFirebase%20Hosting%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acommercial%3Dconditional%3B%20overage%3Dhard_stop%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=firebase-hosting）</p>
     </article>
 
     <div class="note">
       <strong>选型速记（非赞助）：</strong>
       纯文档/开源展示 → GitHub Pages；
-      可能商用、要流量余量 → 优先看 Cloudflare Pages；
-      Next.js 个人实验 → Vercel Hobby（别拿去卖货）；
-      已在 GitLab → GitLab Pages；
-      要和 Firebase 后端一起 → Firebase Hosting。
+      要明确可商用且能接受积分硬顶 → Netlify Free（额度紧）；
+      商用边界清楚但不能用免费档卖货 → 避开 Vercel Hobby / GitHub Pages 商用场景；
+      Cloudflare / Firebase → 看 conditional 说明；
+      Render / Surge / GitLab → 商用仍待核实。
     </div>
 
     <p class="pager"><a href="../index.html">← 返回首页</a> · <a href="free-tts-api.html">下一页：免费 TTS API →</a></p>
@@ -397,8 +533,8 @@
     <div class="wrap wrap--wide">
       <p class="footer-brand">Mogul Desk</p>
       <p class="footer-meta">核验日期：2026-10-21（Asia/Shanghai） · <a href="about.html">关于本站</a> · <a href="changelog.html">更新日志</a></p>
-      <p class="footer-errata">发现问题？<a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF&body=%E9%A1%B5%E9%9D%A2%EF%BC%9A%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A">发勘误邮件</a>（仅勘误 / 纠错，不是客服）。</p>
-      <p class="footer-disclaimer">免责：额度与条款以各平台官网为准；本站无流量/收入承诺，未接入联盟链接。</p>
+      <p class="footer-errata">发现问题？<a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-static-hosting.html%5Cnid%EF%BC%9A%5Cn%E5%8E%9F%E5%80%BC%EF%BC%9A%5Cn%E9%97%AE%E9%A2%98%EF%BC%9A%5Cn%E5%BB%BA%E8%AE%AE%EF%BC%9A">发勘误邮件</a>（仅勘误 / 纠错，不是客服）。</p>
+      <p class="footer-disclaimer">免责：额度与条款以各平台官网为准；本站无流量/收入承诺，未接入联盟链接。本页不是法律意见。</p>
     </div>
   </footer>
   <script src="../assets/compare-filter.js" defer></script>

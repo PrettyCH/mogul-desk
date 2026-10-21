@@ -1,0 +1,231 @@
+{
+  "page": "free-static-hosting",
+  "title": "免费静态托管对照：商用限制、额度与超限后果",
+  "verified_at": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "entries": [
+    {
+      "id": "github-pages",
+      "name": "GitHub Pages",
+      "commercial": "forbidden",
+      "overage": "soft_limit",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "quota_short": "站点 ≤ 1 GB；带宽软上限约 100 GB/月",
+      "domain_ssl": "支持自定义域名 + HTTPS",
+      "domain_ssl_code": "custom_https",
+      "commercial_label": "禁止当免费商业主机",
+      "overage_label": "超限软限制（可能限流/邮件提醒）",
+      "scenario": {
+        "landing": "不适合商用落地页",
+        "portfolio": "个人作品集/开源文档可以",
+        "digital_product": "卖数字产品/收款页不行",
+        "saas_docs": "促成商业交易或提供商业 SaaS 的站不行；纯开源项目文档通常可以"
+      },
+      "overage_detail": "带宽/构建为软上限；超额后站点可能无法正常服务，或收到 Support 邮件建议加 CDN/迁站；触发速率限制时返回 HTTP 429。",
+      "evidence": "GitHub Pages is not intended for or allowed to be used as a free web-hosting service to run your online business, e-commerce site, or any other website that is primarily directed at either facilitating commercial transactions or providing commercial software as a service (SaaS).",
+      "sources": [
+        {"label": "Pages limits", "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits"},
+        {"label": "About Pages", "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages"}
+      ],
+      "one_liner": "从仓库托管静态站；文档与开源项目最省事，但明文禁止当免费商业主机。",
+      "search": "GitHub Pages forbidden commercial soft bandwidth 1GB 100GB"
+    },
+    {
+      "id": "cloudflare-pages",
+      "name": "Cloudflare Pages",
+      "commercial": "conditional",
+      "overage": "hard_stop",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "quota_short": "500 次构建/月；每站 2 万文件；单文件 25 MiB",
+      "domain_ssl": "Free 每项目最多 100 自定义域名",
+      "domain_ssl_code": "custom_https_100",
+      "commercial_label": "有条件：ToS 无商用禁令，但 Free 无 SLA",
+      "overage_label": "构建次数硬顶；静态流量通常宽裕",
+      "scenario": {
+        "landing": "商用落地页常见做法（无正许句，依赖 ToS 无禁令）",
+        "portfolio": "可以",
+        "digital_product": "静态卖货页常见；收款/卡数据勿放 Free CDN 滥用场景",
+        "saas_docs": "产品文档可以；注意 Free 流量优先级低、共享 IP"
+      },
+      "overage_detail": "Free：每月 500 次构建、同时 1 个构建——用尽后当月无法再构建部署。文件数/大小硬顶。静态资源本身不按 GB 计费（以当前 Workers & Pages 定价页为准）；Functions 计入 Workers 配额。",
+      "evidence": "Self-Serve Subscription Agreement §2.2.1 Restrictions 未列「禁止商用」；Pages Free limits：500 builds/month、20,000 files、25 MiB/file。社区员工亦确认 Free 可用于 business，但无 SLA。",
+      "sources": [
+        {"label": "Pages limits", "url": "https://developers.cloudflare.com/pages/platform/limits/"},
+        {"label": "Workers & Pages pricing", "url": "https://www.cloudflare.com/plans/developer-platform-pricing/"},
+        {"label": "Cloudflare terms", "url": "https://www.cloudflare.com/terms/"}
+      ],
+      "one_liner": "边缘静态站；构建/文件数有硬顶。商用靠 ToS 无禁令 + 社区确认，本站标 conditional（筛「可商用」不会命中）。",
+      "search": "Cloudflare Pages conditional builds 500 commercial ToS"
+    },
+    {
+      "id": "vercel-hobby",
+      "name": "Vercel Hobby",
+      "commercial": "forbidden",
+      "overage": "hard_stop",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "quota_short": "Fast Data Transfer 100 GB 等（见 Hobby 表）",
+      "domain_ssl": "每项目最多 50 域名；自动 HTTPS",
+      "domain_ssl_code": "custom_https_50",
+      "commercial_label": "仅限非商用个人用途",
+      "overage_label": "超限后多数能力暂停约 30 天",
+      "scenario": {
+        "landing": "卖产品/服务的落地页不行",
+        "portfolio": "个人作品集可以",
+        "digital_product": "不行（收款、广告变现、付费建站均算商用）",
+        "saas_docs": "商业 SaaS 文档/营销站不行；需 Pro"
+      },
+      "overage_detail": "Hobby 超额后多数用量需等约 30 天周期恢复才能再用；Web Analytics 等可有更短暂停。违规商用可能导致部署/账号被暂停。",
+      "evidence": "Hobby teams are restricted to non-commercial personal use only. All commercial usage of the platform requires either a Pro or Enterprise plan.",
+      "sources": [
+        {"label": "Hobby plan", "url": "https://vercel.com/docs/plans/hobby"},
+        {"label": "Fair Use Guidelines", "url": "https://vercel.com/docs/limits/fair-use-guidelines"}
+      ],
+      "one_liner": "Next.js 友好；Hobby 明文限非商用个人用途，商用必须 Pro。",
+      "search": "Vercel Hobby forbidden non-commercial hard_stop 100GB"
+    },
+    {
+      "id": "netlify-free",
+      "name": "Netlify Free",
+      "commercial": "allowed",
+      "overage": "hard_stop",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "quota_short": "300 credits/月硬顶；带宽约 20 credits/GB",
+      "domain_ssl": "支持自定义域名 + SSL",
+      "domain_ssl_code": "custom_https",
+      "commercial_label": "官方博文允许商用项目",
+      "overage_label": "积分硬顶，耗尽暂停至下周期",
+      "scenario": {
+        "landing": "可以（额度紧）",
+        "portfolio": "可以",
+        "digital_product": "可以，但 Free 适合小实验级流量",
+        "saas_docs": "可以；监控/安全能力弱于付费档"
+      },
+      "overage_detail": "Credit-based Free：300 credits/月、不可 auto recharge。耗尽后项目硬停，直到下个计费周期或升级付费档。带宽约 20 credits/GB；生产部署每次 15 credits。",
+      "evidence": "Netlify Free plan blog: “On the Free plan, you can deploy commercial projects, personal sites, or other creative explorations…” Credit docs: 300 credits/month with credit hard limit, no recharge.",
+      "sources": [
+        {"label": "Credit-based plans", "url": "https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/credit-based-pricing-plans/"},
+        {"label": "Introducing Free plan (blog)", "url": "https://www.netlify.com/blog/introducing-netlify-free-plan/"},
+        {"label": "Pricing", "url": "https://www.netlify.com/pricing"}
+      ],
+      "one_liner": "积分制 Free；官方博文写明可部署商用项目，但额度硬顶、适合小流量。",
+      "search": "Netlify Free allowed commercial 300 credits hard_stop",
+      "codex_review": "博文是否仍覆盖 2025-09 后 credit-based Free——待二次确认"
+    },
+    {
+      "id": "render-static",
+      "name": "Render Static Sites",
+      "commercial": "unverified",
+      "overage": "bill_or_card",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "quota_short": "静态站免费部署；Hobby 含 5 GB 出站带宽",
+      "domain_ssl": "Hobby 含 2 个自定义域名额度；自动 TLS",
+      "domain_ssl_code": "custom_https_2",
+      "commercial_label": "待核实（文档无正许/禁止句）",
+      "overage_label": "超额：有卡则计费，无卡则停服",
+      "scenario": {
+        "landing": "技术上可部署；商用条款待核实",
+        "portfolio": "可以（额度 5 GB 紧）",
+        "digital_product": "商用条款待核实",
+        "saas_docs": "商用条款待核实"
+      },
+      "overage_detail": "Hobby 工作区每月含 5 GB 出站带宽。超出且已绑支付方式：按 GB 计费；未绑支付方式：工作区服务会被挂起直至下月。",
+      "evidence": "Static sites are free to deploy; outbound bandwidth FAQ: without payment method, Render spins down services until next month; with payment method, bills overage.",
+      "sources": [
+        {"label": "Static Sites", "url": "https://render.com/docs/static-sites"},
+        {"label": "Outbound bandwidth", "url": "https://render.com/docs/outbound-bandwidth"},
+        {"label": "Deploy for Free", "url": "https://render.com/docs/free"}
+      ],
+      "one_liner": "静态站免费部署，但 5 GB 带宽很小；商用是否允许官方未写死——本站标 unverified。",
+      "search": "Render Static unverified bill_or_card 5GB",
+      "codex_review": true
+    },
+    {
+      "id": "surge",
+      "name": "Surge.sh",
+      "commercial": "unverified",
+      "overage": "unverified",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "quota_short": "定价页：Unlimited publishing；Basic SSL",
+      "domain_ssl": "免费档：自定义域名 + Basic SSL（强制 HTTPS 在 Professional）",
+      "domain_ssl_code": "custom_basic_ssl",
+      "commercial_label": "待核实",
+      "overage_label": "超限后果未在定价页写清",
+      "scenario": {
+        "landing": "技术可发布；商用条款待核实",
+        "portfolio": "常见用途",
+        "digital_product": "商用条款待核实",
+        "saas_docs": "生产向功能多在 Professional"
+      },
+      "overage_detail": "公开定价页未写带宽硬顶或停服规则；Professional（约 $30/月）才有强制 HTTPS、自定义重定向、密码保护等。大规模限制需另查 API docs——本站不编造数字。",
+      "evidence": "Pricing page lists Free: Unlimited publishing, Custom domain, Basic SSL. No commercial-forbid sentence on that page; no clear overage policy published there.",
+      "sources": [
+        {"label": "Pricing", "url": "https://surge.sh/pricing"},
+        {"label": "Getting started", "url": "https://surge.sh/docs/getting-started"}
+      ],
+      "one_liner": "CLI 发布静态站；定价页无商用禁令也无超限细则——双项 unverified。",
+      "search": "Surge.sh unverified commercial overage",
+      "codex_review": true
+    },
+    {
+      "id": "gitlab-pages",
+      "name": "GitLab Pages",
+      "commercial": "unverified",
+      "overage": "soft_limit",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "quota_short": "站点最大 1 GB；每站最多 150 自定义域名",
+      "domain_ssl": "支持 gitlab.io / 自定义域名 + TLS",
+      "domain_ssl_code": "custom_https_150",
+      "commercial_label": "待核实（设置页仅技术上限）",
+      "overage_label": "带宽无公开硬顶；滥用可能限流",
+      "scenario": {
+        "landing": "商用条款待核实",
+        "portfolio": "项目文档常见",
+        "digital_product": "商用条款待核实",
+        "saas_docs": "已在 GitLab 的项目文档合适；商用待核实"
+      },
+      "overage_detail": "GitLab.com Pages：最大站点 1 GB（与 CI artifact 上限相关）；自定义域名最多 150。带宽无固定公开硬顶；存在 Pages 相关 rate limits。正式滥用处置以 GitLab ToS 为准。",
+      "evidence": "GitLab.com settings list Pages max site size 1 GB and 150 custom domains; no commercial-forbid line on that page.",
+      "sources": [
+        {"label": "GitLab.com settings（含 Pages）", "url": "https://docs.gitlab.com/user/gitlab_com/"},
+        {"label": "GitLab Pages", "url": "https://docs.gitlab.com/user/project/pages/"}
+      ],
+      "one_liner": "跟 GitLab CI 产物绑定；技术上限清楚，商用是否允许未在同页写明。",
+      "search": "GitLab Pages unverified soft_limit 1GB 150 domains",
+      "codex_review": true
+    },
+    {
+      "id": "firebase-hosting",
+      "name": "Firebase Hosting",
+      "commercial": "conditional",
+      "overage": "hard_stop",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "quota_short": "存储 10 GB；传输约 10 GB/月（Spark 免费用量）",
+      "domain_ssl": "支持自定义域名 + 托管证书",
+      "domain_ssl_code": "custom_https",
+      "commercial_label": "可用于生产，但 Spark 超限会停站",
+      "overage_label": "Spark 超限宽限期后禁用至下月或升 Blaze",
+      "scenario": {
+        "landing": "可以，注意 10 GB/月传输",
+        "portfolio": "可以",
+        "digital_product": "可以；建议 Blaze + 预算告警",
+        "saas_docs": "可以；配额按项目计"
+      },
+      "overage_detail": "免费用量：Hosting 存储前 10 GB、CDN 传输前约 10 GB/月。未上 Blaze 且传输出超：短暂宽限期后站点禁用，直到下月或升级 Blaze。已上 Blaze：超额按量计费（传输约 $0.15/GB）。",
+      "evidence": "If you are not on the Blaze plan, and you reach the 10 GB/month limit of no-cost data transfer, we offer a short grace period but then your sites will be disabled… until the start of the next month… or upgrade to Blaze.",
+      "sources": [
+        {"label": "Usage quotas & pricing", "url": "https://firebase.google.com/docs/hosting/usage-quotas-pricing"},
+        {"label": "Firebase Pricing", "url": "https://firebase.google.com/pricing/"}
+      ],
+      "one_liner": "Google CDN 静态托管；无「禁止商用」句，但 Spark 超限会硬停——标 conditional。",
+      "search": "Firebase Hosting conditional hard_stop Spark 10GB"
+    }
+  ]
+}

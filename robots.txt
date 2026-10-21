@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Deployed URL (GitHub Pages). Update if you change host/path.
+Sitemap: https://prettych.github.io/htmlTest/sitemap.xml

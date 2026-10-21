@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>免费 TTS / 语音合成 API 额度对照 · Mogul Desk</title>
   <meta name="description" content="Azure、Google Cloud、ElevenLabs、OpenAI、Amazon Polly、Edge TTS、讯飞、Gemini TTS 等免费档额度与是否绑卡对照（可核验）。" />
+  <meta name="theme-color" content="#0f1419" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://prettych.github.io/htmlTest/pages/free-tts-api.html" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
 <body>
@@ -13,7 +16,10 @@
       <a class="logo" href="../index.html">Mogul <span>Desk</span></a>
       <nav>
         <a href="../index.html">首页</a>
-        <a href="#entries">条目</a>
+        <a href="free-static-hosting.html">静态托管</a>
+        <a href="free-tts-api.html" aria-current="page">TTS API</a>
+        <a href="free-llm-api-no-card.html">免绑卡 LLM</a>
+        <a href="about.html">关于</a>
       </nav>
     </div>
   </header>
@@ -23,7 +29,7 @@
       <span class="badge">对照页 · 8 条</span>
       <h1>免费 TTS / 语音合成 API：额度与是否绑卡</h1>
       <p class="lead">
-        面向想给博客、客服机器人、播客草稿加语音的开发者。数字来自各平台公开文档（核验日 2026-10-21，Asia/Shanghai）。政策会改，下结论前请点「来源」。
+        面向想给博客、客服机器人、播客草稿加语音的开发者。数字来自各平台公开文档（核验日期：2026-10-21（Asia/Shanghai））。政策会改，下结论前请点「来源」。
       </p>
     </section>
 
@@ -32,6 +38,7 @@
     </div>
 
     <h2>速览</h2>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="对照表（可横向滚动）">
     <table class="compare">
       <thead>
         <tr>
@@ -83,6 +90,7 @@
         </tr>
       </tbody>
     </table>
+    </div>
 
     <h2 id="entries">逐条说明</h2>
 
@@ -236,12 +244,14 @@
       <strong>未收录：</strong>火山引擎 / 豆包语音合成——核验时官方计费说明页无法稳定打开，产品页依赖前端渲染，本站<strong>不编造</strong>免费字符数；待官方文档可抓取后再补。选型速记：中文日调用 → 先看讯飞；要官方云 SLA → Azure F0 / Polly / GCP（都要结算意识）；不想绑卡原型 → ElevenLabs Free、Gemini TTS、或接受风险的 Edge TTS。
     </div>
 
-    <p><a href="../index.html">← 返回首页</a> · <a href="free-llm-api-no-card.html">下一页：免绑卡 LLM API →</a></p>
+    <p class="pager"><a href="free-static-hosting.html">← 上一页：静态托管</a> · <a href="../index.html">首页</a> · <a href="free-llm-api-no-card.html">下一页：免绑卡 LLM →</a></p>
   </main>
 
   <footer class="site">
     <div class="wrap">
-      <p>核验日 2026-10-21（Asia/Shanghai）。无联盟链接、无收入数字。发现官方改版请以官网为准。</p>
+      <p class="footer-brand">Mogul Desk</p>
+      <p class="footer-meta">核验日期：2026-10-21（Asia/Shanghai） · <a href="about.html">关于本站</a></p>
+      <p class="footer-disclaimer">免责：额度与条款以各平台官网为准；本站无流量/收入承诺，未接入联盟链接。</p>
     </div>
   </footer>
 </body>

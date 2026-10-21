@@ -27,12 +27,17 @@
 
 ```
 mogul-site/
-├── index.html                         # 站点说明 + 目录（3 篇）
-├── assets/styles.css                  # 简洁深色样式，移动端可读
+├── index.html                         # 站点说明 + 目录
+├── robots.txt                         # 允许抓取 + Sitemap 指向
+├── sitemap.xml                        # 本地写好的 Pages URL（部署后可改域名）
+├── assets/
+│   ├── styles.css                     # 深色样式；表格横向滚动；打印友好
+│   └── favicon.svg                    # 极简图标
 ├── pages/
 │   ├── free-static-hosting.html       # 静态托管对照（8 条）
 │   ├── free-tts-api.html              # 免费 TTS API 对照（8 条）
-│   └── free-llm-api-no-card.html      # 免绑卡 LLM API 短名单（8 条）
+│   ├── free-llm-api-no-card.html      # 免绑卡 LLM API 短名单（8 条）
+│   └── about.html                     # 本站说明（无收入承诺、如何核验）
 └── README.md                          # 本文件
 ```
 
@@ -50,27 +55,23 @@ python3 -m http.server 8765
 
 也可用任意静态服务器，或直接用浏览器打开 `index.html`（部分浏览器对本地相对路径限制更严，推荐 http.server）。
 
-## 公开部署还缺什么
+## 明天部署清单（PrettyCH/htmlTest + GitHub Pages）
 
-当前只有 box 上的文件，**尚未**：
+目标公开地址：`https://prettych.github.io/htmlTest/`
 
-- Git 远程仓库（GitHub / GitLab）
-- 绑定域名与 DNS
-- Cloudflare Pages / GitHub Pages / 其他托管账号上的项目
+**当前卡点：** Cursor / Grok Bot 侧的 GitHub 令牌对 `PrettyCH/htmlTest` **没有写权限**（推送与 create/update file 均失败）。需要你在电脑上给仓库授权，或本机手动推送。
 
-推荐路径（任选其一，与内容页一致）：
+1. **授权或本机推送**  
+   - 在 Cursor 里给 `PrettyCH/htmlTest` 开仓库写权限；或  
+   - 本机：把 `/workspace/mogul-site/` 内容放到仓库**根目录**（不要多套一层 `mogul-site/`），`git push` 到默认分支（`main` 或 `master`）。
+2. **打开 GitHub Pages**  
+   - 仓库 Settings → Pages → Source 选 `Deploy from a branch` → Branch：`main`（或 `master`）+ `/ (root)` → Save。  
+   - 等一两分钟后打开：`https://prettych.github.io/htmlTest/`
+3. **可选核对**  
+   - 点开三篇对照页与「关于」；确认 CSS / favicon 加载正常。  
+   - 若以后换自定义域名，改 `robots.txt` 与 `sitemap.xml` 里的绝对 URL。
 
-1. **Cloudflare Pages**：适合以后可能挂联盟/广告的商用向静态站（仍需自己读 ToS）。
-2. **GitHub Pages**：适合开源文档展示；**不要**拿免费档跑在线生意站。
-3. **GitLab Pages**：若代码已在 GitLab。
-
-典型步骤概要：
-
-```text
-git init && git add . && git commit -m "Initial Mogul Desk MVP"
-# 推到 GitHub 后：Settings → Pages，或接 Cloudflare Pages「Connect Git」
-# 自定义域名：在托管后台填域名，再在域名商处加 CNAME/A 记录
-```
+> 说明：GitHub Pages 免费档**不允许**当在线生意站主机（见本站「静态托管」页）。本站当前是文档型对照页，一般符合「项目文档」用途；若以后挂联盟/卖货，请改 Cloudflare Pages 等更合适的托管。
 
 ## 可选联盟计划（仅公开入口，未申请、未谈成）
 
@@ -92,6 +93,7 @@ git init && git add . && git commit -m "Initial Mogul Desk MVP"
 | --- | --- |
 | 免费 TTS / 语音合成 API 额度对照 | **已发布** → `pages/free-tts-api.html`（8 条；跳过火山：官方计费页核验失败） |
 | 无需绑卡的免费 LLM API 短名单 | **已发布** → `pages/free-llm-api-no-card.html`（8 条；跳过 GitHub Models 已退役、Cerebras 强制绑卡试用、DeepSeek 需预充等） |
+| 关于本站 | **已发布** → `pages/about.html` |
 | 后续可写 | 免费 STT / 语音识别额度对照；「注册赠金 vs 长期免费」总表（跨厂商） |
 
 ## 免责

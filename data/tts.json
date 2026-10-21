@@ -1,0 +1,162 @@
+{
+  "page": "free-tts-api",
+  "title": "免费 TTS / 语音合成 API：额度与是否绑卡",
+  "verified_at": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "entries": [
+    {
+      "id": "azure-speech",
+      "name": "Azure Speech F0",
+      "card": "required",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "quota_short": "神经 TTS 50 万字符/月（F0）",
+      "card_label": "通常要 Azure 支付方式",
+      "one_liner": "微软云语音；免费档神经 TTS 按字符计月额度，适合小流量试听与原型。",
+      "use_case": "应用内朗读、客服提示音、多语言神经音色合成。",
+      "quota_detail": "定价页 Free (F0)：Neural Text to Speech 0.5 million characters free per month（50 万字符/月）。配额文档：F0 实时 TTS 约 20 transactions / 60 seconds；F0 无 Batch synthesis。",
+      "card_detail": "需 Azure 订阅。标准免费/即用即付账户常见要信用卡验证；Azure for Students 等学生计划可能不需卡（以微软当前注册页为准）。F0 本身按定价页为免费额度。",
+      "evidence": "Free (F0) table: Neural Text to Speech — 0.5 million characters free per month.",
+      "sources": [
+        {"label": "Azure Speech pricing", "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/speech-services/"},
+        {"label": "Quotas and limits", "url": "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-services-quotas-and-limits"}
+      ],
+      "search": "Azure Speech F0 neural TTS 50万 绑卡"
+    },
+    {
+      "id": "google-cloud-tts",
+      "name": "Google Cloud TTS",
+      "card": "required",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "quota_short": "Standard/WaveNet 400 万；Neural2/Chirp 3 HD/Studio 100 万字符/月",
+      "card_label": "必须启用结算",
+      "one_liner": "GCP 上的经典 TTS；按月有免费字符档，超量自动计费——所以必须开结算。",
+      "use_case": "多语言 Standard / WaveNet / Neural2 / Chirp 3 HD / Studio 等音色；适合有 GCP 项目的后端合成。",
+      "quota_detail": "定价页（按月、按字符）：Standard 与 WaveNet 免费至 4 million 字符；Neural2、Chirp 3: HD、Studio 等免费至 1 million 字符。Instant custom voice 与部分 Gemini-TTS（Cloud 侧）可能无此免费档。",
+      "card_detail": "官方写明：You must enable billing to use Text-to-Speech；超量会自动扣费。等于要开 GCP 结算账户（通常要支付方式）。",
+      "evidence": "Pricing：Standard/WaveNet free up to 4M chars/month；Neural2/Chirp 3 HD/Studio free up to 1M；billing required.",
+      "sources": [
+        {"label": "Text-to-Speech pricing", "url": "https://cloud.google.com/text-to-speech/pricing"},
+        {"label": "Quotas & limits", "url": "https://docs.cloud.google.com/text-to-speech/quotas"}
+      ],
+      "search": "Google Cloud TTS billing 400万 100万"
+    },
+    {
+      "id": "elevenlabs",
+      "name": "ElevenLabs Free",
+      "card": "none",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "quota_short": "Free 约 1 万字符/月（v4 TTS 表；多产品共享）",
+      "card_label": "免费档通常不需绑卡",
+      "one_liner": "创作者向语音 API；Free / Pay-as-you-go 档有少量含字符量，API 与网页共用。",
+      "use_case": "高质量多语 TTS、有声内容草稿；也有 STT / 音效等。",
+      "quota_detail": "API 定价对照表 Free/Pay-as-you-go：v4 TTS Characters included 10,000（约 10 min）。更高档订阅另计。商用许可：对比表中 Free 的 Commercial use 常为空，Starter 起才列——商用请读当前条款。",
+      "card_detail": "可注册使用 Free；付费订阅才需信用卡 / Apple Pay / Google Pay（定价 FAQ）。",
+      "evidence": "elevenlabs.io/pricing/api model table: Free / Pay as you go — v4 Characters included 10,000.",
+      "sources": [
+        {"label": "ElevenLabs API Pricing", "url": "https://elevenlabs.io/pricing/api"},
+        {"label": "ElevenLabs Pricing", "url": "https://elevenlabs.io/pricing"}
+      ],
+      "search": "ElevenLabs Free 10000 characters 免绑卡"
+    },
+    {
+      "id": "openai-tts",
+      "name": "OpenAI Speech（tts-1 等）",
+      "card": "conditional",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "quota_short": "Free 档有地区限制；tts-1 示例约 3 RPM / 200 RPD",
+      "card_label": "Free 限地区；付费要购积分",
+      "one_liner": "OpenAI 音频 Speech 端点；按字符或 token 计费，Free 档有严格地区与速率限制。",
+      "use_case": "/v1/audio/speech 文本转语音；tts-1 偏速度，tts-1-hd 偏质量，gpt-4o-mini-tts 按 token 计费。",
+      "quota_detail": "Usage tiers：Free 档「User must be in an allowed geography」。模型页示例：tts-1 Free 约 3 RPM / 200 RPD。定价页：tts-1 / tts-1-hd 按字符计费。不在允许地区则无 Free 档。",
+      "card_detail": "Free 档在允许地区可起步；Build 及以上要累计购积分。实际是否强制留卡以账号控制台为准。",
+      "evidence": "OpenAI rate limits / usage tiers：Free geography-gated；tts-1 Free RPM/RPD 以模型页为准。",
+      "sources": [
+        {"label": "OpenAI Pricing", "url": "https://developers.openai.com/api/docs/pricing"},
+        {"label": "tts-1 model", "url": "https://developers.openai.com/api/docs/models/tts-1"},
+        {"label": "Rate limits", "url": "https://developers.openai.com/api/docs/guides/rate-limits"}
+      ],
+      "search": "OpenAI Speech TTS Free geography RPM"
+    },
+    {
+      "id": "amazon-polly",
+      "name": "Amazon Polly",
+      "card": "required",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "quota_short": "Standard 500 万字符/月；Neural 等另有首年额度",
+      "card_label": "通常要 AWS 支付方式",
+      "one_liner": "AWS 文本转语音；Standard 有较大的按月免费字符量，Neural 等多为新账号首年额度。",
+      "use_case": "应用朗读、无障碍、Speech Marks 口型同步等。",
+      "quota_detail": "定价页 Free tier：Standard 5 million characters/month；Neural 1 million/month（首 12 个月）；Long-Form 50 万/月（首 12 个月）；Generative 10 万/月（首 12 个月）。2025-07-15 起新客户另有 AWS Free Tier credits 说明。",
+      "card_detail": "一般需 AWS 账户与支付方式；免费额度用完或超出 Free Tier 后按字符计费。",
+      "evidence": "aws.amazon.com/polly/pricing Free tier: Standard 5M chars/month; Neural 1M/month first 12 months.",
+      "sources": [
+        {"label": "Amazon Polly Pricing", "url": "https://aws.amazon.com/polly/pricing/"}
+      ],
+      "search": "Amazon Polly free tier Standard 5M Neural"
+    },
+    {
+      "id": "edge-tts",
+      "name": "Edge TTS（开源封装）",
+      "card": "none",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "quota_short": "无官方公开额度表；社区库调用 Edge 在线 TTS",
+      "card_label": "无需 API Key / 绑卡",
+      "one_liner": "社区项目通过 Microsoft Edge 在线 TTS 通道合成；无 Key、无账单，但也无官方 SLA。",
+      "use_case": "本地脚本、个人工具快速出音频；PyPI 包 edge-tts（如 rany2/edge-tts）常见。",
+      "quota_detail": "无微软官方「每月 X 字符」公开表。可用性取决于 Edge 在线服务与客户端行为，可能随时变更或限流。",
+      "card_detail": "不需要 API Key 或绑卡。商用/再分发音频：微软社区答复常建议改用 Azure AI Speech；本站不声称其可商用。",
+      "evidence": "非官方产品；见 GitHub rany2/edge-tts 与 Microsoft Q&A 商用讨论。",
+      "sources": [
+        {"label": "rany2/edge-tts", "url": "https://github.com/rany2/edge-tts"},
+        {"label": "edge-tts on PyPI", "url": "https://pypi.org/project/edge-tts/"},
+        {"label": "Microsoft Q&A（商用讨论）", "url": "https://learn.microsoft.com/en-us/answers/questions/6007729/commercial-use-of-microsoft-edge-text-to-speech-vi"}
+      ],
+      "search": "Edge TTS 开源 无需Key 商用风险"
+    },
+    {
+      "id": "xfyun",
+      "name": "讯飞开放平台在线合成",
+      "card": "none",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "quota_short": "创建应用后默认每天 SDK+WebAPI 合计 500 次",
+      "card_label": "国内实名即可起步",
+      "one_liner": "国内常用中文 TTS；创建应用后有按日免费调用次数，适合中文原型。",
+      "use_case": "App / 网页中文朗读；基础发音人文档写明免费赠送，特色发音人另购。",
+      "quota_detail": "服务说明：登录并创建应用后，每天可免费调用语音合成 SDK 与 Web API 共计 500 次；另可在官网领取免费次数包（每账号一次，以领取页为准）。",
+      "card_detail": "国内开放平台流程以实名认证与控制台开通为主；起步免费次数不要求国际信用卡。正式商用额度与审核规则以讯飞当前协议为准。",
+      "evidence": "xfyun.cn 在线语音合成服务说明：每日 SDK+WebAPI 合计 500 次。",
+      "sources": [
+        {"label": "在线语音合成服务说明", "url": "https://www.xfyun.cn/doc/tts/online_tts/tts_description.html"},
+        {"label": "在线语音合成 API", "url": "https://www.xfyun.cn/doc/tts/online_tts/API.html"}
+      ],
+      "search": "讯飞 在线合成 500次 实名"
+    },
+    {
+      "id": "gemini-tts",
+      "name": "Gemini API TTS",
+      "card": "none",
+      "verifyStatus": "ok",
+      "verified": "2026-10-21",
+      "quota_short": "多款 Flash TTS 在 Free Tier 标为 Free of charge",
+      "card_label": "Free Tier 无需结算账户",
+      "one_liner": "走 Google AI Studio / Gemini API，而不是 Cloud Text-to-Speech；多款 Flash TTS 在 Free Tier 标价为免费。",
+      "use_case": "用 Gemini 系 TTS 模型做可控语音合成。",
+      "quota_detail": "定价页多款 Flash TTS 在 Free Tier 列为 Free of charge。具体 RPM / TPM / RPD 因模型与账户档位而异，官方要求在 AI Studio 查看当前限额；Free Tier 内容可能用于改进产品。",
+      "card_detail": "Billing 文档：New accounts begin on the Free Tier，无需先链接结算账户。升级 Paid 才需绑卡并预付（最低约 $5 等）。",
+      "evidence": "ai.google.dev Gemini API pricing + billing：Free Tier without linking billing first.",
+      "sources": [
+        {"label": "Gemini API pricing", "url": "https://ai.google.dev/gemini-api/docs/pricing"},
+        {"label": "Billing", "url": "https://ai.google.dev/gemini-api/docs/billing"},
+        {"label": "Rate limits", "url": "https://ai.google.dev/gemini-api/docs/rate-limits"}
+      ],
+      "search": "Gemini TTS Free Tier 无需结算"
+    }
+  ]
+}

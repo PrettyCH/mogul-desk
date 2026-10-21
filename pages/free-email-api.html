@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>免费事务邮件 API 对照：免绑卡、月/日额度与商用发信 · Mogul Desk</title>
+  <meta name="description" content="Resend、Mailgun、Postmark、Amazon SES、Brevo、SendGrid、ZeptoMail 等免费/试用事务邮件 API：免绑卡、月日额度、可否商用发信（可核验）。" />
+  <meta name="theme-color" content="#161512" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://prettych.github.io/htmlTest/pages/free-email-api.html" />
+  <meta property="og:title" content="免费事务邮件 API 对照：免绑卡、月/日额度与商用发信 · Mogul Desk" />
+  <meta property="og:description" content="Resend、Mailgun、Postmark、Amazon SES、Brevo、SendGrid、ZeptoMail 等免费/试用事务邮件 API：免绑卡、月日额度、可否商用发信（可核验）。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://prettych.github.io/htmlTest/pages/free-email-api.html" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:site_name" content="Mogul Desk" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="免费事务邮件 API 对照：免绑卡、月/日额度与商用发信 · Mogul Desk" />
+  <meta name="twitter:description" content="Resend、Mailgun、Postmark、Amazon SES、Brevo、SendGrid、ZeptoMail 等免费/试用事务邮件 API：免绑卡、月日额度、可否商用发信（可核验）。" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "免费事务邮件 API 对照：免绑卡、月/日额度与商用发信",
+  "description": "Resend、Mailgun、Postmark、Amazon SES、Brevo、SendGrid、ZeptoMail 等免费/试用事务邮件 API：免绑卡、月日额度、可否商用发信（可核验）。",
+  "numberOfItems": 7,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Resend Free",
+      "url": "https://prettych.github.io/htmlTest/pages/free-email-api.html#resend"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Mailgun Free",
+      "url": "https://prettych.github.io/htmlTest/pages/free-email-api.html#mailgun"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Postmark Free（Developer）",
+      "url": "https://prettych.github.io/htmlTest/pages/free-email-api.html#postmark"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Amazon SES",
+      "url": "https://prettych.github.io/htmlTest/pages/free-email-api.html#amazon-ses"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Brevo Free",
+      "url": "https://prettych.github.io/htmlTest/pages/free-email-api.html#brevo"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Twilio SendGrid（试用）",
+      "url": "https://prettych.github.io/htmlTest/pages/free-email-api.html#sendgrid"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "Zoho ZeptoMail / CPaaS Email",
+      "url": "https://prettych.github.io/htmlTest/pages/free-email-api.html#zeptomail"
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到正文</a>
+  <header class="site">
+    <div class="inner">
+      <a class="logo" href="../index.html"><span class="logo-mark" aria-hidden="true">M</span>Mogul <span>Desk</span></a>
+      <nav aria-label="主导航">
+        <a href="../index.html">首页</a>
+        <a href="ai-daily.html">AI 日报</a>
+        <a href="free-static-hosting.html">静态托管</a>
+        <a href="free-tts-api.html">TTS API</a>
+        <a href="free-llm-api-no-card.html">免绑卡 LLM</a>
+        <a href="free-email-api.html" aria-current="page">事务邮件</a>
+        <a href="changelog.html">更新日志</a>
+        <a href="about.html">关于</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap wrap--wide" tabindex="-1">
+    <section class="hero hero--page">
+      <span class="badge">对照页</span>
+      <h1>免费事务邮件 API 对照：免绑卡、月/日额度与商用发信</h1>
+      <p class="lead">
+        静态站上线后下一步常搜「免费发验证码邮件」。本页对照事务邮件 API 的免绑卡、日/月额度与免费档能否商用发信。核验：2026-10-21（Asia/Shanghai）。线索可参考 free-for-dev，数字一律以官方文档为准。
+      </p>
+    </section>
+
+    <div class="note">
+      <strong>口径：</strong>
+      <code>card</code> = none | required | conditional | unverified；
+      <code>commercial</code> = allowed | conditional | forbidden | unverified。
+      筛「免绑卡」= card=none；筛「可商用」只含 <strong>allowed</strong>（conditional 如带品牌贴纸的 Brevo Free 默认排除）。别把 SendGrid 试用当成永久免费档。
+    </div>
+
+    <h2>速览</h2>
+    <div class="filter-bar" data-compare-root>
+      <div class="filter-bar-top">
+        <div class="filter-search">
+          <label for="filter-q">搜索</label>
+          <input type="search" id="filter-q" data-filter-search placeholder="服务名、额度、关键词…" autocomplete="off" />
+        </div>
+        <div class="filter-meta">
+          <span data-filter-count></span>
+          <button type="button" class="filter-clear" data-filter-clear>清除</button>
+        </div>
+      </div>
+      <div class="filter-groups">
+        <div class="filter-group" data-filter-group="card" role="group" aria-label="按是否绑卡筛选">
+          <span class="filter-group-label">绑卡</span>
+          <button type="button" class="filter-chip is-active" data-filter-value="" aria-pressed="true">全部</button>
+          <button type="button" class="filter-chip" data-filter-value="none" aria-pressed="false">免绑卡起步</button>
+          <button type="button" class="filter-chip" data-filter-value="conditional" aria-pressed="false">有条件</button>
+          <button type="button" class="filter-chip" data-filter-value="required" aria-pressed="false">需要绑卡</button>
+          <button type="button" class="filter-chip" data-filter-value="unverified" aria-pressed="false">待核实</button>
+        </div>
+        <div class="filter-group" data-filter-group="commercial" role="group" aria-label="按商用发信筛选">
+          <span class="filter-group-label">商用发信</span>
+          <button type="button" class="filter-chip is-active" data-filter-value="" aria-pressed="true">全部</button>
+          <button type="button" class="filter-chip" data-filter-value="allowed" aria-pressed="false">可商用</button>
+          <button type="button" class="filter-chip" data-filter-value="conditional" aria-pressed="false">有条件</button>
+          <button type="button" class="filter-chip" data-filter-value="forbidden" aria-pressed="false">不可商用</button>
+          <button type="button" class="filter-chip" data-filter-value="unverified" aria-pressed="false">待核实</button>
+        </div>
+      </div>
+      <p class="filter-empty" data-filter-status hidden role="status">没有匹配的条目。试试换关键词，或点「清除」。</p>
+    </div>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="对照表（可横向滚动）">
+    <table class="compare" role="table">
+      <thead>
+        <tr>
+          <th>服务</th>
+          <th>免费档要点</th>
+          <th>绑卡</th>
+          <th>商用发信</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="row-resend" data-entry="resend" data-card="none" data-commercial="allowed" data-verify-status="ok" data-verified="2026-10-21" data-search="Resend Free 3000 100 免绑卡">
+          <td><a href="#resend">Resend Free</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
+          <td>3,000 封/月 · 100 封/日（UTC）</td>
+          <td class="tag-ok"><span class="pill pill-ok">免绑卡（free-forever）</span></td>
+          <td class="tag-ok"><span class="pill pill-ok">可商用事务邮件</span></td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-email-api%20%C2%B7%20resend&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-email-api.html%0Aid%EF%BC%9Aresend%0A%E5%90%8D%E7%A7%B0%EF%BC%9AResend%20Free%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dnone%3B%20commercial%3Dallowed%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
+        </tr>
+        <tr id="row-mailgun" data-entry="mailgun" data-card="none" data-commercial="allowed" data-verify-status="ok" data-verified="2026-10-21" data-search="Mailgun Free 100/day no credit card">
+          <td><a href="#mailgun">Mailgun Free</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
+          <td>100 封/日（约 3,000/月若天天满发）</td>
+          <td class="tag-ok"><span class="pill pill-ok">免绑卡</span></td>
+          <td class="tag-ok"><span class="pill pill-ok">可商用事务邮件</span></td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-email-api%20%C2%B7%20mailgun&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-email-api.html%0Aid%EF%BC%9Amailgun%0A%E5%90%8D%E7%A7%B0%EF%BC%9AMailgun%20Free%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dnone%3B%20commercial%3Dallowed%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
+        </tr>
+        <tr id="row-postmark" data-entry="postmark" data-card="none" data-commercial="allowed" data-verify-status="ok" data-verified="2026-10-21" data-search="Postmark Free Developer 100/month">
+          <td><a href="#postmark">Postmark Free（Developer）</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
+          <td>100 封/月 · 不可超额</td>
+          <td class="tag-ok"><span class="pill pill-ok">免绑卡起步</span></td>
+          <td class="tag-ok"><span class="pill pill-ok">可商用（低量测试/侧项目）</span></td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-email-api%20%C2%B7%20postmark&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-email-api.html%0Aid%EF%BC%9Apostmark%0A%E5%90%8D%E7%A7%B0%EF%BC%9APostmark%20Free%EF%BC%88Developer%EF%BC%89%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dnone%3B%20commercial%3Dallowed%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
+        </tr>
+        <tr id="row-amazon-ses" data-entry="amazon-ses" data-card="required" data-commercial="allowed" data-verify-status="ok" data-verified="2026-10-21" data-search="Amazon SES Free Tier credits 2026 no 3000">
+          <td><a href="#amazon-ses">Amazon SES</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
+          <td>按量计费；新客户靠 AWS Free Tier credits（无永久免费用量档）</td>
+          <td class="tag-bad"><span class="pill pill-bad">通常要 AWS 支付方式</span></td>
+          <td class="tag-ok"><span class="pill pill-ok">可商用（付费/credits）</span></td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-email-api%20%C2%B7%20amazon-ses&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-email-api.html%0Aid%EF%BC%9Aamazon-ses%0A%E5%90%8D%E7%A7%B0%EF%BC%9AAmazon%20SES%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Drequired%3B%20commercial%3Dallowed%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
+        </tr>
+        <tr id="row-brevo" data-entry="brevo" data-card="none" data-commercial="conditional" data-verify-status="ok" data-verified="2026-10-21" data-search="Brevo Free 300/day branding">
+          <td><a href="#brevo">Brevo Free</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
+          <td>300 封/日（事务+营销共用日顶）</td>
+          <td class="tag-ok"><span class="pill pill-ok">免绑卡、无时限</span></td>
+          <td class="tag-warn"><span class="pill pill-warn">可用，但带 Brevo 品牌标识</span></td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-email-api%20%C2%B7%20brevo&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-email-api.html%0Aid%EF%BC%9Abrevo%0A%E5%90%8D%E7%A7%B0%EF%BC%9ABrevo%20Free%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dnone%3B%20commercial%3Dconditional%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
+        </tr>
+        <tr id="row-sendgrid" data-entry="sendgrid" data-card="conditional" data-commercial="allowed" data-verify-status="ok" data-verified="2026-10-21" data-search="SendGrid 60 day trial 100/day not forever free">
+          <td><a href="#sendgrid">Twilio SendGrid（试用）</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
+          <td>新账号约 60 天试用 · 约 100 封 API/日</td>
+          <td class="tag-warn"><span class="pill pill-warn">试用后需升级（常要卡）</span></td>
+          <td class="tag-ok"><span class="pill pill-ok">可商用（试用/付费）</span></td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-email-api%20%C2%B7%20sendgrid&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-email-api.html%0Aid%EF%BC%9Asendgrid%0A%E5%90%8D%E7%A7%B0%EF%BC%9ATwilio%20SendGrid%EF%BC%88%E8%AF%95%E7%94%A8%EF%BC%89%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dconditional%3B%20commercial%3Dallowed%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
+        </tr>
+        <tr id="row-zeptomail" data-entry="zeptomail" data-card="none" data-commercial="allowed" data-verify-status="ok" data-verified="2026-10-21" data-search="ZeptoMail first credit free 10000">
+          <td><a href="#zeptomail">Zoho ZeptoMail / CPaaS Email</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
+          <td>首份积分免费：1 万封；用尽后购积分</td>
+          <td class="tag-ok"><span class="pill pill-ok">起步免绑卡（积分制）</span></td>
+          <td class="tag-ok"><span class="pill pill-ok">可商用事务邮件</span></td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-email-api%20%C2%B7%20zeptomail&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-email-api.html%0Aid%EF%BC%9Azeptomail%0A%E5%90%8D%E7%A7%B0%EF%BC%9AZoho%20ZeptoMail%20/%20CPaaS%20Email%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dnone%3B%20commercial%3Dallowed%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2 id="entries">逐条说明</h2>
+
+    <article class="entry" id="resend" data-entry="resend" data-card="none" data-commercial="allowed" data-verify-status="ok" data-verified="2026-10-21" data-search="Resend Free 3000 100 免绑卡">
+      <div class="entry-head">
+        <h3>1. Resend Free</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
+      <p class="one-liner">开发者向事务邮件 API；免费档有明确日/月双顶，适合验证码与产品通知起步。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>密码重置、魔术链接、订单通知等事务邮件；另有 Marketing 联系人档（与事务配额分开）。</dd>
+        <dt>日额度</dt>
+        <dd>100/日（UTC 自然日）</dd>
+        <dt>月额度</dt>
+        <dd>3,000/月</dd>
+        <dt>额度说明</dt>
+        <dd>Free：事务邮件 100 emails/day 且 3,000 emails/month；发信与收信（inbound）都计入；同一封里多个 To/CC/BCC 分别计数。日配额按 UTC 自然日重置。最多 3 个已验证域名、3 个 inbox。</dd>
+        <dt>是否绑卡</dt>
+        <dd><code>card=none</code> — 定价 FAQ：提供 free-forever plan，无「仅试用」时限；付费档才要卡。</dd>
+        <dt>商用发信（免费档）</dt>
+        <dd><code>commercial=allowed</code> — 产品定位即为应用内事务/营销发信 API；Free 含 REST API / SMTP。滥用/退信率仍受账户限额约束（bounce &lt;4% 等）。</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">resend.com/pricing Free $0/mo 3,000 emails；docs：100/day + 3,000/month；FAQ：free-forever plan.</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://resend.com/pricing" rel="noopener" target="_blank">Resend Pricing</a>
+        <a href="https://www.resend.com/docs/knowledge-base/account-quotas-and-limits" rel="noopener" target="_blank">Account quotas</a>
+      </p>
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-email-api%20%C2%B7%20resend&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-email-api.html%0Aid%EF%BC%9Aresend%0A%E5%90%8D%E7%A7%B0%EF%BC%9AResend%20Free%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dnone%3B%20commercial%3Dallowed%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=resend）</p>
+    </article>
+
+    <article class="entry" id="mailgun" data-entry="mailgun" data-card="none" data-commercial="allowed" data-verify-status="ok" data-verified="2026-10-21" data-search="Mailgun Free 100/day no credit card">
+      <div class="entry-head">
+        <h3>2. Mailgun Free</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
+      <p class="one-liner">Sinch Mailgun 免费档按日 100 封；含 API/SMTP 与 1 个自定义发信域。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>应用事务邮件、入站路由试验；日志仅保留 1 天。</dd>
+        <dt>日额度</dt>
+        <dd>100/日</dd>
+        <dt>月额度</dt>
+        <dd>无单独月顶（受日顶约束）</dd>
+        <dt>额度说明</dt>
+        <dd>Help Center「What does the Free plan offer」：100 messages per day；1 custom domain；1 day log retention；1 inbound route；2 API keys。定价页同口径。</dd>
+        <dt>是否绑卡</dt>
+        <dd><code>card=none</code> — 官方写明 Free plan requires no credit card。</dd>
+        <dt>商用发信（免费档）</dt>
+        <dd><code>commercial=allowed</code> — 面向应用发信的商业产品；Free 含 RESTful API 与 SMTP。仍须遵守反垃圾与域名认证要求。</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">help.mailgun.com Free plan: 100 messages/day, no credit card; mailgun.com/pricing Free $0/mo.</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://help.mailgun.com/hc/en-us/articles/203068914-What-does-the-Free-plan-offer" rel="noopener" target="_blank">What does the Free plan offer?</a>
+        <a href="https://www.mailgun.com/pricing/" rel="noopener" target="_blank">Mailgun Pricing</a>
+      </p>
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-email-api%20%C2%B7%20mailgun&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-email-api.html%0Aid%EF%BC%9Amailgun%0A%E5%90%8D%E7%A7%B0%EF%BC%9AMailgun%20Free%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dnone%3B%20commercial%3Dallowed%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=mailgun）</p>
+    </article>
+
+    <article class="entry" id="postmark" data-entry="postmark" data-card="none" data-commercial="allowed" data-verify-status="ok" data-verified="2026-10-21" data-search="Postmark Free Developer 100/month">
+      <div class="entry-head">
+        <h3>3. Postmark Free（Developer）</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
+      <p class="one-liner">以送达率著称的事务邮件；免费 Developer 档仅 100 封/月，永不自动过期但额度紧。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>集成测试、评估送达、极低量侧项目。正式量级需 Basic 起（约 1 万封/月）。</dd>
+        <dt>日额度</dt>
+        <dd>无单独日顶（受月顶约束）</dd>
+        <dt>月额度</dt>
+        <dd>100/月</dd>
+        <dt>额度说明</dt>
+        <dd>定价页 Free：$0 · 100 emails/month · No overages allowed。FAQ：free developer plan never expires；未使用额度不滚动。</dd>
+        <dt>是否绑卡</dt>
+        <dd><code>card=none</code> — 官网 CTA：Try Postmark Free · No Credit Card Required。</dd>
+        <dt>商用发信（免费档）</dt>
+        <dd><code>commercial=allowed</code> — 允许事务/广播分 Message Streams；免费档可用于真实发信但额度极低。账户外发审批等政策以 Postmark 当前流程为准。</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">postmarkapp.com/pricing Free 100 emails/month; FAQ free developer plan does not expire; no credit card required.</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://postmarkapp.com/pricing" rel="noopener" target="_blank">Postmark Pricing</a>
+        <a href="https://postmarkapp.com/support/article/1107-how-does-monthly-pricing-work" rel="noopener" target="_blank">Monthly pricing support</a>
+      </p>
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-email-api%20%C2%B7%20postmark&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-email-api.html%0Aid%EF%BC%9Apostmark%0A%E5%90%8D%E7%A7%B0%EF%BC%9APostmark%20Free%EF%BC%88Developer%EF%BC%89%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dnone%3B%20commercial%3Dallowed%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=postmark）</p>
+    </article>
+
+    <article class="entry" id="amazon-ses" data-entry="amazon-ses" data-card="required" data-commercial="allowed" data-verify-status="ok" data-verified="2026-10-21" data-search="Amazon SES Free Tier credits 2026 no 3000">
+      <div class="entry-head">
+        <h3>4. Amazon SES</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
+      <p class="one-liner">AWS 原生事务/营销发信；便宜但账号与沙箱门槛高。2026-07-21 起新客户不再享有旧的 SES 专属每月 3000 条免费档。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>已在 AWS 生态、要按量扩展的事务邮件；需完成域名验证与（常）离开沙箱。</dd>
+        <dt>日额度</dt>
+        <dd>受 SES 发送配额/沙箱限制（控制台）</dd>
+        <dt>月额度</dt>
+        <dd>见 AWS Free Tier / 定价计划</dd>
+        <dt>额度说明</dt>
+        <dd>定价页：Essentials/Pro/Enterprise 按千封计费，或 à la carte 约 $0.10/千封（出站）。AWS Free Tier：新客户最高约 $200 credits（注册可选 free plan 约 6 个月等，以 AWS Free Tier 文档为准）。Messaging Blog：2026-07-21 起新客户不再提供 SES 专属「每月 3000 message charges × 12 个月」；仍在该专属档期内的老客户可继续用完剩余期限。</dd>
+        <dt>是否绑卡</dt>
+        <dd><code>card=required</code> — 使用 SES 需 AWS 账户；支付方式以 AWS 注册/计费要求为准。沙箱阶段通常只能发给验证过的地址。</dd>
+        <dt>商用发信（免费档）</dt>
+        <dd><code>commercial=allowed</code> — 设计用于生产事务与营销发信；遵守 SES 发送政策与反垃圾要求。</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">aws.amazon.com/ses/pricing AWS Free Tier credits; blog 2026-07-21 SES-specific free tier no longer for new customers.</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://aws.amazon.com/ses/pricing/" rel="noopener" target="_blank">Amazon SES Pricing</a>
+        <a href="https://aws.amazon.com/blogs/messaging-and-targeting/introducing-amazon-simple-email-service-ses-pricing-plans/" rel="noopener" target="_blank">SES pricing plans blog</a>
+        <a href="https://aws.amazon.com/ses/faqs/" rel="noopener" target="_blank">SES FAQs</a>
+      </p>
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-email-api%20%C2%B7%20amazon-ses&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-email-api.html%0Aid%EF%BC%9Aamazon-ses%0A%E5%90%8D%E7%A7%B0%EF%BC%9AAmazon%20SES%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Drequired%3B%20commercial%3Dallowed%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=amazon-ses）</p>
+    </article>
+
+    <article class="entry" id="brevo" data-entry="brevo" data-card="none" data-commercial="conditional" data-verify-status="ok" data-verified="2026-10-21" data-search="Brevo Free 300/day branding">
+      <div class="entry-head">
+        <h3>5. Brevo Free</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
+      <p class="one-liner">原 Sendinblue；免费档日发 300，API 齐全，邮件带「Sent with Brevo」贴纸。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>事务 + 营销一体起步；日量中等的侧项目。</dd>
+        <dt>日额度</dt>
+        <dd>300/日</dd>
+        <dt>月额度</dt>
+        <dd>约 9,000/月（若天天满发；无单独月顶）</dd>
+        <dt>额度说明</dt>
+        <dd>Help Center：Free 含 300 email sends/day，每日重置，未用完不滚动。事务邮件达日顶后最多约 1,000 封进入重试队列，超出不投递。可存最多 100,000 contacts。</dd>
+        <dt>是否绑卡</dt>
+        <dd><code>card=none</code> — Free 无时限、无需信用卡（产品页与定价说明）。</dd>
+        <dt>商用发信（免费档）</dt>
+        <dd><code>commercial=conditional</code> — 允许真实发信；Free 强制带 Sent with Brevo 标识。移除品牌需升级。</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">help.brevo.com Free plan: 300 emails/day, no time limit; branding sticker required on Free.</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://help.brevo.com/hc/en-us/articles/208580669-FAQs-What-are-the-limits-of-the-Free-plan" rel="noopener" target="_blank">Free plan limits FAQ</a>
+        <a href="https://www.brevo.com/features/email-api/" rel="noopener" target="_blank">Brevo Email API</a>
+      </p>
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-email-api%20%C2%B7%20brevo&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-email-api.html%0Aid%EF%BC%9Abrevo%0A%E5%90%8D%E7%A7%B0%EF%BC%9ABrevo%20Free%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dnone%3B%20commercial%3Dconditional%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=brevo）</p>
+    </article>
+
+    <article class="entry" id="sendgrid" data-entry="sendgrid" data-card="conditional" data-commercial="allowed" data-verify-status="ok" data-verified="2026-10-21" data-search="SendGrid 60 day trial 100/day not forever free">
+      <div class="entry-head">
+        <h3>6. Twilio SendGrid（试用）</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
+      <p class="one-liner">老牌 Email API；永久免费档已改，新账号主要是限期试用，不要当成长期免费用量。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>短期评估 Twilio SendGrid；长期用量需付费计划。</dd>
+        <dt>日额度</dt>
+        <dd>试用期内约 100/日</dd>
+        <dt>月额度</dt>
+        <dd>非永久免费档</dd>
+        <dt>额度说明</dt>
+        <dd>Twilio changelog / Support：新账号 60-Day Free Trial；Email API 约 100 emails/day（Marketing 另有联系人限制）。试用结束后需升级才能继续发。</dd>
+        <dt>是否绑卡</dt>
+        <dd><code>card=conditional</code> — 试用注册流程以 Twilio/SendGrid 当前页为准；升级付费通常需支付方式。</dd>
+        <dt>商用发信（免费档）</dt>
+        <dd><code>commercial=allowed</code> — 付费/试用均可发事务邮件；遵守 Twilio 可接受使用政策。</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">Twilio changelog: Changes to SendGrid Free Plan; Support: 60-Day Free Trial ~100 Email API/day.</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://www.twilio.com/en-us/changelog/sendgrid-free-plan" rel="noopener" target="_blank">SendGrid Free Plan changelog</a>
+        <a href="https://support.sendgrid.com/hc/en-us/articles/35270136965403-Overview-of-60-Day-Free-Trial-Plans-for-New-SendGrid-Accounts" rel="noopener" target="_blank">60-Day Free Trial overview</a>
+        <a href="https://www.twilio.com/en-us/products/email-api/pricing" rel="noopener" target="_blank">Email API Pricing</a>
+      </p>
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-email-api%20%C2%B7%20sendgrid&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-email-api.html%0Aid%EF%BC%9Asendgrid%0A%E5%90%8D%E7%A7%B0%EF%BC%9ATwilio%20SendGrid%EF%BC%88%E8%AF%95%E7%94%A8%EF%BC%89%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dconditional%3B%20commercial%3Dallowed%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=sendgrid）</p>
+    </article>
+
+    <article class="entry" id="zeptomail" data-entry="zeptomail" data-card="none" data-commercial="allowed" data-verify-status="ok" data-verified="2026-10-21" data-search="ZeptoMail first credit free 10000">
+      <div class="entry-head">
+        <h3>7. Zoho ZeptoMail / CPaaS Email</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
+      <p class="one-liner">Zoho 事务邮件（现并入 CPaaS 积分制）；第一份 email credit 免费，之后按积分购买。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>只要事务邮件、接受积分预付的团队；非营销群发定位。</dd>
+        <dt>日额度</dt>
+        <dd>验证前常见日顶（以控制台为准）</dd>
+        <dt>月额度</dt>
+        <dd>首份免费积分非每月刷新</dd>
+        <dt>额度说明</dt>
+        <dd>zoho.com/zeptomail/pricing（CPaaS）：Email — 10,000 emails per credit；First credit is free；付费积分有效期约 6 个月。属试用金/首充赠送，不是每月自动刷新的免费档。</dd>
+        <dt>是否绑卡</dt>
+        <dd><code>card=none</code> — 可先用免费首份积分起步；续购积分才涉及付款。</dd>
+        <dt>商用发信（免费档）</dt>
+        <dd><code>commercial=allowed</code> — 定位事务邮件；营销/群发需改用其他产品。</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">zoho.com/zeptomail/pricing.html：10,000 emails per credit; First credit is free; credits valid 6 months.</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://www.zoho.com/zeptomail/pricing.html" rel="noopener" target="_blank">Zoho CPaaS / ZeptoMail Pricing</a>
+        <a href="https://www.zoho.com/zeptomail/help/getting-started.html" rel="noopener" target="_blank">Getting started</a>
+      </p>
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-email-api%20%C2%B7%20zeptomail&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-email-api.html%0Aid%EF%BC%9Azeptomail%0A%E5%90%8D%E7%A7%B0%EF%BC%9AZoho%20ZeptoMail%20/%20CPaaS%20Email%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dnone%3B%20commercial%3Dallowed%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=zeptomail）</p>
+    </article>
+
+    <div class="note">
+      <strong>选型速记（非赞助）：</strong>
+      要长期免绑卡 + 月量尚可 → Resend Free（3k/月·100/日）或 Brevo（300/日，带品牌）；
+      只要测送达 → Postmark Free（100/月）或 Mailgun（100/日）；
+      已在 AWS → SES（按量 + Free Tier credits，新客户无旧 3000/月专属档）；
+      别把 SendGrid 60 天试用写成「永久免费」。国内厂商（如阿里云邮件推送）待官方公开免费档文档可抓取后再补。
+    </div>
+
+    <p class="pager"><a href="free-llm-api-no-card.html">← 上一页：免绑卡 LLM</a> · <a href="../index.html">首页</a></p>
+  </main>
+
+  <footer class="site">
+    <div class="wrap wrap--wide">
+      <p class="footer-brand">Mogul Desk</p>
+      <p class="footer-meta">核验日期：2026-10-21（Asia/Shanghai） · <a href="about.html">关于本站</a> · <a href="changelog.html">更新日志</a></p>
+      <p class="footer-errata">发现问题？<a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-email-api.html%5Cnid%EF%BC%9A%5Cn%E5%8E%9F%E5%80%BC%EF%BC%9A%5Cn%E9%97%AE%E9%A2%98%EF%BC%9A%5Cn%E5%BB%BA%E8%AE%AE%EF%BC%9A">发勘误邮件</a>（仅勘误 / 纠错，不是客服）。</p>
+      <p class="footer-disclaimer">免责：额度与条款以各平台官网为准；本站无流量/收入承诺，未接入联盟链接。本页不是法律意见。</p>
+    </div>
+  </footer>
+  <script src="../assets/compare-filter.js" defer></script>
+</body>
+</html>

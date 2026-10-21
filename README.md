@@ -12,6 +12,7 @@
 1. **免费静态托管**额度 / 商用条款 / 自定义域名  
 2. **免费 TTS / 语音合成 API**额度与是否绑卡  
 3. **无需绑卡（或写明要绑卡）的免费 LLM API**短名单  
+4. **免费事务邮件 API**（免绑卡 / 月日额度 / 商用发信）  
 
 ## 为什么选这个方向（需求证据）
 
@@ -37,10 +38,16 @@ mogul-site/
 ├── pages/
 │   ├── free-static-hosting.html       # 静态托管对照（8 条，可筛商用）
 │   ├── free-tts-api.html              # 免费 TTS API 对照（8 条，可筛绑卡）
-│   ├── free-llm-api-no-card.html      # 免绑卡 LLM API（8 条，可筛绑卡/额度类型）
+│   ├── free-llm-api-no-card.html      # 免绑卡 LLM（8 条；card / freeType）
+│   ├── free-email-api.html            # 事务邮件 API（7 条；绑卡 / 商用）
+│   ├── ai-daily.html                  # AIHOT 日报
 │   ├── changelog.html                 # 更新日志
 │   └── about.html                     # 本站说明 + 勘误入口
-└── README.md                          # 本文件
+├── data/
+│   ├── hosting.json / tts.json / llm.json / email-api.json / aihot-daily.json
+├── scripts/
+│   ├── build-hosting.py / build-tts.py / build-llm.py / build-email-api.py / build-ai-daily.py
+└── README.md
 ```
 
 ## 功能（2026-10-21）
@@ -49,6 +56,15 @@ mogul-site/
 - 每条 **核验：2026-10-21**（`data-verified`，表行 + 条目卡）
 - **更新日志**、页脚 / 关于页 **勘误 mailto**
 - Open Graph + JSON-LD（WebSite / ItemList）；skip link
+
+## 重建对照页
+
+```bash
+python3 scripts/build-hosting.py
+python3 scripts/build-tts.py
+python3 scripts/build-llm.py
+python3 scripts/build-email-api.py
+```
 
 ## 本地预览
 
@@ -101,9 +117,10 @@ python3 -m http.server 8765
 | 候选 | 状态 |
 | --- | --- |
 | 免费 TTS / 语音合成 API 额度对照 | **已发布** → `pages/free-tts-api.html`（8 条；跳过火山：官方计费页核验失败） |
-| 无需绑卡的免费 LLM API 短名单 | **已发布** → `pages/free-llm-api-no-card.html`（8 条；跳过 GitHub Models 已退役、Cerebras 强制绑卡试用、DeepSeek 需预充等） |
+| 无需绑卡的免费 LLM API 短名单 | **已发布** → `pages/free-llm-api-no-card.html`（8 条；recurring×6 / trial_credit×2） |
+| 免费事务邮件 API | **已发布** → `pages/free-email-api.html`（7 条） |
 | 关于本站 | **已发布** → `pages/about.html` |
-| 后续可写 | 免费 STT / 语音识别额度对照；「注册赠金 vs 长期免费」总表（跨厂商） |
+| 后续可写 | 免费 STT；国内邮件推送公开免费档（文档可抓取后再补） |
 
 ## 免责
 

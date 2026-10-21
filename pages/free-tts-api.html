@@ -3,27 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>免费 TTS / 语音合成 API 额度对照 · Mogul Desk</title>
-  <meta name="description" content="Azure、Google Cloud、ElevenLabs、OpenAI、Amazon Polly、Edge TTS、讯飞、Gemini TTS 等免费档额度与是否绑卡对照（可核验）。" />
+  <title>免费 TTS / 语音合成 API：额度与是否绑卡 · Mogul Desk</title>
+  <meta name="description" content="Azure、GCP、ElevenLabs、OpenAI、Polly、Edge TTS、讯飞、Gemini TTS 等免费档额度与是否绑卡对照（可核验）。" />
   <meta name="theme-color" content="#161512" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://prettych.github.io/htmlTest/pages/free-tts-api.html" />
-  <meta property="og:title" content="免费 TTS / 语音合成 API 额度对照 · Mogul Desk" />
-  <meta property="og:description" content="Azure、GCP、ElevenLabs、OpenAI、Polly、Edge TTS、讯飞、Gemini TTS 免费档与是否绑卡对照。" />
+  <meta property="og:title" content="免费 TTS / 语音合成 API：额度与是否绑卡 · Mogul Desk" />
+  <meta property="og:description" content="Azure、GCP、ElevenLabs、OpenAI、Polly、Edge TTS、讯飞、Gemini TTS 等免费档额度与是否绑卡对照（可核验）。" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://prettych.github.io/htmlTest/pages/free-tts-api.html" />
   <meta property="og:locale" content="zh_CN" />
   <meta property="og:site_name" content="Mogul Desk" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="免费 TTS / 语音合成 API 额度对照 · Mogul Desk" />
-  <meta name="twitter:description" content="Azure、GCP、ElevenLabs、OpenAI、Polly、Edge TTS、讯飞、Gemini TTS 免费档与是否绑卡对照。" />
+  <meta name="twitter:title" content="免费 TTS / 语音合成 API：额度与是否绑卡 · Mogul Desk" />
+  <meta name="twitter:description" content="Azure、GCP、ElevenLabs、OpenAI、Polly、Edge TTS、讯飞、Gemini TTS 等免费档额度与是否绑卡对照（可核验）。" />
   <link rel="stylesheet" href="../assets/styles.css" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "免费 TTS / 语音合成 API 额度对照",
-  "description": "Azure、GCP、ElevenLabs、OpenAI、Polly、Edge TTS、讯飞、Gemini TTS 免费档与是否绑卡对照。",
+  "name": "免费 TTS / 语音合成 API：额度与是否绑卡",
+  "description": "Azure、GCP、ElevenLabs、OpenAI、Polly、Edge TTS、讯飞、Gemini TTS 等免费档额度与是否绑卡对照（可核验）。",
   "numberOfItems": 8,
   "itemListElement": [
     {
@@ -47,7 +47,7 @@
     {
       "@type": "ListItem",
       "position": 4,
-      "name": "OpenAI Speech",
+      "name": "OpenAI Speech（tts-1 等）",
       "url": "https://prettych.github.io/htmlTest/pages/free-tts-api.html#openai-tts"
     },
     {
@@ -59,13 +59,13 @@
     {
       "@type": "ListItem",
       "position": 6,
-      "name": "Edge TTS",
+      "name": "Edge TTS（开源封装）",
       "url": "https://prettych.github.io/htmlTest/pages/free-tts-api.html#edge-tts"
     },
     {
       "@type": "ListItem",
       "position": 7,
-      "name": "讯飞开放平台",
+      "name": "讯飞开放平台在线合成",
       "url": "https://prettych.github.io/htmlTest/pages/free-tts-api.html#xfyun"
     },
     {
@@ -83,12 +83,13 @@
   <header class="site">
     <div class="inner">
       <a class="logo" href="../index.html"><span class="logo-mark" aria-hidden="true">M</span>Mogul <span>Desk</span></a>
-            <nav aria-label="主导航">
+      <nav aria-label="主导航">
         <a href="../index.html">首页</a>
         <a href="ai-daily.html">AI 日报</a>
         <a href="free-static-hosting.html">静态托管</a>
         <a href="free-tts-api.html" aria-current="page">TTS API</a>
         <a href="free-llm-api-no-card.html">免绑卡 LLM</a>
+        <a href="free-email-api.html">事务邮件</a>
         <a href="changelog.html">更新日志</a>
         <a href="about.html">关于</a>
       </nav>
@@ -100,12 +101,12 @@
       <span class="badge">对照页</span>
       <h1>免费 TTS / 语音合成 API：额度与是否绑卡</h1>
       <p class="lead">
-        面向想给博客、客服机器人、播客草稿加语音的开发者。数字来自各平台公开文档（核验日期：2026-10-21（Asia/Shanghai））。政策会改，下结论前请点「来源」。
+        面向想给博客、客服机器人、播客草稿加语音的开发者。数字来自各平台公开文档（核验：2026-10-21，Asia/Shanghai）。枚举：<code>card</code>=none|required|conditional|unverified。政策会改，下结论前请点「来源」。
       </p>
     </section>
 
     <div class="note">
-      <strong>怎么读：</strong>「免费额度」只写官方写明的字符/次数/积分；「绑卡」指开通该免费档是否通常需要支付方式。云厂商（Azure / GCP / AWS）多数要先开订阅并留支付方式，即使本月可能 $0。Edge TTS 不是官方产品，商用风险单独标出。
+      <strong>怎么读：</strong>「免费额度」只写官方写明的字符/次数；筛「免绑卡起步」= <code>card=none</code>。云厂商（Azure / GCP / AWS）多数要先开订阅并留支付方式，即使本月可能 $0。Edge TTS 不是官方产品，商用风险单独标出。
     </div>
 
     <h2>速览</h2>
@@ -124,9 +125,10 @@
         <div class="filter-group" data-filter-group="card" role="group" aria-label="按是否绑卡筛选">
           <span class="filter-group-label">绑卡</span>
           <button type="button" class="filter-chip is-active" data-filter-value="" aria-pressed="true">全部</button>
-          <button type="button" class="filter-chip" data-filter-value="no" aria-pressed="false">免绑卡起步</button>
-          <button type="button" class="filter-chip" data-filter-value="yes" aria-pressed="false">通常要支付方式</button>
-          <button type="button" class="filter-chip" data-filter-value="maybe" aria-pressed="false">视地区/档位</button>
+          <button type="button" class="filter-chip" data-filter-value="none" aria-pressed="false">免绑卡起步</button>
+          <button type="button" class="filter-chip" data-filter-value="conditional" aria-pressed="false">视地区/档位</button>
+          <button type="button" class="filter-chip" data-filter-value="required" aria-pressed="false">通常要支付方式</button>
+          <button type="button" class="filter-chip" data-filter-value="unverified" aria-pressed="false">待核实</button>
         </div>
       </div>
       <p class="filter-empty" data-filter-status hidden role="status">没有匹配的条目。试试换关键词，或点「清除」。</p>
@@ -138,48 +140,57 @@
           <th>服务</th>
           <th>免费档要点</th>
           <th>绑卡</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
-        <tr data-entry="azure-speech" data-card="yes" data-verify-status="ok" data-verified="2026-10-21" data-search="Azure Speech F0 神经TTS 绑卡">
-          <td><a href="#azure-speech">Azure Speech F0</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
-          <td>神经 TTS 50 万字符/月</td>
-          <td class="tag-warn"><span class="pill pill-warn">通常要 Azure 支付方式</span></td>
+        <tr id="row-azure-speech" data-entry="azure-speech" data-card="required" data-verify-status="ok" data-verified="2026-10-21" data-search="Azure Speech F0 neural TTS 50万 绑卡">
+          <td><a href="#azure-speech">Azure Speech F0</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
+          <td>神经 TTS 50 万字符/月（F0）</td>
+          <td class="tag-bad"><span class="pill pill-bad">通常要 Azure 支付方式</span></td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-tts-api%20%C2%B7%20azure-speech&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-tts-api.html%0Aid%EF%BC%9Aazure-speech%0A%E5%90%8D%E7%A7%B0%EF%BC%9AAzure%20Speech%20F0%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Drequired%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
         </tr>
-        <tr data-entry="google-cloud-tts" data-card="yes" data-verify-status="ok" data-verified="2026-10-21" data-search="Google Cloud TTS 必须结算">
-          <td><a href="#google-cloud-tts">Google Cloud TTS</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
+        <tr id="row-google-cloud-tts" data-entry="google-cloud-tts" data-card="required" data-verify-status="ok" data-verified="2026-10-21" data-search="Google Cloud TTS billing 400万 100万">
+          <td><a href="#google-cloud-tts">Google Cloud TTS</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
           <td>Standard/WaveNet 400 万；Neural2/Chirp 3 HD/Studio 100 万字符/月</td>
           <td class="tag-bad"><span class="pill pill-bad">必须启用结算</span></td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-tts-api%20%C2%B7%20google-cloud-tts&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-tts-api.html%0Aid%EF%BC%9Agoogle-cloud-tts%0A%E5%90%8D%E7%A7%B0%EF%BC%9AGoogle%20Cloud%20TTS%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Drequired%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
         </tr>
-        <tr data-entry="elevenlabs" data-card="no" data-verify-status="ok" data-verified="2026-10-21" data-search="ElevenLabs Free credits 免绑卡">
-          <td><a href="#elevenlabs">ElevenLabs Free</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
-          <td>1 万 credits/月（多产品共享）</td>
-          <td class="tag-ok"><span class="pill pill-ok">免费档通常不需</span></td>
+        <tr id="row-elevenlabs" data-entry="elevenlabs" data-card="none" data-verify-status="ok" data-verified="2026-10-21" data-search="ElevenLabs Free 10000 characters 免绑卡">
+          <td><a href="#elevenlabs">ElevenLabs Free</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
+          <td>Free 约 1 万字符/月（v4 TTS 表；多产品共享）</td>
+          <td class="tag-ok"><span class="pill pill-ok">免费档通常不需绑卡</span></td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-tts-api%20%C2%B7%20elevenlabs&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-tts-api.html%0Aid%EF%BC%9Aelevenlabs%0A%E5%90%8D%E7%A7%B0%EF%BC%9AElevenLabs%20Free%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dnone%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
         </tr>
-        <tr data-entry="openai-tts" data-card="maybe" data-verify-status="ok" data-verified="2026-10-21" data-search="OpenAI Speech TTS 地区 Free">
-          <td><a href="#openai-tts">OpenAI Speech（tts-1 等）</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
-          <td>Free 档有地区限制；tts-1 示例 3 RPM / 200 RPD；$100/月用量上限</td>
+        <tr id="row-openai-tts" data-entry="openai-tts" data-card="conditional" data-verify-status="ok" data-verified="2026-10-21" data-search="OpenAI Speech TTS Free geography RPM">
+          <td><a href="#openai-tts">OpenAI Speech（tts-1 等）</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
+          <td>Free 档有地区限制；tts-1 示例约 3 RPM / 200 RPD</td>
           <td class="tag-warn"><span class="pill pill-warn">Free 限地区；付费要购积分</span></td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-tts-api%20%C2%B7%20openai-tts&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-tts-api.html%0Aid%EF%BC%9Aopenai-tts%0A%E5%90%8D%E7%A7%B0%EF%BC%9AOpenAI%20Speech%EF%BC%88tts-1%20%E7%AD%89%EF%BC%89%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dconditional%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
         </tr>
-        <tr data-entry="amazon-polly" data-card="yes" data-verify-status="ok" data-verified="2026-10-21" data-search="Amazon Polly AWS 支付方式">
-          <td><a href="#amazon-polly">Amazon Polly</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
+        <tr id="row-amazon-polly" data-entry="amazon-polly" data-card="required" data-verify-status="ok" data-verified="2026-10-21" data-search="Amazon Polly free tier Standard 5M Neural">
+          <td><a href="#amazon-polly">Amazon Polly</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
           <td>Standard 500 万字符/月；Neural 等另有首年额度</td>
-          <td class="tag-warn"><span class="pill pill-warn">通常要 AWS 支付方式</span></td>
+          <td class="tag-bad"><span class="pill pill-bad">通常要 AWS 支付方式</span></td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-tts-api%20%C2%B7%20amazon-polly&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-tts-api.html%0Aid%EF%BC%9Aamazon-polly%0A%E5%90%8D%E7%A7%B0%EF%BC%9AAmazon%20Polly%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Drequired%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
         </tr>
-        <tr data-entry="edge-tts" data-card="no" data-verify-status="ok" data-verified="2026-10-21" data-search="Edge TTS 开源 无需Key">
-          <td><a href="#edge-tts">Edge TTS（开源封装）</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
+        <tr id="row-edge-tts" data-entry="edge-tts" data-card="none" data-verify-status="ok" data-verified="2026-10-21" data-search="Edge TTS 开源 无需Key 商用风险">
+          <td><a href="#edge-tts">Edge TTS（开源封装）</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
           <td>无官方公开额度表；社区库调用 Edge 在线 TTS</td>
           <td class="tag-ok"><span class="pill pill-ok">无需 API Key / 绑卡</span></td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-tts-api%20%C2%B7%20edge-tts&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-tts-api.html%0Aid%EF%BC%9Aedge-tts%0A%E5%90%8D%E7%A7%B0%EF%BC%9AEdge%20TTS%EF%BC%88%E5%BC%80%E6%BA%90%E5%B0%81%E8%A3%85%EF%BC%89%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dnone%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
         </tr>
-        <tr data-entry="xfyun" data-card="no" data-verify-status="ok" data-verified="2026-10-21" data-search="讯飞 在线合成 实名">
-          <td><a href="#xfyun">讯飞开放平台在线合成</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
+        <tr id="row-xfyun" data-entry="xfyun" data-card="none" data-verify-status="ok" data-verified="2026-10-21" data-search="讯飞 在线合成 500次 实名">
+          <td><a href="#xfyun">讯飞开放平台在线合成</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
           <td>创建应用后默认每天 SDK+WebAPI 合计 500 次</td>
           <td class="tag-ok"><span class="pill pill-ok">国内实名即可起步</span></td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-tts-api%20%C2%B7%20xfyun&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-tts-api.html%0Aid%EF%BC%9Axfyun%0A%E5%90%8D%E7%A7%B0%EF%BC%9A%E8%AE%AF%E9%A3%9E%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0%E5%9C%A8%E7%BA%BF%E5%90%88%E6%88%90%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dnone%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
         </tr>
-        <tr data-entry="gemini-tts" data-card="no" data-verify-status="ok" data-verified="2026-10-21" data-search="Gemini TTS Free Tier 无需结算">
-          <td><a href="#gemini-tts">Gemini API TTS</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21</span></td>
+        <tr id="row-gemini-tts" data-entry="gemini-tts" data-card="none" data-verify-status="ok" data-verified="2026-10-21" data-search="Gemini TTS Free Tier 无需结算">
+          <td><a href="#gemini-tts">Gemini API TTS</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
           <td>多款 Flash TTS 在 Free Tier 标为 Free of charge</td>
           <td class="tag-ok"><span class="pill pill-ok">Free Tier 无需结算账户</span></td>
+          <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-tts-api%20%C2%B7%20gemini-tts&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-tts-api.html%0Aid%EF%BC%9Agemini-tts%0A%E5%90%8D%E7%A7%B0%EF%BC%9AGemini%20API%20TTS%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dnone%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
         </tr>
       </tbody>
     </table>
@@ -187,167 +198,190 @@
 
     <h2 id="entries">逐条说明</h2>
 
-    <article class="entry" id="azure-speech" data-entry="azure-speech" data-card="yes" data-verify-status="ok" data-verified="2026-10-21" data-search="Azure Speech F0 神经TTS 绑卡">
+    <article class="entry" id="azure-speech" data-entry="azure-speech" data-card="required" data-verify-status="ok" data-verified="2026-10-21" data-search="Azure Speech F0 neural TTS 50万 绑卡">
       <div class="entry-head">
-      <h3>1. Azure Speech（Free / F0）</h3>
-      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
-    </div>
+        <h3>1. Azure Speech F0</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
       <p class="one-liner">微软云语音；免费档神经 TTS 按字符计月额度，适合小流量试听与原型。</p>
       <dl>
         <dt>用途</dt>
         <dd>应用内朗读、客服提示音、多语言神经音色合成。</dd>
         <dt>免费额度</dt>
-        <dd>定价页 Free (F0)：Neural Text to Speech <strong>0.5 million characters free per month</strong>（50 万字符/月）。配额文档：F0 实时 TTS 约 20 transactions / 60 seconds，单次最长约 10 分钟音频；F0 无 Batch synthesis。</dd>
+        <dd>定价页 Free (F0)：Neural Text to Speech 0.5 million characters free per month（50 万字符/月）。配额文档：F0 实时 TTS 约 20 transactions / 60 seconds；F0 无 Batch synthesis。</dd>
         <dt>是否绑卡</dt>
-        <dd>需 Azure 订阅。标准免费/即用即付账户常见要信用卡验证；Azure for Students 等学生计划可能不需卡（以微软当前注册页为准）。F0 本身按定价页为免费额度。</dd>
+        <dd><code>card=required</code> — 需 Azure 订阅。标准免费/即用即付账户常见要信用卡验证；Azure for Students 等学生计划可能不需卡（以微软当前注册页为准）。F0 本身按定价页为免费额度。</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">Free (F0) table: Neural Text to Speech — 0.5 million characters free per month.</dd>
       </dl>
       <p class="sources">
         来源：
         <a href="https://azure.microsoft.com/en-us/pricing/details/cognitive-services/speech-services/" rel="noopener" target="_blank">Azure Speech pricing</a>
         <a href="https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-services-quotas-and-limits" rel="noopener" target="_blank">Quotas and limits</a>
       </p>
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-tts-api%20%C2%B7%20azure-speech&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-tts-api.html%0Aid%EF%BC%9Aazure-speech%0A%E5%90%8D%E7%A7%B0%EF%BC%9AAzure%20Speech%20F0%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Drequired%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=azure-speech）</p>
     </article>
 
-    <article class="entry" id="google-cloud-tts" data-entry="google-cloud-tts" data-card="yes" data-verify-status="ok" data-verified="2026-10-21" data-search="Google Cloud TTS 必须结算">
+    <article class="entry" id="google-cloud-tts" data-entry="google-cloud-tts" data-card="required" data-verify-status="ok" data-verified="2026-10-21" data-search="Google Cloud TTS billing 400万 100万">
       <div class="entry-head">
-      <h3>2. Google Cloud Text-to-Speech</h3>
-      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
-    </div>
+        <h3>2. Google Cloud TTS</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
       <p class="one-liner">GCP 上的经典 TTS；按月有免费字符档，超量自动计费——所以必须开结算。</p>
       <dl>
         <dt>用途</dt>
         <dd>多语言 Standard / WaveNet / Neural2 / Chirp 3 HD / Studio 等音色；适合有 GCP 项目的后端合成。</dd>
         <dt>免费额度</dt>
-        <dd>定价页（按月、按字符）：Standard 与 WaveNet 免费至 <strong>4 million</strong> 字符；Neural2、Polyglot（Preview）、Chirp 3: HD、Studio 免费至 <strong>1 million</strong> 字符。Instant custom voice 与 Gemini-TTS（Cloud 侧）定价页写 Not available（无此免费档）。</dd>
+        <dd>定价页（按月、按字符）：Standard 与 WaveNet 免费至 4 million 字符；Neural2、Chirp 3: HD、Studio 等免费至 1 million 字符。Instant custom voice 与部分 Gemini-TTS（Cloud 侧）可能无此免费档。</dd>
         <dt>是否绑卡</dt>
-        <dd>官方写明：You must enable billing to use Text-to-Speech；超量会自动扣费。等于要开 GCP 结算账户（通常要支付方式）。</dd>
+        <dd><code>card=required</code> — 官方写明：You must enable billing to use Text-to-Speech；超量会自动扣费。等于要开 GCP 结算账户（通常要支付方式）。</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">Pricing：Standard/WaveNet free up to 4M chars/month；Neural2/Chirp 3 HD/Studio free up to 1M；billing required.</dd>
       </dl>
       <p class="sources">
         来源：
         <a href="https://cloud.google.com/text-to-speech/pricing" rel="noopener" target="_blank">Text-to-Speech pricing</a>
         <a href="https://docs.cloud.google.com/text-to-speech/quotas" rel="noopener" target="_blank">Quotas &amp; limits</a>
       </p>
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-tts-api%20%C2%B7%20google-cloud-tts&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-tts-api.html%0Aid%EF%BC%9Agoogle-cloud-tts%0A%E5%90%8D%E7%A7%B0%EF%BC%9AGoogle%20Cloud%20TTS%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Drequired%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=google-cloud-tts）</p>
     </article>
 
-    <article class="entry" id="elevenlabs" data-entry="elevenlabs" data-card="no" data-verify-status="ok" data-verified="2026-10-21" data-search="ElevenLabs Free credits 免绑卡">
+    <article class="entry" id="elevenlabs" data-entry="elevenlabs" data-card="none" data-verify-status="ok" data-verified="2026-10-21" data-search="ElevenLabs Free 10000 characters 免绑卡">
       <div class="entry-head">
-      <h3>3. ElevenLabs Free</h3>
-      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
-    </div>
-      <p class="one-liner">创作者向语音 API；免费档用共享 credits，API 与网页共用额度。</p>
+        <h3>3. ElevenLabs Free</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
+      <p class="one-liner">创作者向语音 API；Free / Pay-as-you-go 档有少量含字符量，API 与网页共用。</p>
       <dl>
         <dt>用途</dt>
-        <dd>高质量多语 TTS、有声内容草稿；也有 STT / 音效等（都吃同一池 credits）。</dd>
+        <dd>高质量多语 TTS、有声内容草稿；也有 STT / 音效等。</dd>
         <dt>免费额度</dt>
-        <dd>定价 FAQ：Free <strong>$0 / 10,000 credits per month</strong>。Multilingual V2 约 1 字符 = 1 credit；Flash/Turbo 部分模型 API 约 0.5–1 credit/字符。Free 档 credits <strong>不滚动</strong>。对比表中 Free 的 Commercial use 为空（Starter 起才列商用许可）——商用请读当前条款。</dd>
+        <dd>API 定价对照表 Free/Pay-as-you-go：v4 TTS Characters included 10,000（约 10 min）。更高档订阅另计。商用许可：对比表中 Free 的 Commercial use 常为空，Starter 起才列——商用请读当前条款。</dd>
         <dt>是否绑卡</dt>
-        <dd>免费档可注册使用；付费订阅才需信用卡 / Apple Pay / Google Pay（定价 FAQ）。</dd>
+        <dd><code>card=none</code> — 可注册使用 Free；付费订阅才需信用卡 / Apple Pay / Google Pay（定价 FAQ）。</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">elevenlabs.io/pricing/api model table: Free / Pay as you go — v4 Characters included 10,000.</dd>
       </dl>
       <p class="sources">
         来源：
+        <a href="https://elevenlabs.io/pricing/api" rel="noopener" target="_blank">ElevenLabs API Pricing</a>
         <a href="https://elevenlabs.io/pricing" rel="noopener" target="_blank">ElevenLabs Pricing</a>
-        <a href="https://help.elevenlabs.io/hc/en-us/articles/13298164480913-What-s-the-maximum-amount-of-characters-and-text-I-can-generate" rel="noopener" target="_blank">Character limits (Help Center)</a>
       </p>
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-tts-api%20%C2%B7%20elevenlabs&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-tts-api.html%0Aid%EF%BC%9Aelevenlabs%0A%E5%90%8D%E7%A7%B0%EF%BC%9AElevenLabs%20Free%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dnone%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=elevenlabs）</p>
     </article>
 
-    <article class="entry" id="openai-tts" data-entry="openai-tts" data-card="maybe" data-verify-status="ok" data-verified="2026-10-21" data-search="OpenAI Speech TTS 地区 Free">
+    <article class="entry" id="openai-tts" data-entry="openai-tts" data-card="conditional" data-verify-status="ok" data-verified="2026-10-21" data-search="OpenAI Speech TTS Free geography RPM">
       <div class="entry-head">
-      <h3>4. OpenAI Speech API（tts-1 / tts-1-hd / gpt-4o-mini-tts）</h3>
-      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
-    </div>
+        <h3>4. OpenAI Speech（tts-1 等）</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
       <p class="one-liner">OpenAI 音频 Speech 端点；按字符或 token 计费，Free 档有严格地区与速率限制。</p>
       <dl>
         <dt>用途</dt>
-        <dd><code>/v1/audio/speech</code> 文本转语音；tts-1 偏速度，tts-1-hd 偏质量，gpt-4o-mini-tts 按 text/audio token 计费。</dd>
+        <dd>/v1/audio/speech 文本转语音；tts-1 偏速度，tts-1-hd 偏质量，gpt-4o-mini-tts 按 token 计费。</dd>
         <dt>免费额度</dt>
-        <dd>Usage tiers：Free 档「User must be in an allowed geography」，月用量上限 <strong>$100 / month</strong>。模型页示例：tts-1 Free 约 <strong>3 RPM / 200 RPD</strong>。定价页：tts-1 约 $15 / 1M characters，tts-1-hd 约 $30 / 1M characters；gpt-4o-mini-tts 约 text input $0.60 / 1M tokens + audio output $12 / 1M tokens。不在允许地区则无 Free 档。</dd>
+        <dd>Usage tiers：Free 档「User must be in an allowed geography」。模型页示例：tts-1 Free 约 3 RPM / 200 RPD。定价页：tts-1 / tts-1-hd 按字符计费。不在允许地区则无 Free 档。</dd>
         <dt>是否绑卡</dt>
-        <dd>Free 档在允许地区可起步；Build 及以上要累计购积分。实际是否强制留卡以账号控制台为准。</dd>
+        <dd><code>card=conditional</code> — Free 档在允许地区可起步；Build 及以上要累计购积分。实际是否强制留卡以账号控制台为准。</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">OpenAI rate limits / usage tiers：Free geography-gated；tts-1 Free RPM/RPD 以模型页为准。</dd>
       </dl>
       <p class="sources">
         来源：
         <a href="https://developers.openai.com/api/docs/pricing" rel="noopener" target="_blank">OpenAI Pricing</a>
         <a href="https://developers.openai.com/api/docs/models/tts-1" rel="noopener" target="_blank">tts-1 model</a>
-        <a href="https://developers.openai.com/api/docs/guides/rate-limits" rel="noopener" target="_blank">Rate limits / usage tiers</a>
+        <a href="https://developers.openai.com/api/docs/guides/rate-limits" rel="noopener" target="_blank">Rate limits</a>
       </p>
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-tts-api%20%C2%B7%20openai-tts&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-tts-api.html%0Aid%EF%BC%9Aopenai-tts%0A%E5%90%8D%E7%A7%B0%EF%BC%9AOpenAI%20Speech%EF%BC%88tts-1%20%E7%AD%89%EF%BC%89%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dconditional%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=openai-tts）</p>
     </article>
 
-    <article class="entry" id="amazon-polly" data-entry="amazon-polly" data-card="yes" data-verify-status="ok" data-verified="2026-10-21" data-search="Amazon Polly AWS 支付方式">
+    <article class="entry" id="amazon-polly" data-entry="amazon-polly" data-card="required" data-verify-status="ok" data-verified="2026-10-21" data-search="Amazon Polly free tier Standard 5M Neural">
       <div class="entry-head">
-      <h3>5. Amazon Polly</h3>
-      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
-    </div>
+        <h3>5. Amazon Polly</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
       <p class="one-liner">AWS 文本转语音；Standard 有较大的按月免费字符量，Neural 等多为新账号首年额度。</p>
       <dl>
         <dt>用途</dt>
         <dd>应用朗读、无障碍、Speech Marks 口型同步等。</dd>
         <dt>免费额度</dt>
-        <dd>定价页 Free tier：Standard <strong>5 million characters/month</strong>；Neural <strong>1 million/month（首 12 个月）</strong>；Long-Form 50 万/月（首 12 个月）；Generative 10 万/月（首 12 个月）。2025-07-15 起新客户另有 AWS Free Tier credits 说明，以 AWS Free Tier 文档为准。</dd>
+        <dd>定价页 Free tier：Standard 5 million characters/month；Neural 1 million/month（首 12 个月）；Long-Form 50 万/月（首 12 个月）；Generative 10 万/月（首 12 个月）。2025-07-15 起新客户另有 AWS Free Tier credits 说明。</dd>
         <dt>是否绑卡</dt>
-        <dd>一般需 AWS 账户与支付方式；免费额度用完或超出 Free Tier 后按字符计费。</dd>
+        <dd><code>card=required</code> — 一般需 AWS 账户与支付方式；免费额度用完或超出 Free Tier 后按字符计费。</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">aws.amazon.com/polly/pricing Free tier: Standard 5M chars/month; Neural 1M/month first 12 months.</dd>
       </dl>
       <p class="sources">
         来源：
         <a href="https://aws.amazon.com/polly/pricing/" rel="noopener" target="_blank">Amazon Polly Pricing</a>
       </p>
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-tts-api%20%C2%B7%20amazon-polly&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-tts-api.html%0Aid%EF%BC%9Aamazon-polly%0A%E5%90%8D%E7%A7%B0%EF%BC%9AAmazon%20Polly%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Drequired%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=amazon-polly）</p>
     </article>
 
-    <article class="entry" id="edge-tts" data-entry="edge-tts" data-card="no" data-verify-status="ok" data-verified="2026-10-21" data-search="Edge TTS 开源 无需Key">
+    <article class="entry" id="edge-tts" data-entry="edge-tts" data-card="none" data-verify-status="ok" data-verified="2026-10-21" data-search="Edge TTS 开源 无需Key 商用风险">
       <div class="entry-head">
-      <h3>6. Edge TTS（开源封装，非微软官方 API）</h3>
-      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
-    </div>
+        <h3>6. Edge TTS（开源封装）</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
       <p class="one-liner">社区项目通过 Microsoft Edge 在线 TTS 通道合成；无 Key、无账单，但也无官方 SLA。</p>
       <dl>
         <dt>用途</dt>
-        <dd>本地脚本、个人工具快速出音频；PyPI 包 <code>edge-tts</code>（如 rany2/edge-tts）常见。</dd>
+        <dd>本地脚本、个人工具快速出音频；PyPI 包 edge-tts（如 rany2/edge-tts）常见。</dd>
         <dt>免费额度</dt>
-        <dd><strong>无</strong>微软官方「每月 X 字符」公开表。可用性取决于 Edge 在线服务与客户端行为，可能随时变更或限流。</dd>
+        <dd>无微软官方「每月 X 字符」公开表。可用性取决于 Edge 在线服务与客户端行为，可能随时变更或限流。</dd>
         <dt>是否绑卡</dt>
-        <dd>不需要 API Key 或绑卡。商用/再分发音频：微软社区答复常建议改用 Azure AI Speech；本站不声称其可商用。</dd>
+        <dd><code>card=none</code> — 不需要 API Key 或绑卡。商用/再分发音频：微软社区答复常建议改用 Azure AI Speech；本站不声称其可商用。</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">非官方产品；见 GitHub rany2/edge-tts 与 Microsoft Q&amp;A 商用讨论。</dd>
       </dl>
       <p class="sources">
         来源：
-        <a href="https://github.com/rany2/edge-tts" rel="noopener" target="_blank">rany2/edge-tts（GitHub）</a>
+        <a href="https://github.com/rany2/edge-tts" rel="noopener" target="_blank">rany2/edge-tts</a>
         <a href="https://pypi.org/project/edge-tts/" rel="noopener" target="_blank">edge-tts on PyPI</a>
         <a href="https://learn.microsoft.com/en-us/answers/questions/6007729/commercial-use-of-microsoft-edge-text-to-speech-vi" rel="noopener" target="_blank">Microsoft Q&amp;A（商用讨论）</a>
       </p>
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-tts-api%20%C2%B7%20edge-tts&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-tts-api.html%0Aid%EF%BC%9Aedge-tts%0A%E5%90%8D%E7%A7%B0%EF%BC%9AEdge%20TTS%EF%BC%88%E5%BC%80%E6%BA%90%E5%B0%81%E8%A3%85%EF%BC%89%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dnone%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=edge-tts）</p>
     </article>
 
-    <article class="entry" id="xfyun" data-entry="xfyun" data-card="no" data-verify-status="ok" data-verified="2026-10-21" data-search="讯飞 在线合成 实名">
+    <article class="entry" id="xfyun" data-entry="xfyun" data-card="none" data-verify-status="ok" data-verified="2026-10-21" data-search="讯飞 在线合成 500次 实名">
       <div class="entry-head">
-      <h3>7. 讯飞开放平台 · 在线语音合成</h3>
-      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
-    </div>
+        <h3>7. 讯飞开放平台在线合成</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
       <p class="one-liner">国内常用中文 TTS；创建应用后有按日免费调用次数，适合中文原型。</p>
       <dl>
         <dt>用途</dt>
-        <dd>App / 网页中文朗读；基础发音人（如小燕、许久等）文档写明免费赠送，特色发音人另购。</dd>
+        <dd>App / 网页中文朗读；基础发音人文档写明免费赠送，特色发音人另购。</dd>
         <dt>免费额度</dt>
-        <dd>服务说明：登录并创建应用后，每天可免费调用语音合成 <strong>SDK 与 Web API 共计 500 次</strong>；另可在官网领取免费次数包（每账号一次，以领取页为准）。API 文档亦写：创建应用后默认每日 500 次。</dd>
+        <dd>服务说明：登录并创建应用后，每天可免费调用语音合成 SDK 与 Web API 共计 500 次；另可在官网领取免费次数包（每账号一次，以领取页为准）。</dd>
         <dt>是否绑卡</dt>
-        <dd>国内开放平台流程以实名认证与控制台开通为主；起步免费次数不要求国际信用卡。正式商用额度与审核规则以讯飞当前协议为准。</dd>
+        <dd><code>card=none</code> — 国内开放平台流程以实名认证与控制台开通为主；起步免费次数不要求国际信用卡。正式商用额度与审核规则以讯飞当前协议为准。</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">xfyun.cn 在线语音合成服务说明：每日 SDK+WebAPI 合计 500 次。</dd>
       </dl>
       <p class="sources">
         来源：
         <a href="https://www.xfyun.cn/doc/tts/online_tts/tts_description.html" rel="noopener" target="_blank">在线语音合成服务说明</a>
         <a href="https://www.xfyun.cn/doc/tts/online_tts/API.html" rel="noopener" target="_blank">在线语音合成 API</a>
       </p>
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-tts-api%20%C2%B7%20xfyun&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-tts-api.html%0Aid%EF%BC%9Axfyun%0A%E5%90%8D%E7%A7%B0%EF%BC%9A%E8%AE%AF%E9%A3%9E%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0%E5%9C%A8%E7%BA%BF%E5%90%88%E6%88%90%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dnone%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=xfyun）</p>
     </article>
 
-    <article class="entry" id="gemini-tts" data-entry="gemini-tts" data-card="no" data-verify-status="ok" data-verified="2026-10-21" data-search="Gemini TTS Free Tier 无需结算">
+    <article class="entry" id="gemini-tts" data-entry="gemini-tts" data-card="none" data-verify-status="ok" data-verified="2026-10-21" data-search="Gemini TTS Free Tier 无需结算">
       <div class="entry-head">
-      <h3>8. Gemini Developer API · TTS 模型</h3>
-      <span class="verified" data-verified="2026-10-21">核验：2026-10-21</span>
-    </div>
+        <h3>8. Gemini API TTS</h3>
+        <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
+      </div>
       <p class="one-liner">走 Google AI Studio / Gemini API，而不是 Cloud Text-to-Speech；多款 Flash TTS 在 Free Tier 标价为免费。</p>
       <dl>
         <dt>用途</dt>
-        <dd>用 Gemini 系 TTS 模型（如文档中的 gemini-3.8-flash-tts、Flash-Lite TTS、2.5 Flash Preview TTS 等）做可控语音合成。</dd>
+        <dd>用 Gemini 系 TTS 模型做可控语音合成。</dd>
         <dt>免费额度</dt>
-        <dd>定价页多款 Flash TTS 在 Free Tier 列为 <strong>Free of charge</strong>（输入/输出）。具体 RPM / TPM / RPD 因模型与账户档位而异，官方要求在 AI Studio 查看当前限额；Free Tier 内容可能用于改进产品（定价页标注）。</dd>
+        <dd>定价页多款 Flash TTS 在 Free Tier 列为 Free of charge。具体 RPM / TPM / RPD 因模型与账户档位而异，官方要求在 AI Studio 查看当前限额；Free Tier 内容可能用于改进产品。</dd>
         <dt>是否绑卡</dt>
-        <dd>Billing 文档：New accounts begin on the Free Tier，无需先链接结算账户。升级 Paid 才需绑卡并预付（最低约 $5 等，以 AI Studio 流程为准）。</dd>
+        <dd><code>card=none</code> — Billing 文档：New accounts begin on the Free Tier，无需先链接结算账户。升级 Paid 才需绑卡并预付（最低约 $5 等）。</dd>
+        <dt>证据句</dt>
+        <dd class="evidence">ai.google.dev Gemini API pricing + billing：Free Tier without linking billing first.</dd>
       </dl>
       <p class="sources">
         来源：
@@ -355,10 +389,11 @@
         <a href="https://ai.google.dev/gemini-api/docs/billing" rel="noopener" target="_blank">Billing</a>
         <a href="https://ai.google.dev/gemini-api/docs/rate-limits" rel="noopener" target="_blank">Rate limits</a>
       </p>
+      <p class="entry-errata"><a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-tts-api%20%C2%B7%20gemini-tts&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-tts-api.html%0Aid%EF%BC%9Agemini-tts%0A%E5%90%8D%E7%A7%B0%EF%BC%9AGemini%20API%20TTS%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acard%3Dnone%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">报告本条过时/错误</a>（预填 id=gemini-tts）</p>
     </article>
 
     <div class="note">
-      <strong>未收录：</strong>火山引擎 / 豆包语音合成——核验时官方计费说明页无法稳定打开，产品页依赖前端渲染，本站<strong>不编造</strong>免费字符数；待官方文档可抓取后再补。选型速记：中文日调用 → 先看讯飞；要官方云 SLA → Azure F0 / Polly / GCP（都要结算意识）；不想绑卡原型 → ElevenLabs Free、Gemini TTS、或接受风险的 Edge TTS。
+      <strong>未收录：</strong>火山引擎 / 豆包语音合成——核验时官方计费说明页无法稳定打开，本站<strong>不编造</strong>免费字符数；待官方文档可抓取后再补。选型速记：中文日调用 → 先看讯飞；要官方云 SLA → Azure F0 / Polly / GCP（都要结算意识）；不想绑卡原型 → ElevenLabs Free、Gemini TTS、或接受风险的 Edge TTS。
     </div>
 
     <p class="pager"><a href="free-static-hosting.html">← 上一页：静态托管</a> · <a href="../index.html">首页</a> · <a href="free-llm-api-no-card.html">下一页：免绑卡 LLM →</a></p>
@@ -368,7 +403,7 @@
     <div class="wrap wrap--wide">
       <p class="footer-brand">Mogul Desk</p>
       <p class="footer-meta">核验日期：2026-10-21（Asia/Shanghai） · <a href="about.html">关于本站</a> · <a href="changelog.html">更新日志</a></p>
-      <p class="footer-errata">发现问题？<a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF&body=%E9%A1%B5%E9%9D%A2%EF%BC%9A%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A">发勘误邮件</a>（仅勘误 / 纠错，不是客服）。</p>
+      <p class="footer-errata">发现问题？<a href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-tts-api.html%5Cnid%EF%BC%9A%5Cn%E5%8E%9F%E5%80%BC%EF%BC%9A%5Cn%E9%97%AE%E9%A2%98%EF%BC%9A%5Cn%E5%BB%BA%E8%AE%AE%EF%BC%9A">发勘误邮件</a>（仅勘误 / 纠错，不是客服）。</p>
       <p class="footer-disclaimer">免责：额度与条款以各平台官网为准；本站无流量/收入承诺，未接入联盟链接。</p>
     </div>
   </footer>

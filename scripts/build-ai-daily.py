@@ -250,6 +250,7 @@ def render_page(report: dict, generated_label: str) -> str:
         <a href="free-static-hosting.html">静态托管</a>
         <a href="free-tts-api.html">TTS API</a>
         <a href="free-llm-api-no-card.html">免绑卡 LLM</a>
+        <a href="free-email-api.html">事务邮件</a>
         <a href="changelog.html">更新日志</a>
         <a href="about.html">关于</a>
       </nav>

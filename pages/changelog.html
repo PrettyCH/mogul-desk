@@ -30,6 +30,7 @@
         <a href="free-static-hosting.html">静态托管</a>
         <a href="free-tts-api.html">TTS API</a>
         <a href="free-llm-api-no-card.html">免绑卡 LLM</a>
+        <a href="free-email-api.html">事务邮件</a>
         <a href="changelog.html" aria-current="page">更新日志</a>
         <a href="about.html">关于</a>
       </nav>
@@ -49,6 +50,18 @@
     </section>
 
     <ol class="changelog">
+      <li>
+        <time datetime="2026-10-21">2026-10-21</time>
+        <h3>TTS / LLM 迁 JSON→HTML；新增事务邮件 API 对照</h3>
+        <p>对照页改为 data/*.json + scripts/build-*.py 生成。筛选文案与托管页分离；按行勘误 mailto 预填页面+id。</p>
+        <ul>
+          <li><code>data/tts.json</code> → <code>pages/free-tts-api.html</code>（8 条；card=none|required|conditional|unverified）</li>
+          <li><code>data/llm.json</code> → <code>pages/free-llm-api-no-card.html</code>（freeType：recurring×6、trial_credit×2；试用金写明用尽条件）</li>
+          <li>新页 <code>data/email-api.json</code> → <code>pages/free-email-api.html</code>（7 条：Resend / Mailgun / Postmark / SES / Brevo / SendGrid 试用 / ZeptoMail）</li>
+          <li>额度数字经官方定价/文档核验（2026-10-21）；未收录无法稳定打开文档的国内邮件推送厂商</li>
+          <li>首页目录卡 + 全站导航挂「事务邮件」；sitemap 更新</li>
+        </ul>
+      </li>
       <li>
         <time datetime="2026-10-21">2026-10-21</time>
         <h3>托管页 P0：统一 commercial / overage 枚举 + 商用边界加深</h3>

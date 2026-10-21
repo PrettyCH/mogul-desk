@@ -24,8 +24,9 @@
   <header class="site">
     <div class="inner">
       <a class="logo" href="../index.html"><span class="logo-mark" aria-hidden="true">M</span>Mogul <span>Desk</span></a>
-      <nav aria-label="主导航">
+            <nav aria-label="主导航">
         <a href="../index.html">首页</a>
+        <a href="ai-daily.html">AI 日报</a>
         <a href="free-static-hosting.html">静态托管</a>
         <a href="free-tts-api.html">TTS API</a>
         <a href="free-llm-api-no-card.html">免绑卡 LLM</a>
@@ -48,6 +49,15 @@
     </section>
 
     <ol class="changelog">
+      <li>
+        <time datetime="2026-10-21">2026-10-21</time>
+        <h3>接入 AIHOT：每日 AI 日报页</h3>
+        <p>新增 <code>pages/ai-daily.html</code>，由 <code>scripts/build-ai-daily.py</code> 读取 <code>data/aihot-daily.json</code> 生成。条目优先链原文，AIHOT 作次要；首页与全站导航挂上「AI 日报」。</p>
+        <ul>
+          <li>例行任务：拉 AIHOT JSON → 覆盖 data 文件 → 跑 build 脚本</li>
+          <li>个人非商业整理；新闻以信源为准</li>
+        </ul>
+      </li>
       <li>
         <time datetime="2026-10-21">2026-10-21</time>
         <h3>去 AI 味：改成墨水色编辑站</h3>

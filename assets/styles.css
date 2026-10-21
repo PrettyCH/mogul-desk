@@ -912,3 +912,77 @@ article.entry[hidden] {
   font-size: 0.8rem;
 }
 .footer-errata a { color: var(--accent); }
+
+/* ——— AI Daily ——— */
+.daily-toc {
+  margin: 0 0 1.75rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.daily-toc a { margin: 0 0.05rem; }
+
+.daily-sec-full {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--faint);
+  letter-spacing: 0;
+}
+
+.daily-item {
+  padding: 1.1rem 0 1.2rem;
+  border-bottom: 1px solid var(--border);
+}
+.daily-item:last-child { border-bottom: none; }
+.daily-item h3 {
+  margin: 0 0 0.35rem;
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+}
+.daily-item h3 a {
+  color: var(--text);
+  text-decoration-color: rgba(196, 165, 116, 0.35);
+}
+.daily-item h3 a:hover { color: var(--accent-hover); }
+
+.daily-meta {
+  margin: 0 0 0.45rem;
+  font-size: 0.78rem;
+  color: var(--faint);
+  font-variant-numeric: tabular-nums;
+}
+.daily-source { color: var(--muted); }
+
+.daily-summary {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.925rem;
+  line-height: 1.65;
+}
+
+.daily-links {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--faint);
+}
+.daily-links a { color: var(--accent); }
+.daily-aihot {
+  color: var(--ink) !important;
+  text-decoration-color: rgba(138, 158, 150, 0.4);
+}
+
+.daily-flashes .daily-item {
+  padding: 0.7rem 0;
+}
+.daily-flashes .daily-item h3 {
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+.muted { color: var(--muted); }

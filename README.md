@@ -108,3 +108,19 @@ python3 -m http.server 8765
 ## 免责
 
 平台额度与条款随时变更。本站内容供学习与选型参考，不构成投资、法律或商务建议。
+
+## AI 日报（AIHOT）
+
+- 数据：`data/aihot-daily.json`
+- 生成页：`pages/ai-daily.html`（由脚本覆盖写入）
+- 一键拉取并重建（在本机 / box）：
+
+```bash
+./scripts/fetch-ai-daily.sh          # 默认今天（Asia/Shanghai）
+./scripts/fetch-ai-daily.sh 2026-10-21
+# 或只重建：
+python3 scripts/build-ai-daily.py
+```
+
+只 GET `aihot.news`；页面里每条优先链原文，AIHOT 条目为次要。个人非商业整理。
+

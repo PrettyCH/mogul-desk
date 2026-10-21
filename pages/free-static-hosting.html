@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>免费静态托管对照 · Mogul Desk</title>
   <meta name="description" content="GitHub Pages、Cloudflare Pages、Vercel、Netlify、Render、Surge、GitLab Pages、Firebase Hosting 的免费额度与商用条款对照（可核验）。" />
-  <meta name="theme-color" content="#0f1419" />
+  <meta name="theme-color" content="#09090b" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://prettych.github.io/htmlTest/pages/free-static-hosting.html" />
   <link rel="stylesheet" href="../assets/styles.css" />
@@ -13,7 +13,7 @@
 <body>
   <header class="site">
     <div class="inner">
-      <a class="logo" href="../index.html">Mogul <span>Desk</span></a>
+            <a class="logo" href="../index.html"><span class="logo-mark" aria-hidden="true">M</span>Mogul <span>Desk</span></a>
       <nav>
         <a href="../index.html">首页</a>
         <a href="free-static-hosting.html" aria-current="page">静态托管</a>
@@ -24,8 +24,8 @@
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
+  <main class="wrap wrap--wide">
+    <section class="hero hero--page">
       <span class="badge">对照页 · 8 条</span>
       <h1>免费静态托管：额度、商用与自定义域名</h1>
       <p class="lead">
@@ -52,49 +52,49 @@
         <tr>
           <td><a href="#github-pages">GitHub Pages</a></td>
           <td>站点 ≤ 1 GB；带宽软上限约 100 GB/月</td>
-          <td class="tag-bad">不允许当免费商业主机</td>
+          <td class="tag-bad"><span class="pill pill-bad">不允许当免费商业主机</span></td>
           <td>支持</td>
         </tr>
         <tr>
           <td><a href="#cloudflare-pages">Cloudflare Pages</a></td>
           <td>500 次构建/月；每站 2 万文件；静态请求通常不计费</td>
-          <td class="tag-ok">未见等同「禁止商用」条款</td>
+          <td class="tag-ok"><span class="pill pill-ok">未见等同「禁止商用」条款</span></td>
           <td>每项目最多 100 个（Free）</td>
         </tr>
         <tr>
           <td><a href="#vercel-hobby">Vercel Hobby</a></td>
           <td>Fast Data Transfer 100 GB 等</td>
-          <td class="tag-bad">仅限非商用个人用途</td>
+          <td class="tag-bad"><span class="pill pill-bad">仅限非商用个人用途</span></td>
           <td>每项目最多 50 个域名</td>
         </tr>
         <tr>
           <td><a href="#netlify-free">Netlify Free</a></td>
           <td>300 credits/月；带宽 20 credits/GB</td>
-          <td class="tag-warn">文档未写死禁止商用；额度耗尽会暂停</td>
+          <td class="tag-warn"><span class="pill pill-warn">文档未写死禁止商用；额度耗尽会暂停</span></td>
           <td>支持 + SSL</td>
         </tr>
         <tr>
           <td><a href="#render-static">Render Static Sites</a></td>
           <td>静态站免费部署；Hobby 含 5 GB 出站带宽</td>
-          <td class="tag-warn">可商用，但超额需绑卡否则可能停服</td>
+          <td class="tag-warn"><span class="pill pill-warn">可商用，但超额需绑卡否则可能停服</span></td>
           <td>Hobby 含 2 个域名额度</td>
         </tr>
         <tr>
           <td><a href="#surge">Surge.sh</a></td>
           <td>免费无限发布；基础 SSL</td>
-          <td class="tag-warn">以官网条款为准；Professional 才有强制 HTTPS 等</td>
+          <td class="tag-warn"><span class="pill pill-warn">以官网条款为准；Professional 才有强制 HTTPS 等</span></td>
           <td>免费档支持</td>
         </tr>
         <tr>
           <td><a href="#gitlab-pages">GitLab Pages</a></td>
           <td>站点最大 1 GB；每站最多 150 个自定义域名</td>
-          <td class="tag-warn">官方设置页未写「禁止商用」一句；以 ToS 为准</td>
+          <td class="tag-warn"><span class="pill pill-warn">官方设置页未写「禁止商用」一句；以 ToS 为准</span></td>
           <td>支持（gitlab.io / 自定义）</td>
         </tr>
         <tr>
           <td><a href="#firebase-hosting">Firebase Hosting</a></td>
           <td>存储 10 GB；传输约 10 GB/月（Spark）</td>
-          <td class="tag-warn">可商用；超量需升 Blaze，否则站点可能被停</td>
+          <td class="tag-warn"><span class="pill pill-warn">可商用；超量需升 Blaze，否则站点可能被停</span></td>
           <td>支持</td>
         </tr>
       </tbody>
@@ -277,7 +277,7 @@
   </main>
 
   <footer class="site">
-    <div class="wrap">
+    <div class="wrap wrap--wide">
       <p class="footer-brand">Mogul Desk</p>
       <p class="footer-meta">核验日期：2026-10-21（Asia/Shanghai） · <a href="about.html">关于本站</a></p>
       <p class="footer-disclaimer">免责：额度与条款以各平台官网为准；本站无流量/收入承诺，未接入联盟链接。</p>

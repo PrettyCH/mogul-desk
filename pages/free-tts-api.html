@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>免费 TTS / 语音合成 API 额度对照 · Mogul Desk</title>
   <meta name="description" content="Azure、Google Cloud、ElevenLabs、OpenAI、Amazon Polly、Edge TTS、讯飞、Gemini TTS 等免费档额度与是否绑卡对照（可核验）。" />
-  <meta name="theme-color" content="#0f1419" />
+  <meta name="theme-color" content="#09090b" />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://prettych.github.io/htmlTest/pages/free-tts-api.html" />
   <link rel="stylesheet" href="../assets/styles.css" />
@@ -13,7 +13,7 @@
 <body>
   <header class="site">
     <div class="inner">
-      <a class="logo" href="../index.html">Mogul <span>Desk</span></a>
+            <a class="logo" href="../index.html"><span class="logo-mark" aria-hidden="true">M</span>Mogul <span>Desk</span></a>
       <nav>
         <a href="../index.html">首页</a>
         <a href="free-static-hosting.html">静态托管</a>
@@ -24,8 +24,8 @@
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
+  <main class="wrap wrap--wide">
+    <section class="hero hero--page">
       <span class="badge">对照页 · 8 条</span>
       <h1>免费 TTS / 语音合成 API：额度与是否绑卡</h1>
       <p class="lead">
@@ -51,42 +51,42 @@
         <tr>
           <td><a href="#azure-speech">Azure Speech F0</a></td>
           <td>神经 TTS 50 万字符/月</td>
-          <td class="tag-warn">通常要 Azure 支付方式</td>
+          <td class="tag-warn"><span class="pill pill-warn">通常要 Azure 支付方式</span></td>
         </tr>
         <tr>
           <td><a href="#google-cloud-tts">Google Cloud TTS</a></td>
           <td>Standard/WaveNet 400 万；Neural2/Chirp 3 HD/Studio 100 万字符/月</td>
-          <td class="tag-bad">必须启用结算</td>
+          <td class="tag-bad"><span class="pill pill-bad">必须启用结算</span></td>
         </tr>
         <tr>
           <td><a href="#elevenlabs">ElevenLabs Free</a></td>
           <td>1 万 credits/月（多产品共享）</td>
-          <td class="tag-ok">免费档通常不需</td>
+          <td class="tag-ok"><span class="pill pill-ok">免费档通常不需</span></td>
         </tr>
         <tr>
           <td><a href="#openai-tts">OpenAI Speech（tts-1 等）</a></td>
           <td>Free 档有地区限制；tts-1 示例 3 RPM / 200 RPD；$100/月用量上限</td>
-          <td class="tag-warn">Free 限地区；付费要购积分</td>
+          <td class="tag-warn"><span class="pill pill-warn">Free 限地区；付费要购积分</span></td>
         </tr>
         <tr>
           <td><a href="#amazon-polly">Amazon Polly</a></td>
           <td>Standard 500 万字符/月；Neural 等另有首年额度</td>
-          <td class="tag-warn">通常要 AWS 支付方式</td>
+          <td class="tag-warn"><span class="pill pill-warn">通常要 AWS 支付方式</span></td>
         </tr>
         <tr>
           <td><a href="#edge-tts">Edge TTS（开源封装）</a></td>
           <td>无官方公开额度表；社区库调用 Edge 在线 TTS</td>
-          <td class="tag-ok">无需 API Key / 绑卡</td>
+          <td class="tag-ok"><span class="pill pill-ok">无需 API Key / 绑卡</span></td>
         </tr>
         <tr>
           <td><a href="#xfyun">讯飞开放平台在线合成</a></td>
           <td>创建应用后默认每天 SDK+WebAPI 合计 500 次</td>
-          <td class="tag-ok">国内实名即可起步</td>
+          <td class="tag-ok"><span class="pill pill-ok">国内实名即可起步</span></td>
         </tr>
         <tr>
           <td><a href="#gemini-tts">Gemini API TTS</a></td>
           <td>多款 Flash TTS 在 Free Tier 标为 Free of charge</td>
-          <td class="tag-ok">Free Tier 无需结算账户</td>
+          <td class="tag-ok"><span class="pill pill-ok">Free Tier 无需结算账户</span></td>
         </tr>
       </tbody>
     </table>
@@ -248,7 +248,7 @@
   </main>
 
   <footer class="site">
-    <div class="wrap">
+    <div class="wrap wrap--wide">
       <p class="footer-brand">Mogul Desk</p>
       <p class="footer-meta">核验日期：2026-10-21（Asia/Shanghai） · <a href="about.html">关于本站</a></p>
       <p class="footer-disclaimer">免责：额度与条款以各平台官网为准；本站无流量/收入承诺，未接入联盟链接。</p>

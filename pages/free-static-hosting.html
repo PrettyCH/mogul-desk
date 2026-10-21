@@ -167,7 +167,7 @@
         <tr id="row-cloudflare-pages" data-entry="cloudflare-pages" data-commercial="conditional" data-overage="hard_stop" data-verify-status="ok" data-verified="2026-10-21" data-search="Cloudflare Pages conditional builds 500 commercial ToS">
           <td><a href="#cloudflare-pages">Cloudflare Pages</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
           <td>500 次构建/月；每站 2 万文件；单文件 25 MiB</td>
-          <td class="tag-warn"><span class="pill pill-warn">有条件：ToS 无商用禁令，但 Free 无 SLA</span></td>
+          <td class="tag-warn"><span class="pill pill-warn">有条件：无总禁商用，但 Free 不可收卡（§2.2.1(h)）</span></td>
           <td class="tag-bad"><span class="pill pill-bad">构建次数硬顶；静态流量通常宽裕</span></td>
           <td>Free 每项目最多 100 自定义域名</td>
           <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-static-hosting%20%C2%B7%20cloudflare-pages&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-static-hosting.html%0Aid%EF%BC%9Acloudflare-pages%0A%E5%90%8D%E7%A7%B0%EF%BC%9ACloudflare%20Pages%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acommercial%3Dconditional%3B%20overage%3Dhard_stop%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
@@ -183,7 +183,7 @@
         <tr id="row-netlify-free" data-entry="netlify-free" data-commercial="allowed" data-overage="hard_stop" data-verify-status="ok" data-verified="2026-10-21" data-search="Netlify Free allowed commercial 300 credits hard_stop">
           <td><a href="#netlify-free">Netlify Free</a><span class="table-verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span></td>
           <td>300 credits/月硬顶；带宽约 20 credits/GB</td>
-          <td class="tag-ok"><span class="pill pill-ok">官方博文允许商用项目</span></td>
+          <td class="tag-ok"><span class="pill pill-ok">官方博文允许商用项目（额度硬顶，适合轻量商用）</span></td>
           <td class="tag-bad"><span class="pill pill-bad">积分硬顶，耗尽暂停至下周期</span></td>
           <td>支持自定义域名 + SSL</td>
           <td><a class="errata-link" href="mailto:chengxixi@mail.grokbot.com?subject=Mogul%20Desk%20%E5%8B%98%E8%AF%AF%20%C2%B7%20free-static-hosting%20%C2%B7%20netlify-free&body=%E9%A1%B5%E9%9D%A2%EF%BC%9Afree-static-hosting.html%0Aid%EF%BC%9Anetlify-free%0A%E5%90%8D%E7%A7%B0%EF%BC%9ANetlify%20Free%0A%E5%8E%9F%E5%80%BC%EF%BC%9Acommercial%3Dallowed%3B%20overage%3Dhard_stop%0A%E9%97%AE%E9%A2%98%EF%BC%9A%0A%E5%AE%98%E6%96%B9%E6%9D%A5%E6%BA%90%E9%93%BE%E6%8E%A5%EF%BC%9A%0A%E5%BB%BA%E8%AE%AE%EF%BC%9A%0A">勘误</a></td>
@@ -267,7 +267,7 @@
         <h3>2. Cloudflare Pages</h3>
         <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
       </div>
-      <p class="one-liner">边缘静态站；构建/文件数有硬顶。商用靠 ToS 无禁令 + 社区确认，本站标 conditional（筛「可商用」不会命中）。</p>
+      <p class="one-liner">边缘静态站；构建/文件数有硬顶。商用靠 ToS 无禁令 + 社区确认，本站标 conditional（筛「可商用」不会命中）；Free 档不可在 Free Services 上处理信用卡信息。</p>
       <dl>
         <dt>场景结论</dt>
         <dd>
@@ -281,13 +281,13 @@
         <dt>免费额度</dt>
         <dd>500 次构建/月；每站 2 万文件；单文件 25 MiB</dd>
         <dt>商用（免费档）</dt>
-        <dd><code>conditional</code> — 有条件：ToS 无商用禁令，但 Free 无 SLA</dd>
+        <dd><code>conditional</code> — 有条件：无总禁商用，但 Free 不可收卡（§2.2.1(h)）</dd>
         <dt>超限后果</dt>
         <dd><code>hard_stop</code> — Free：每月 500 次构建、同时 1 个构建——用尽后当月无法再构建部署。文件数/大小硬顶。静态资源本身不按 GB 计费（以当前 Workers &amp; Pages 定价页为准）；Functions 计入 Workers 配额。</dd>
         <dt>自定义域名 / SSL</dt>
         <dd>Free 每项目最多 100 自定义域名</dd>
         <dt>证据句</dt>
-        <dd class="evidence">Self-Serve Subscription Agreement §2.2.1 Restrictions 未列「禁止商用」；Pages Free limits：500 builds/month、20,000 files、25 MiB/file。社区员工亦确认 Free 可用于 business，但无 SLA。</dd>
+        <dd class="evidence">Self-Serve Subscription Agreement §2.2.1 Restrictions 未列「禁止商用」；Pages Free limits：500 builds/month、20,000 files、25 MiB/file。社区员工亦确认 Free 可用于 business，但无 SLA。 Free Services 明确禁止处理信用卡信息（Self-Serve §2.2.1(h)）。</dd>
       </dl>
       <p class="sources">
         来源：
@@ -340,7 +340,7 @@
         <h3>4. Netlify Free</h3>
         <span class="verified" data-verified="2026-10-21">核验：2026-10-21 · 已核验</span>
       </div>
-      <p class="one-liner">积分制 Free；官方博文写明可部署商用项目，但额度硬顶、适合小流量。</p>
+      <p class="one-liner">积分制 Free；官方博文写明可部署商用项目，但额度硬顶、适合小流量；额度硬顶（credits 用尽暂停），适合轻量商用。</p>
       <dl>
         <dt>场景结论</dt>
         <dd>
@@ -354,7 +354,7 @@
         <dt>免费额度</dt>
         <dd>300 credits/月硬顶；带宽约 20 credits/GB</dd>
         <dt>商用（免费档）</dt>
-        <dd><code>allowed</code> — 官方博文允许商用项目</dd>
+        <dd><code>allowed</code> — 官方博文允许商用项目（额度硬顶，适合轻量商用）</dd>
         <dt>超限后果</dt>
         <dd><code>hard_stop</code> — Credit-based Free：300 credits/月、不可 auto recharge。耗尽后项目硬停，直到下个计费周期或升级付费档。带宽约 20 credits/GB；生产部署每次 15 credits。</dd>
         <dt>自定义域名 / SSL</dt>

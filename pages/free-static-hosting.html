@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>免费静态托管对照 · Mogul Desk</title>
+  <meta name="description" content="GitHub Pages、Cloudflare Pages、Vercel、Netlify、Render、Surge、GitLab Pages、Firebase Hosting 的免费额度与商用条款对照（可核验）。" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="site">
+    <div class="inner">
+      <a class="logo" href="../index.html">Mogul <span>Desk</span></a>
+      <nav>
+        <a href="../index.html">首页</a>
+        <a href="#entries">条目</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <span class="badge">对照页 · 8 条</span>
+      <h1>免费静态托管：额度、商用与自定义域名</h1>
+      <p class="lead">
+        面向个人开发者与独立站长。数字来自各平台公开文档（核验日 2026-10-21，Asia/Shanghai）。政策会改，下结论前请点「来源」再看一眼。
+      </p>
+    </section>
+
+    <div class="note">
+      <strong>怎么读这张表：</strong>「商用」指条款是否允许把免费档拿来跑生意站 / 卖货 / SaaS；不是「能不能挂广告」的绝对判决。Vercel Hobby 与 GitHub Pages 都有明确的非商用/非在线生意限制——这是很多人翻车的地方。
+    </div>
+
+    <h2>速览</h2>
+    <table class="compare">
+      <thead>
+        <tr>
+          <th>平台</th>
+          <th>免费档要点</th>
+          <th>商用（免费档）</th>
+          <th>自定义域名</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="#github-pages">GitHub Pages</a></td>
+          <td>站点 ≤ 1 GB；带宽软上限约 100 GB/月</td>
+          <td class="tag-bad">不允许当免费商业主机</td>
+          <td>支持</td>
+        </tr>
+        <tr>
+          <td><a href="#cloudflare-pages">Cloudflare Pages</a></td>
+          <td>500 次构建/月；每站 2 万文件；静态请求通常不计费</td>
+          <td class="tag-ok">未见等同「禁止商用」条款</td>
+          <td>每项目最多 100 个（Free）</td>
+        </tr>
+        <tr>
+          <td><a href="#vercel-hobby">Vercel Hobby</a></td>
+          <td>Fast Data Transfer 100 GB 等</td>
+          <td class="tag-bad">仅限非商用个人用途</td>
+          <td>每项目最多 50 个域名</td>
+        </tr>
+        <tr>
+          <td><a href="#netlify-free">Netlify Free</a></td>
+          <td>300 credits/月；带宽 20 credits/GB</td>
+          <td class="tag-warn">文档未写死禁止商用；额度耗尽会暂停</td>
+          <td>支持 + SSL</td>
+        </tr>
+        <tr>
+          <td><a href="#render-static">Render Static Sites</a></td>
+          <td>静态站免费部署；Hobby 含 5 GB 出站带宽</td>
+          <td class="tag-warn">可商用，但超额需绑卡否则可能停服</td>
+          <td>Hobby 含 2 个域名额度</td>
+        </tr>
+        <tr>
+          <td><a href="#surge">Surge.sh</a></td>
+          <td>免费无限发布；基础 SSL</td>
+          <td class="tag-warn">以官网条款为准；Professional 才有强制 HTTPS 等</td>
+          <td>免费档支持</td>
+        </tr>
+        <tr>
+          <td><a href="#gitlab-pages">GitLab Pages</a></td>
+          <td>站点最大 1 GB；每站最多 150 个自定义域名</td>
+          <td class="tag-warn">官方设置页未写「禁止商用」一句；以 ToS 为准</td>
+          <td>支持（gitlab.io / 自定义）</td>
+        </tr>
+        <tr>
+          <td><a href="#firebase-hosting">Firebase Hosting</a></td>
+          <td>存储 10 GB；传输约 10 GB/月（Spark）</td>
+          <td class="tag-warn">可商用；超量需升 Blaze，否则站点可能被停</td>
+          <td>支持</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="entries">逐条说明</h2>
+
+    <article class="entry" id="github-pages">
+      <h3>1. GitHub Pages</h3>
+      <p class="one-liner">从仓库直接托管静态站；文档与开源项目最省事，但明确禁止当免费商业主机。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>个人站、项目文档、组织展示页；默认 <code>*.github.io</code>。</dd>
+        <dt>免费额度</dt>
+        <dd>发布站点 ≤ 1 GB；带宽软上限约 100 GB/月；软限制约每小时 10 次构建（自定义 Actions 工作流不受此限）。</dd>
+        <dt>商用</dt>
+        <dd>官方写明：不打算也不允许用作免费 Web 主机去跑在线生意、电商，或主要促成商业交易 / 提供商业 SaaS 的网站。</dd>
+        <dt>备注</dt>
+        <dd>免费账号上公开仓库即可用；敏感交易（密码、信用卡）也不适合放这里。</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits" rel="noopener" target="_blank">Pages limits</a>
+        <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages" rel="noopener" target="_blank">About Pages</a>
+      </p>
+    </article>
+
+    <article class="entry" id="cloudflare-pages">
+      <h3>2. Cloudflare Pages</h3>
+      <p class="one-liner">边缘 CDN 上的静态站；Free 档构建次数与文件数是硬门槛，静态流量通常很宽裕。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>博客、文档、营销落地页；可接 Pages Functions（计入 Workers 配额）。</dd>
+        <dt>免费额度</dt>
+        <dd>每月 500 次构建、同时 1 个构建；每站最多 20,000 文件、单文件 25 MiB；每账号最多 100 个项目；Free 每项目最多 100 个自定义域名。</dd>
+        <dt>商用</dt>
+        <dd>平台介绍与定价页强调静态请求免费；公开对照文常写「未见等同 GitHub/Vercel 的非商用禁令」。正式商用仍应读当前 ToS。</dd>
+        <dt>备注</dt>
+        <dd>Cloudflare 现更推荐用 Workers + Static Assets 开新项目；Pages 仍可用。</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://developers.cloudflare.com/pages/platform/limits/" rel="noopener" target="_blank">Pages limits</a>
+        <a href="https://www.cloudflare.com/plans/developer-platform-pricing/" rel="noopener" target="_blank">Workers &amp; Pages pricing</a>
+      </p>
+    </article>
+
+    <article class="entry" id="vercel-hobby">
+      <h3>3. Vercel Hobby</h3>
+      <p class="one-liner">Next.js / 前端实验友好；Hobby <strong>明文限非商用个人用途</strong>。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>个人项目、演示、学习；框架集成强。</dd>
+        <dt>免费额度</dt>
+        <dd>含 Fast Data Transfer 100 GB、Fast Origin Transfer 10 GB、CDN Requests 100 万、Function Invocations 100 万、Active CPU 4 小时等（按月）；最多 200 项目、每项目 50 域名、每天 100 次部署。</dd>
+        <dt>商用</dt>
+        <dd>Fair Use：Hobby 仅限 non-commercial, personal use；卖产品/服务、广告变现等需 Pro。</dd>
+        <dt>备注</dt>
+        <dd>多数额度用超后需等约 30 天周期恢复（部分分析类暂停更短）。</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://vercel.com/docs/plans/hobby" rel="noopener" target="_blank">Hobby plan</a>
+        <a href="https://vercel.com/docs/limits/fair-use-guidelines" rel="noopener" target="_blank">Fair Use Guidelines</a>
+      </p>
+    </article>
+
+    <article class="entry" id="netlify-free">
+      <h3>4. Netlify Free（Credit-based）</h3>
+      <p class="one-liner">2025-09-04 后新账号用积分制：Free 每月 300 credits，耗尽硬停。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>静态站 + 表单、预览部署；适合中小流量实验。</dd>
+        <dt>免费额度</dt>
+        <dd>300 credits/月（不可自动充值）。带宽约 20 credits/GB；生产部署每次 15 credits；Web Requests 约 2 credits / 1 万次。若几乎只烧带宽，大约折合十几 GB 量级。</dd>
+        <dt>商用</dt>
+        <dd>Credit-based 文档强调 Free 适合小实验；未在同页写死「禁止商用」。额度耗尽后项目会暂停直到下个周期。</dd>
+        <dt>备注</dt>
+        <dd>旧账号可能仍是 Legacy 套餐；本文按新积分制描述。</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/credit-based-pricing-plans/" rel="noopener" target="_blank">Credit-based plans</a>
+        <a href="https://www.netlify.com/pricing" rel="noopener" target="_blank">Pricing</a>
+      </p>
+    </article>
+
+    <article class="entry" id="render-static">
+      <h3>5. Render Static Sites</h3>
+      <p class="one-liner">静态站本身免费部署，但流量与构建分钟计入工作区月度配额。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>前端站、文档、博客；全局 CDN、自动 HTTPS、PR 预览。</dd>
+        <dt>免费额度</dt>
+        <dd>静态站免费部署。Hobby 工作区每月含 <strong>5 GB</strong> 出站带宽；超出且未绑支付方式时，服务可能被挂起至下月。</dd>
+        <dt>商用</dt>
+        <dd>文档未把静态站限定为「仅个人」；适合有预算绑卡的小生意站，但 5 GB 对图片站很紧。</dd>
+        <dt>备注</dt>
+        <dd>Hobby 含 2 个自定义域名额度，超出按文档另行计费。</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://render.com/docs/static-sites" rel="noopener" target="_blank">Static Sites</a>
+        <a href="https://render.com/docs/outbound-bandwidth" rel="noopener" target="_blank">Outbound bandwidth</a>
+        <a href="https://render.com/docs/free" rel="noopener" target="_blank">Deploy for Free</a>
+      </p>
+    </article>
+
+    <article class="entry" id="surge">
+      <h3>6. Surge.sh</h3>
+      <p class="one-liner">命令行把本地文件夹发布成静态站；免费档强调无限发布 + 自定义域名 + 基础 SSL。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>快速预览、简单落地页、课程作业站。</dd>
+        <dt>免费额度</dt>
+        <dd>定价页：Unlimited publishing、Custom domain、Basic SSL。Professional（约 $30/月）才有强制 HTTPS、自定义重定向、密码保护等。</dd>
+        <dt>商用</dt>
+        <dd>定价页未写「禁止商用」；生产向功能多在 Professional。请自行阅读当前条款。</dd>
+        <dt>备注</dt>
+        <dd>部署 API 文档另有单项目文件数/体积一类限制，大规模站请先查 API docs。</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://surge.sh/pricing" rel="noopener" target="_blank">Pricing</a>
+        <a href="https://surge.sh/docs/getting-started" rel="noopener" target="_blank">Getting started</a>
+      </p>
+    </article>
+
+    <article class="entry" id="gitlab-pages">
+      <h3>7. GitLab Pages</h3>
+      <p class="one-liner">跟 GitLab CI 产物绑定；适合已经在 GitLab 上的文档与项目站。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>项目文档、静态站点；默认 <code>*.gitlab.io</code>。</dd>
+        <dt>免费额度</dt>
+        <dd>GitLab.com：站点最大 1 GB；每站最多 150 个自定义域名；支持 TLS。带宽无固定公开硬顶（滥用仍可能受限）。</dd>
+        <dt>商用</dt>
+        <dd>gitlab.com 设置页列出技术上限，未在同页写「禁止商用」；正式用途请读 GitLab 服务条款。</dd>
+        <dt>备注</dt>
+        <dd>站点大小与 CI artifact 上限相关（GitLab.com artifact 压缩上限 1 GB）。</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://docs.gitlab.com/user/gitlab_com/" rel="noopener" target="_blank">GitLab.com settings（含 Pages）</a>
+        <a href="https://docs.gitlab.com/user/project/pages/" rel="noopener" target="_blank">GitLab Pages</a>
+      </p>
+    </article>
+
+    <article class="entry" id="firebase-hosting">
+      <h3>8. Firebase Hosting（Spark / 免费用量）</h3>
+      <p class="one-liner">Google 全球 CDN 静态托管；免费档有明确存储与月传输上限。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>Web App 前端、活动页；与 Firebase 生态集成方便。</dd>
+        <dt>免费额度</dt>
+        <dd>Hosting 存储前 10 GB 免费；CDN 数据传输前约 <strong>10 GB/月</strong> 免费。单文件最大 2 GB。</dd>
+        <dt>商用</dt>
+        <dd>可用于生产，但 Spark 超量后站点可能在宽限期后被禁用，直到下月或升级 Blaze。</dd>
+        <dt>备注</dt>
+        <dd>配额按<strong>项目</strong>计，不是按站点。建议在 Cloud Console 设预算告警。</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://firebase.google.com/docs/hosting/usage-quotas-pricing" rel="noopener" target="_blank">Usage quotas &amp; pricing</a>
+        <a href="https://firebase.google.com/pricing/" rel="noopener" target="_blank">Firebase Pricing</a>
+      </p>
+    </article>
+
+    <div class="note">
+      <strong>选型速记（非赞助）：</strong>
+      纯文档/开源展示 → GitHub Pages；
+      可能商用、要流量余量 → 优先看 Cloudflare Pages；
+      Next.js 个人实验 → Vercel Hobby（别拿去卖货）；
+      已在 GitLab → GitLab Pages；
+      要和 Firebase 后端一起 → Firebase Hosting。
+    </div>
+
+    <p><a href="../index.html">← 返回首页</a></p>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <p>核验日 2026-10-21（Asia/Shanghai）。无联盟链接、无收入数字。发现官方改版请以官网为准。</p>
+    </div>
+  </footer>
+</body>
+</html>

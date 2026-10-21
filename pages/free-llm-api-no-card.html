@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>无需绑卡的免费 LLM API 短名单 · Mogul Desk</title>
+  <meta name="description" content="Gemini、Groq、OpenRouter、Cloudflare Workers AI、Mistral、NVIDIA API Catalog、Fireworks、SiliconFlow 等免费/起步积分与是否绑卡对照（可核验）。" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="site">
+    <div class="inner">
+      <a class="logo" href="../index.html">Mogul <span>Desk</span></a>
+      <nav>
+        <a href="../index.html">首页</a>
+        <a href="#entries">条目</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <span class="badge">对照页 · 8 条</span>
+      <h1>无需绑卡（或明确写「要绑卡」）的免费 LLM API</h1>
+      <p class="lead">
+        只列官方公开限额与入口。核验日 <strong>2026-10-21（Asia/Shanghai）</strong>。长期免费 vs 一次性赠金已分开写；别把「试用金」当成永久免费。
+      </p>
+    </section>
+
+    <div class="note">
+      <strong>怎么读：</strong>「绑卡」列绿 = 文档/产品说明允许不绑支付方式起步；黄 = 一次性赠金或不稳定；红 = 明确要支付方式。RPM/RPD 会随模型与账户档位变——以各控制台 Limits 页为准。
+    </div>
+
+    <h2>速览</h2>
+    <table class="compare">
+      <thead>
+        <tr>
+          <th>服务</th>
+          <th>免费要点</th>
+          <th>绑卡</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="#gemini">Google Gemini API Free</a></td>
+          <td>多款 Flash 等 Free of charge；限额见 AI Studio</td>
+          <td class="tag-ok">Free Tier 无需结算</td>
+        </tr>
+        <tr>
+          <td><a href="#groq">Groq Free</a></td>
+          <td>按模型 RPM/RPD/TPM/TPD（控制台 Limits）</td>
+          <td class="tag-ok">可免费创建账号/Key</td>
+        </tr>
+        <tr>
+          <td><a href="#openrouter">OpenRouter :free</a></td>
+          <td>未购满积分约 20 RPM / 50 RPD</td>
+          <td class="tag-ok">可用免费模型起步</td>
+        </tr>
+        <tr>
+          <td><a href="#workers-ai">Cloudflare Workers AI</a></td>
+          <td>10,000 Neurons/天免费</td>
+          <td class="tag-ok">Workers Free 含免费额度</td>
+        </tr>
+        <tr>
+          <td><a href="#mistral">Mistral Free mode</a></td>
+          <td>含每月 included usage；限额在 Admin → Limits</td>
+          <td class="tag-ok">可建 Key 用不绑卡档</td>
+        </tr>
+        <tr>
+          <td><a href="#nvidia">NVIDIA API Catalog</a></td>
+          <td>Developer Program 托管端点免费原型</td>
+          <td class="tag-ok">开发者计划可起步</td>
+        </tr>
+        <tr>
+          <td><a href="#fireworks">Fireworks 起步积分</a></td>
+          <td>新账号约 $1 预付积分（一次性）</td>
+          <td class="tag-ok">文档称可不加支付方式</td>
+        </tr>
+        <tr>
+          <td><a href="#siliconflow">SiliconFlow 起步积分</a></td>
+          <td>定价 FAQ：约 $1 免费积分起步</td>
+          <td class="tag-warn">积分用尽后需付费；实名以控制台为准</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="entries">逐条说明</h2>
+
+    <article class="entry" id="gemini">
+      <h3>1. Google Gemini Developer API（Free Tier）</h3>
+      <p class="one-liner">AI Studio 发 Key 即可调多款 Gemini；Free Tier 输入输出在定价页对多款 Flash 标为免费。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>聊天、多模态、部分 TTS；适合个人原型与学习。</dd>
+        <dt>官方限额</dt>
+        <dd>定价页：如 gemini-3.8-flash、3.6-flash、2.5 Flash / Flash-Lite 等 Free Tier 为 Free of charge（部分旗舰/Pro/图片模型 Free 不可用）。RPM / TPM / RPD 按模型与档位变化，官方要求在 <strong>AI Studio</strong> 查看当前限额；RPD 约太平洋时间午夜重置。Free Tier 数据可能用于改进产品。</dd>
+        <dt>是否绑卡</dt>
+        <dd><strong>无需</strong>结算账户即可用 Free Tier。升级 Paid 需链接账单并预付（文档写最低约 $5 等）。</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://ai.google.dev/gemini-api/docs/pricing" rel="noopener" target="_blank">Pricing</a>
+        <a href="https://ai.google.dev/gemini-api/docs/billing" rel="noopener" target="_blank">Billing</a>
+        <a href="https://ai.google.dev/gemini-api/docs/rate-limits" rel="noopener" target="_blank">Rate limits</a>
+        <a href="https://aistudio.google.com/" rel="noopener" target="_blank">Google AI Studio</a>
+      </p>
+    </article>
+
+    <article class="entry" id="groq">
+      <h3>2. GroqCloud API（Free）</h3>
+      <p class="one-liner">LPU 推理，OpenAI 兼容端点；免费档按模型列 RPM/RPD/TPM/TPD。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>低延迟聊天与代码补全；组织级限额，多 Key 共享。</dd>
+        <dt>官方限额</dt>
+        <dd>公开 Rate Limits 表示例（以控制台为准）：如 <code>openai/gpt-oss-120b</code>、<code>openai/gpt-oss-20b</code>、<code>qwen/qwen3.8-27b</code> 约 <strong>30 RPM / 1K RPD / 8K TPM / 200K TPD</strong>。完整表见官方文档；账号 Limits 页为最终值。</dd>
+        <dt>是否绑卡</dt>
+        <dd>可在 console.groq.com 免费注册并创建 API Key；更高档为 Developer 付费计划。</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://console.groq.com/docs/rate-limits" rel="noopener" target="_blank">Groq Rate Limits</a>
+        <a href="https://console.groq.com/keys" rel="noopener" target="_blank">API Keys</a>
+      </p>
+    </article>
+
+    <article class="entry" id="openrouter">
+      <h3>3. OpenRouter 免费模型（ID 以 <code>:free</code> 结尾）</h3>
+      <p class="one-liner">聚合多家模型；免费变体有平台级请求上限，与付费模型不同。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>一条 API 试多个上游免费端点；适合实验，不适合硬实时生产。</dd>
+        <dt>官方限额</dt>
+        <dd>Limits 文档：免费变体默认 <strong>20 requests/minute</strong>；累计购买积分 &lt; 约 10 时 <strong>50 requests/day</strong>；累计至少约 $10 后升至 <strong>1000 requests/day</strong>（分钟上限仍为 20）。可用 <code>GET /api/v1/key</code> 看 <code>free_model_daily_requests</code>。账户余额为负时免费模型也可能 402。</dd>
+        <dt>是否绑卡</dt>
+        <dd>可用 :free 模型起步；买积分才会要支付方式。未买满阈值则保持较低日上限。</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://openrouter.ai/docs/api-reference/limits" rel="noopener" target="_blank">API Credit &amp; Rate Limits</a>
+        <a href="https://openrouter.ai/" rel="noopener" target="_blank">OpenRouter</a>
+      </p>
+    </article>
+
+    <article class="entry" id="workers-ai">
+      <h3>4. Cloudflare Workers AI</h3>
+      <p class="one-liner">边缘侧推理；Free 与 Paid 都含每日 Neurons 免费配额，超额才计费。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>Workers / Pages 里调 Llama、Qwen、Whisper 等；按 Neurons 计量。</dd>
+        <dt>官方限额</dt>
+        <dd>定价页：所有人每日 <strong>10,000 Neurons</strong> 免费；UTC 00:00 重置。超额需 Workers Paid，约 $0.011 / 1,000 Neurons。部分前沿模型要求 Paid 或 AI Gateway 预付积分，Free 可能 403。</dd>
+        <dt>是否绑卡</dt>
+        <dd>Workers Free 计划含上述免费 Neurons；升级 Paid 才需支付方式。</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://developers.cloudflare.com/workers-ai/platform/pricing/" rel="noopener" target="_blank">Workers AI pricing</a>
+        <a href="https://developers.cloudflare.com/workers-ai/platform/limits/" rel="noopener" target="_blank">Limits</a>
+      </p>
+    </article>
+
+    <article class="entry" id="mistral">
+      <h3>5. Mistral AI · Free mode</h3>
+      <p class="one-liner">Studio 可建 API Key；Free mode 含每月 included usage，超限需开 pay-as-you-go。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>Mistral 自有聊天/补全模型；评估与原型。</dd>
+        <dt>官方限额</dt>
+        <dd>Usage and limits：Free mode「lets you create API keys and use included monthly usage within the limits shown on the Limits page」。具体 Tokens/min、Requests/sec 因模型而异，官方不在该页写死全局数字——以 <strong>Admin Panel → API → Limits</strong> 为准。</dd>
+        <dt>是否绑卡</dt>
+        <dd>Free mode 可不先开通按量付费；扩展额度才用 prepaid credits / 付费。</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://docs.mistral.ai/admin/billing-usage/usage-limits" rel="noopener" target="_blank">Usage and limits</a>
+        <a href="https://docs.mistral.ai/getting-started/quickstarts/studio/activate-and-generate-api-key" rel="noopener" target="_blank">Activate Studio &amp; API key</a>
+        <a href="https://mistral.ai/pricing/" rel="noopener" target="_blank">Mistral pricing</a>
+      </p>
+    </article>
+
+    <article class="entry" id="nvidia">
+      <h3>6. NVIDIA API Catalog（build.nvidia.com）</h3>
+      <p class="one-liner">NIM / 托管模型目录；Developer Program 可免费调原型端点，非生产授权。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>浏览器试用与 POC；自托管 NIM 另需开发者许可（生产要 NVIDIA AI Enterprise）。</dd>
+        <dt>官方限额</dt>
+        <dd>产品 FAQ：Developer Program 对托管 API 端点免费用于 prototyping；具体 RPM 因模型/流量变化，账户界面显示当前限额（社区常提约 40 RPM 量级，<strong>以控制台为准，本站不写死</strong>）。明确：非生产用途。</dd>
+        <dt>是否绑卡</dt>
+        <dd>加入 NVIDIA Developer Program 即可起步；生产部署需 AI Enterprise 许可（另计）。</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://docs.api.nvidia.com/nim/docs/product" rel="noopener" target="_blank">NIM General FAQ</a>
+        <a href="https://build.nvidia.com/" rel="noopener" target="_blank">build.nvidia.com</a>
+      </p>
+    </article>
+
+    <article class="entry" id="fireworks">
+      <h3>7. Fireworks AI · 新账号起步积分</h3>
+      <p class="one-liner">Serverless 推理；新账号有小额预付积分，用完即停，不是按月永久免费。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>开源权重模型的托管推理（OpenAI 兼容端点）。</dd>
+        <dt>官方限额</dt>
+        <dd>官方 FAQ / 计费说明口径：新账号约 <strong>$1</strong> starter credit；耗尽后需添加支付方式与积分才能继续。这是<strong>一次性赠金</strong>，不是每月刷新的免费档。</dd>
+        <dt>是否绑卡</dt>
+        <dd>文档与第三方汇总常写：起步积分阶段可不加支付方式；续用要绑卡充值。请以 Fireworks 当前注册流程为准。</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://docs.fireworks.ai/faq-new/billing-pricing/what-happens-when-i-finish-my-1-dollar-credit" rel="noopener" target="_blank">What happens when I finish my $1 credit</a>
+        <a href="https://docs.fireworks.ai/serverless/overview" rel="noopener" target="_blank">Serverless overview</a>
+        <a href="https://fireworks.ai/pricing" rel="noopener" target="_blank">Fireworks pricing</a>
+      </p>
+    </article>
+
+    <article class="entry" id="siliconflow">
+      <h3>8. SiliconFlow（硅基流动国际站口径）</h3>
+      <p class="one-liner">聚合多家开源模型的推理平台；定价页 FAQ 写明约 $1 免费积分起步。</p>
+      <dl>
+        <dt>用途</dt>
+        <dd>按 token 调用 DeepSeek / Qwen / GLM 等（具体上架模型以模型广场为准）。</dd>
+        <dt>官方限额</dt>
+        <dd>国际站定价 FAQ：「可以从 $1 的免费积分开始」；无最低消费承诺。免费积分用完后按价目表付费。中国站（siliconflow.cn）可能另有实名与免费模型列表，以对应控制台为准——本条按已抓取的 <strong>siliconflow.com</strong> 定价页描述。</dd>
+        <dt>是否绑卡</dt>
+        <dd>起步积分阶段通常可先注册试用；持续使用需充值。是否强制实名/绑卡以注册地区控制台为准（标黄提醒）。</dd>
+      </dl>
+      <p class="sources">
+        来源：
+        <a href="https://www.siliconflow.com/zh/pricing" rel="noopener" target="_blank">SiliconFlow 定价</a>
+        <a href="https://www.siliconflow.com/" rel="noopener" target="_blank">SiliconFlow</a>
+      </p>
+    </article>
+
+    <div class="note">
+      <strong>明确跳过 / 不写进「免绑卡长期免费」：</strong>
+      <ul>
+        <li><strong>GitHub Models</strong>：官方文档写明已于 2026-07-30 退役。</li>
+        <li><strong>Cerebras Free Trial</strong>：官方写明需先添加已验证支付方式才发 $5 试用金（30 天），且无永久免费档。</li>
+        <li><strong>DeepSeek 官方 API</strong>：需预充值余额，无「长期免费用量」公开档。</li>
+        <li><strong>Hugging Face Inference Providers</strong>：免费用户月度积分政策已变更/取消（以 HF 当前 Pricing 为准），本页不收录易过期数字。</li>
+      </ul>
+    </div>
+
+    <p><a href="../index.html">← 返回首页</a> · <a href="free-tts-api.html">← 上一页：免费 TTS API</a></p>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <p>核验日 2026-10-21（Asia/Shanghai）。无联盟链接、无收入数字。发现官方改版请以官网为准。</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,206 @@
+:root {
+  --bg: #0f1419;
+  --surface: #1a2332;
+  --surface-2: #243044;
+  --text: #e7ecf3;
+  --muted: #9aa8bc;
+  --accent: #5b9fd4;
+  --accent-soft: rgba(91, 159, 212, 0.15);
+  --ok: #6bcf8e;
+  --warn: #e6b35c;
+  --bad: #e07a7a;
+  --border: #2d3a4f;
+  --radius: 12px;
+  --font: "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 16px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; }
+
+.wrap {
+  width: min(960px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.5rem 0 3rem;
+}
+
+header.site {
+  border-bottom: 1px solid var(--border);
+  background: rgba(15, 20, 25, 0.92);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(8px);
+  z-index: 10;
+}
+header.site .inner {
+  width: min(960px, calc(100% - 2rem));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 0;
+}
+.logo {
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+.logo span { color: var(--accent); }
+nav a {
+  color: var(--muted);
+  margin-left: 1rem;
+  font-size: 0.95rem;
+}
+nav a:hover { color: var(--text); }
+
+.hero {
+  padding: 2.2rem 0 1.2rem;
+}
+.hero h1 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
+}
+.hero p.lead {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin: 0 0 1.25rem;
+  max-width: 40rem;
+}
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.2rem;
+}
+.card h2, .card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+.card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.card a.cta {
+  display: inline-block;
+  margin-top: 0.85rem;
+  font-weight: 600;
+}
+
+.note {
+  background: var(--surface);
+  border-left: 3px solid var(--accent);
+  padding: 0.9rem 1rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 1.25rem 0;
+}
+
+table.compare {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+table.compare th,
+table.compare td {
+  text-align: left;
+  padding: 0.75rem 0.85rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+table.compare th {
+  background: var(--surface-2);
+  color: var(--text);
+  font-weight: 600;
+  white-space: nowrap;
+}
+table.compare tr:last-child td { border-bottom: none; }
+table.compare td.tag-ok { color: var(--ok); }
+table.compare td.tag-warn { color: var(--warn); }
+table.compare td.tag-bad { color: var(--bad); }
+
+.entry {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.15rem 1.25rem;
+  margin: 1rem 0;
+}
+.entry h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+}
+.entry .one-liner {
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+}
+.entry dl {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 0.35rem 0.75rem;
+  margin: 0;
+  font-size: 0.95rem;
+}
+.entry dt { color: var(--muted); }
+.entry dd { margin: 0; }
+.entry .sources {
+  margin-top: 0.85rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.entry .sources a { margin-right: 0.75rem; }
+
+footer.site {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 1.5rem 0 2rem;
+  margin-top: 2rem;
+}
+footer.site .wrap { padding-top: 0; padding-bottom: 0; }
+
+@media (max-width: 640px) {
+  .entry dl { grid-template-columns: 1fr; gap: 0.15rem; }
+  .entry dt { margin-top: 0.45rem; }
+  table.compare { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  nav a { margin-left: 0.65rem; font-size: 0.88rem; }
+}
+
+code, .mono { font-family: var(--mono); font-size: 0.9em; }

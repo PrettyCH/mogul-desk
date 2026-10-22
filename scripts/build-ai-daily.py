@@ -111,13 +111,6 @@ def build_body(report: dict, generated_label: str) -> str:
     date = report.get("date") or ""
     links = report.get("links") or {}
     aihot_daily = links.get("aihot") or f"https://aihot.news/daily/{date}"
-    window_start = to_shanghai(report.get("windowStart"))
-    window_end = to_shanghai(report.get("windowEnd"))
-    window_txt = ""
-    if window_start and window_end:
-        # API window is UTC day; show Shanghai covering range clearly
-        window_txt = f"{window_start} → {window_end}（已换算上海时区）"
-
     lead = report.get("lead") or {}
     sections = report.get("sections") or []
     flashes = report.get("flashes") or []
@@ -139,11 +132,6 @@ def build_body(report: dict, generated_label: str) -> str:
       </div>
     </section>
 
-    <div class="note">
-      本页由 <code>scripts/build-ai-daily.py</code> 从 <code>data/aihot-daily.json</code> 生成。
-      新闻与额度以信源为准；AIHOT 与各原文页面可能更新，本站不承诺实时。
-      {f'<br />API 窗口：{esc(window_txt)}' if window_txt else ''}
-    </div>
 """
     )
 

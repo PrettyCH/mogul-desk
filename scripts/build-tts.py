@@ -10,7 +10,7 @@ from urllib.parse import quote
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "tts.json"
 OUT = ROOT / "pages" / "free-tts-api.html"
-BASE = "https://prettych.github.io/htmlTest"
+BASE = "https://prettych.github.io/mogul-desk"
 PAGE = "free-tts-api"
 ERRATA = "chengxixi@mail.grokbot.com"
 

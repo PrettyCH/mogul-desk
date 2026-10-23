@@ -80,18 +80,18 @@ python3 -m http.server 8765
 
 也可用任意静态服务器，或直接用浏览器打开 `index.html`（部分浏览器对本地相对路径限制更严，推荐 http.server）。
 
-## 明天部署清单（PrettyCH/htmlTest + GitHub Pages）
+## 明天部署清单（PrettyCH/mogul-desk + GitHub Pages）
 
-目标公开地址：`https://prettych.github.io/htmlTest/`
+目标公开地址：`https://prettych.github.io/mogul-desk/`
 
-**当前卡点：** Cursor / Grok Bot 侧的 GitHub 令牌对 `PrettyCH/htmlTest` **没有写权限**（推送与 create/update file 均失败）。需要你在电脑上给仓库授权，或本机手动推送。
+**当前卡点：** Cursor / Grok Bot 侧的 GitHub 令牌对 `PrettyCH/mogul-desk` **没有写权限**（推送与 create/update file 均失败）。需要你在电脑上给仓库授权，或本机手动推送。
 
 1. **授权或本机推送**  
-   - 在 Cursor 里给 `PrettyCH/htmlTest` 开仓库写权限；或  
+   - 在 Cursor 里给 `PrettyCH/mogul-desk` 开仓库写权限；或  
    - 本机：把 `/workspace/mogul-site/` 内容放到仓库**根目录**（不要多套一层 `mogul-site/`），`git push` 到默认分支（`main` 或 `master`）。
 2. **打开 GitHub Pages**  
    - 仓库 Settings → Pages → Source 选 `Deploy from a branch` → Branch：`main`（或 `master`）+ `/ (root)` → Save。  
-   - 等一两分钟后打开：`https://prettych.github.io/htmlTest/`
+   - 等一两分钟后打开：`https://prettych.github.io/mogul-desk/`
 3. **可选核对**  
    - 点开三篇对照页与「关于」；确认 CSS / favicon 加载正常。  
    - 若以后换自定义域名，改 `robots.txt` 与 `sitemap.xml` 里的绝对 URL。

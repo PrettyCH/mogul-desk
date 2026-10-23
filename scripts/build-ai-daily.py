@@ -218,14 +218,14 @@ def render_page(report: dict, generated_label: str) -> str:
   <meta property="og:title" content="AI 日报 {esc(date)} · Mogul Desk" />
   <meta property="og:description" content="{esc(desc)}" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://prettych.github.io/htmlTest/pages/ai-daily.html" />
+  <meta property="og:url" content="https://prettych.github.io/mogul-desk/pages/ai-daily.html" />
   <meta property="og:locale" content="zh_CN" />
   <meta property="og:site_name" content="Mogul Desk" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="AI 日报 {esc(date)} · Mogul Desk" />
   <meta name="twitter:description" content="{esc(desc)}" />
   <link rel="stylesheet" href="../assets/styles.css" />
-  <link rel="canonical" href="https://prettych.github.io/htmlTest/pages/ai-daily.html" />
+  <link rel="canonical" href="https://prettych.github.io/mogul-desk/pages/ai-daily.html" />
 </head>
 <body>
 <a class="skip-link" href="#main">跳到正文</a>

@@ -1,7 +1,7 @@
 {
   "page": "free-email-api",
   "title": "免费事务邮件 API 对照：免绑卡、月/日额度与商用发信",
-  "verified_at": "2026-10-21",
+  "verified_at": "2026-11-02",
   "timezone": "Asia/Shanghai",
   "entries": [
     {
@@ -10,7 +10,7 @@
       "card": "none",
       "commercial": "allowed",
       "verifyStatus": "ok",
-      "verified": "2026-10-21",
+      "verified": "2026-11-02",
       "quota_short": "3,000 封/月 · 100 封/日（UTC）",
       "quota_day": "100/日（UTC 自然日）",
       "quota_month": "3,000/月",
@@ -23,8 +23,14 @@
       "commercial_detail": "产品定位即为应用内事务/营销发信 API；Free 含 REST API / SMTP。滥用/退信率仍受账户限额约束（bounce <4% 等）。",
       "evidence": "resend.com/pricing Free $0/mo 3,000 emails；docs：100/day + 3,000/month；FAQ：free-forever plan.",
       "sources": [
-        {"label": "Resend Pricing", "url": "https://resend.com/pricing"},
-        {"label": "Account quotas", "url": "https://www.resend.com/docs/knowledge-base/account-quotas-and-limits"}
+        {
+          "label": "Resend Pricing",
+          "url": "https://resend.com/pricing"
+        },
+        {
+          "label": "Account quotas",
+          "url": "https://www.resend.com/docs/knowledge-base/account-quotas-and-limits"
+        }
       ],
       "search": "Resend Free 3000 100 免绑卡"
     },
@@ -34,7 +40,7 @@
       "card": "none",
       "commercial": "allowed",
       "verifyStatus": "ok",
-      "verified": "2026-10-21",
+      "verified": "2026-11-02",
       "quota_short": "100 封/日（约 3,000/月若天天满发）",
       "quota_day": "100/日",
       "quota_month": "无单独月顶（受日顶约束）",
@@ -47,8 +53,14 @@
       "commercial_detail": "面向应用发信的商业产品；Free 含 RESTful API 与 SMTP。仍须遵守反垃圾与域名认证要求。",
       "evidence": "help.mailgun.com Free plan: 100 messages/day, no credit card; mailgun.com/pricing Free $0/mo.",
       "sources": [
-        {"label": "What does the Free plan offer?", "url": "https://help.mailgun.com/hc/en-us/articles/203068914-What-does-the-Free-plan-offer"},
-        {"label": "Mailgun Pricing", "url": "https://www.mailgun.com/pricing/"}
+        {
+          "label": "What does the Free plan offer?",
+          "url": "https://help.mailgun.com/hc/en-us/articles/203068914-What-does-the-Free-plan-offer"
+        },
+        {
+          "label": "Mailgun Pricing",
+          "url": "https://www.mailgun.com/pricing/"
+        }
       ],
       "search": "Mailgun Free 100/day no credit card"
     },
@@ -58,7 +70,7 @@
       "card": "none",
       "commercial": "allowed",
       "verifyStatus": "ok",
-      "verified": "2026-10-21",
+      "verified": "2026-11-02",
       "quota_short": "100 封/月 · 不可超额",
       "quota_day": "无单独日顶（受月顶约束）",
       "quota_month": "100/月",
@@ -71,8 +83,14 @@
       "commercial_detail": "允许事务/广播分 Message Streams；免费档可用于真实发信但额度极低。账户外发审批等政策以 Postmark 当前流程为准。",
       "evidence": "postmarkapp.com/pricing Free 100 emails/month; FAQ free developer plan does not expire; no credit card required.",
       "sources": [
-        {"label": "Postmark Pricing", "url": "https://postmarkapp.com/pricing"},
-        {"label": "Monthly pricing support", "url": "https://postmarkapp.com/support/article/1107-how-does-monthly-pricing-work"}
+        {
+          "label": "Postmark Pricing",
+          "url": "https://postmarkapp.com/pricing"
+        },
+        {
+          "label": "Monthly pricing support",
+          "url": "https://postmarkapp.com/support/article/1107-how-does-monthly-pricing-work"
+        }
       ],
       "search": "Postmark Free Developer 100/month"
     },
@@ -82,7 +100,7 @@
       "card": "required",
       "commercial": "allowed",
       "verifyStatus": "ok",
-      "verified": "2026-10-21",
+      "verified": "2026-11-02",
       "quota_short": "按量计费；新客户靠 AWS Free Tier credits（无永久免费用量档）",
       "quota_day": "受 SES 发送配额/沙箱限制（控制台）",
       "quota_month": "见 AWS Free Tier / 定价计划",
@@ -95,9 +113,18 @@
       "commercial_detail": "设计用于生产事务与营销发信；遵守 SES 发送政策与反垃圾要求。",
       "evidence": "aws.amazon.com/ses/pricing AWS Free Tier credits; blog 2026-07-21 SES-specific free tier no longer for new customers.",
       "sources": [
-        {"label": "Amazon SES Pricing", "url": "https://aws.amazon.com/ses/pricing/"},
-        {"label": "SES pricing plans blog", "url": "https://aws.amazon.com/blogs/messaging-and-targeting/introducing-amazon-simple-email-service-ses-pricing-plans/"},
-        {"label": "SES FAQs", "url": "https://aws.amazon.com/ses/faqs/"}
+        {
+          "label": "Amazon SES Pricing",
+          "url": "https://aws.amazon.com/ses/pricing/"
+        },
+        {
+          "label": "SES pricing plans blog",
+          "url": "https://aws.amazon.com/blogs/messaging-and-targeting/introducing-amazon-simple-email-service-ses-pricing-plans/"
+        },
+        {
+          "label": "SES FAQs",
+          "url": "https://aws.amazon.com/ses/faqs/"
+        }
       ],
       "search": "Amazon SES Free Tier credits 2026 no 3000"
     },
@@ -107,7 +134,7 @@
       "card": "none",
       "commercial": "conditional",
       "verifyStatus": "ok",
-      "verified": "2026-10-21",
+      "verified": "2026-11-02",
       "quota_short": "300 封/日（事务+营销共用日顶）",
       "quota_day": "300/日",
       "quota_month": "约 9,000/月（若天天满发；无单独月顶）",
@@ -120,8 +147,14 @@
       "commercial_detail": "允许真实发信；Free 强制带 Sent with Brevo 标识。移除品牌需升级。",
       "evidence": "help.brevo.com Free plan: 300 emails/day, no time limit; branding sticker required on Free.",
       "sources": [
-        {"label": "Free plan limits FAQ", "url": "https://help.brevo.com/hc/en-us/articles/208580669-FAQs-What-are-the-limits-of-the-Free-plan"},
-        {"label": "Brevo Email API", "url": "https://www.brevo.com/features/email-api/"}
+        {
+          "label": "Free plan limits FAQ",
+          "url": "https://help.brevo.com/hc/en-us/articles/208580669-FAQs-What-are-the-limits-of-the-Free-plan"
+        },
+        {
+          "label": "Brevo Email API",
+          "url": "https://www.brevo.com/features/email-api/"
+        }
       ],
       "search": "Brevo Free 300/day branding"
     },
@@ -131,7 +164,7 @@
       "card": "conditional",
       "commercial": "allowed",
       "verifyStatus": "ok",
-      "verified": "2026-10-21",
+      "verified": "2026-11-02",
       "quota_short": "新账号约 60 天试用 · 约 100 封 API/日",
       "quota_day": "试用期内约 100/日",
       "quota_month": "非永久免费档",
@@ -144,9 +177,18 @@
       "commercial_detail": "付费/试用均可发事务邮件；遵守 Twilio 可接受使用政策。",
       "evidence": "Twilio changelog: Changes to SendGrid Free Plan; Support: 60-Day Free Trial ~100 Email API/day.",
       "sources": [
-        {"label": "SendGrid Free Plan changelog", "url": "https://www.twilio.com/en-us/changelog/sendgrid-free-plan"},
-        {"label": "60-Day Free Trial overview", "url": "https://support.sendgrid.com/hc/en-us/articles/35270136965403-Overview-of-60-Day-Free-Trial-Plans-for-New-SendGrid-Accounts"},
-        {"label": "Email API Pricing", "url": "https://www.twilio.com/en-us/products/email-api/pricing"}
+        {
+          "label": "SendGrid Free Plan changelog",
+          "url": "https://www.twilio.com/en-us/changelog/sendgrid-free-plan"
+        },
+        {
+          "label": "60-Day Free Trial overview",
+          "url": "https://support.sendgrid.com/hc/en-us/articles/35270136965403-Overview-of-60-Day-Free-Trial-Plans-for-New-SendGrid-Accounts"
+        },
+        {
+          "label": "Email API Pricing",
+          "url": "https://www.twilio.com/en-us/products/email-api/pricing"
+        }
       ],
       "search": "SendGrid 60 day trial 100/day not forever free"
     },
@@ -156,7 +198,7 @@
       "card": "none",
       "commercial": "allowed",
       "verifyStatus": "ok",
-      "verified": "2026-10-21",
+      "verified": "2026-11-02",
       "quota_short": "首份积分免费：1 万封；用尽后购积分",
       "quota_day": "验证前常见日顶（以控制台为准）",
       "quota_month": "首份免费积分非每月刷新",
@@ -169,8 +211,14 @@
       "commercial_detail": "定位事务邮件；营销/群发需改用其他产品。",
       "evidence": "zoho.com/zeptomail/pricing.html：10,000 emails per credit; First credit is free; credits valid 6 months.",
       "sources": [
-        {"label": "Zoho CPaaS / ZeptoMail Pricing", "url": "https://www.zoho.com/zeptomail/pricing.html"},
-        {"label": "Getting started", "url": "https://www.zoho.com/zeptomail/help/getting-started.html"}
+        {
+          "label": "Zoho CPaaS / ZeptoMail Pricing",
+          "url": "https://www.zoho.com/zeptomail/pricing.html"
+        },
+        {
+          "label": "Getting started",
+          "url": "https://www.zoho.com/zeptomail/help/getting-started.html"
+        }
       ],
       "search": "ZeptoMail first credit free 10000"
     }

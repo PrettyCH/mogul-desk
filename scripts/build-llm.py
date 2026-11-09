@@ -103,7 +103,7 @@ def main() -> None:
     entries = data["entries"]
     verified = data["verified_at"]
     title = data["title"]
-    desc = "Gemini、Groq、OpenRouter、Workers AI、Mistral、NVIDIA、Fireworks、SiliconFlow 等免费/起步积分与是否绑卡对照（可核验）。"
+    desc = "Gemini、Groq、OpenRouter、Workers AI、NVIDIA、Fireworks、SiliconFlow 等免费/起步积分与是否绑卡对照（可核验）。"
 
     list_items = ",\n    ".join(
         f"""{{

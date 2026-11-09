@@ -113,6 +113,7 @@ def build_body(report: dict, generated_label: str) -> str:
     aihot_daily = links.get("aihot") or f"https://aihot.news/daily/{date}"
     lead = report.get("lead") or {}
     sections = report.get("sections") or []
+    highlights = report.get("highlights") or []
     flashes = report.get("flashes") or []
 
     # Collect lead item if it also appears in a section — still show as 头条 once
@@ -139,6 +140,8 @@ def build_body(report: dict, generated_label: str) -> str:
     toc: list[str] = []
     if lead.get("title"):
         toc.append('<a href="#lead">头条</a>')
+    if highlights:
+        toc.append('<a href="#highlights">要闻</a>')
     for i, sec in enumerate(sections):
         label = sec.get("label") or f"分类{i+1}"
         short = SECTION_SHORT.get(label, label)
@@ -161,13 +164,18 @@ def build_body(report: dict, generated_label: str) -> str:
             "source": {},
             "links": {},
         }
-        for sec in sections:
-            for it in sec.get("items") or []:
+        for src in list(sections) + [{"items": highlights}]:
+            for it in src.get("items") or []:
                 if (it.get("title") or "") == lead.get("title"):
                     lead_item = it
                     break
         chunks.append('    <h2 id="lead">头条</h2>\n')
         chunks.append("    " + render_item(lead_item).replace("\n", "\n    ") + "\n")
+
+    if highlights:
+        chunks.append('    <h2 id="highlights">要闻</h2>\n')
+        for it in highlights:
+            chunks.append("    " + render_item(it).replace("\n", "\n    ") + "\n")
 
     for i, sec in enumerate(sections):
         label = sec.get("label") or "其他"
